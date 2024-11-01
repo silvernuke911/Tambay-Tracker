@@ -202,16 +202,24 @@ def show_point_order():
 def show_date_freq():
     pass 
 
+def random_data_generator():
+    pass
+
 def main():
     prompt = starting_menu()  # Show the starting menu
     if prompt == 'y':
+        # clear_screen()
         get_entry_input()  # Get a new entry from the user
     elif isinstance(prompt, int):
+        # clear_screen()
         handle_option_choice(prompt)  # Handle the option selected
     while True:
         # After handling the option, ask for the next option
         option_choice = get_option_input(program_options)
+        # clear_screen()
         handle_option_choice(option_choice)
 
 if __name__ == '__main__':
     main()
+    input()
+
