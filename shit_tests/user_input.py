@@ -24,9 +24,7 @@ def is_valid_sender(sender_name, valid_names):
     """Checks if the sender's name is valid."""
     return sender_name in valid_names
 
-# Load valid names from the CSV file at the start of your program
 valid_names = load_valid_names('member_list.csv')
-
 def is_valid_members(members, valid_names):
     """Check if all members are valid names from the list."""
     invalid_members = [name for name in members if name not in valid_names]
@@ -44,6 +42,11 @@ def clear_screen():
 def set_terminal_size(width=100, height=30):
     os.system(f'mode con: cols={width} lines={height}')
 
+def safe_exit():
+    update_points()
+    update_date_frequency()
+    exit()
+
 # Main system
 def get_yes_no_input(prompt_text, max_attempts=5):
     attempts = 0
@@ -54,7 +57,7 @@ def get_yes_no_input(prompt_text, max_attempts=5):
         print('Invalid entry, please try again.')
         attempts += 1
     print("Too many invalid attempts. Exiting program.")
-    exit()
+    safe_exit()
 
 def get_option_input(options, max_attempts=5):
     print('What else would you like to do?')
@@ -73,7 +76,7 @@ def get_option_input(options, max_attempts=5):
             print('Invalid entry, please enter a number.')
         attempts += 1
     print("Too many invalid attempts. Exiting program.")
-    exit()
+    safe_exit()
 
 def starting_menu():
     print(f'WELCOME TO THE TAMBAY TRACKER!\n')
@@ -132,41 +135,47 @@ def get_entry_input():
         if date is None or sender is None:  # Check if 'QUIT' was entered during input
             break
 
-        # Saving the entry to a CSV file with ':' as the delimiter
-        with open('shit_tests/tambay_tracker_data.csv', mode='a', newline='') as file:
-            writer = csv.writer(file, delimiter=':')
-            writer.writerow([date, sender, members_present])
-
-        print("Entry saved successfully.")
+        # Save entry
+        save_entry(date, sender, members_present)
 
         # Ask if the user wants to add another entry
         another_entry = get_yes_no_input('Do you want to add another entry? (Y/N): ')
         if another_entry == 'n':
             break
+        
+def save_entry(date, sender, members_present):
+    # Saving the entry to a CSV file with ':' as the delimiter
+    with open('shit_tests/tambay_tracker_data.csv', mode='a', newline='') as file:
+        writer = csv.writer(file, delimiter=':')
+        writer.writerow([date, sender, members_present])
+    print("Entry saved successfully.")
+    return 
 
 def handle_option_choice(option_choice):
     """Handle the user's selection from program options."""
-    if option_choice == 1:
+    if   option_choice == 1:
         get_entry_input()
     elif option_choice == 2:
-        print("Executing 'Show raw data'...")
+        print("Executing 'Showing raw data'...")
+        print('\n')
         show_raw_data()
+        print('\n')
     elif option_choice == 3:
-        print("Executing 'Visualize Data'...")
+        print("Executing 'Visualizing Data'...")
         # Insert functionality here for 'Visualize Data'
     elif option_choice == 4:
-        print("Executing 'Show Points'...")
+        print("Executing 'Showing Points List'...")
         # Insert functionality here for 'Show Points'
     elif option_choice == 5:
-        print("Executing 'Show Point Order'...")
+        print("Executing 'Showing Point Order List and Graph'...")
         # Insert functionality here for 'Show Point Order'
     elif option_choice == 6:
-        print("Executing 'Show Date Frequency'...")
+        print("Executing 'Show Date Frequency List and Graph'...")
         # Insert functionality here for 'Show Date Frequency'
     elif option_choice == 7:
         exit_question = get_yes_no_input('Are you sure you want to exit? (Y/N): ')
         if exit_question == 'y':
-            exit()
+            safe_exit()
         else:
             input('Returning to the main menu. Press enter')
 
@@ -182,13 +191,12 @@ def show_raw_data():
         with open(r'shit_tests\tambay_tracker_data.csv', mode='r') as file:
             reader = csv.reader(file, delimiter=':')
             for row in reader:
-                sender_name = row[1].ljust(10)  # Adjust the width as needed
+                sender_name = row[1].ljust(10)
                 print(f"Date: {row[0]},\t Sender: {sender_name},\t Members Present: {row[2]}")
     except FileNotFoundError:
         print("The data file does not exist.")
     except Exception as e:
         print(f"An error occurred: {e}")
-
 
 def visualize_data():
     pass 
@@ -206,20 +214,15 @@ def random_data_generator():
     pass
 
 def main():
-    prompt = starting_menu()  # Show the starting menu
+    prompt = starting_menu() 
     if prompt == 'y':
         # clear_screen()
-        get_entry_input()  # Get a new entry from the user
-    elif isinstance(prompt, int):
-        # clear_screen()
-        handle_option_choice(prompt)  # Handle the option selected
+        get_entry_input()  
     while True:
-        # After handling the option, ask for the next option
         option_choice = get_option_input(program_options)
         # clear_screen()
         handle_option_choice(option_choice)
 
 if __name__ == '__main__':
     main()
-    input()
 
