@@ -25,6 +25,7 @@ def is_valid_sender(sender_name, valid_names):
     return sender_name in valid_names
 
 valid_names = load_valid_names('member_list.csv')
+
 def is_valid_members(members, valid_names):
     """Check if all members are valid names from the list."""
     invalid_members = [name for name in members if name not in valid_names]
@@ -80,11 +81,7 @@ def get_option_input(options, max_attempts=5):
 
 def starting_menu():
     print(f'WELCOME TO THE TAMBAY TRACKER!\n')
-    prompt = get_yes_no_input('Do you want to put a new entry? (Y/N): ')
-    if prompt == 'y':
-        return 'y'
-    elif prompt == 'n':
-        return get_option_input(program_options)
+    return get_yes_no_input('Do you want to put a new entry? (Y/N): ')
     
 def get_input_with_quit(prompt):
     """Helper function to get input and check for 'QUIT' condition."""
@@ -92,6 +89,14 @@ def get_input_with_quit(prompt):
     if user_input == 'QUIT':
         return None  # Signal to quit
     return user_input  # Return the normal input
+
+def save_entry(date, sender, members_present):
+    # Saving the entry to a CSV file with ':' as the delimiter
+    with open('shit_tests/tambay_tracker_data.csv', mode='a', newline='') as file:
+        writer = csv.writer(file, delimiter=':')
+        writer.writerow([date, sender, members_present])
+    print("Entry saved successfully.")
+    return 
 
 def get_entry_input():
     while True:
@@ -142,14 +147,6 @@ def get_entry_input():
         another_entry = get_yes_no_input('Do you want to add another entry? (Y/N): ')
         if another_entry == 'n':
             break
-        
-def save_entry(date, sender, members_present):
-    # Saving the entry to a CSV file with ':' as the delimiter
-    with open('shit_tests/tambay_tracker_data.csv', mode='a', newline='') as file:
-        writer = csv.writer(file, delimiter=':')
-        writer.writerow([date, sender, members_present])
-    print("Entry saved successfully.")
-    return 
 
 def handle_option_choice(option_choice):
     """Handle the user's selection from program options."""
@@ -191,8 +188,10 @@ def show_raw_data():
         with open(r'shit_tests\tambay_tracker_data.csv', mode='r') as file:
             reader = csv.reader(file, delimiter=':')
             for row in reader:
+                date_ = row[0].ljust(5)
                 sender_name = row[1].ljust(10)
-                print(f"Date: {row[0]},\t Sender: {sender_name},\t Members Present: {row[2]}")
+                print(f"Date: {date_},\t Sender: {sender_name},\t Members Present: {row[2]}")
+
     except FileNotFoundError:
         print("The data file does not exist.")
     except Exception as e:
@@ -216,13 +215,18 @@ def random_data_generator():
 def main():
     prompt = starting_menu() 
     if prompt == 'y':
-        # clear_screen()
-        get_entry_input()  
+        get_entry_input()
     while True:
         option_choice = get_option_input(program_options)
-        # clear_screen()
         handle_option_choice(option_choice)
 
 if __name__ == '__main__':
     main()
+
+# You should probably encrypt member list and tambay tracker
+# so that what get's stored in the member list is a hashed string which can be
+# decrypted, and at the tambay tracker data, it will mostly be indices and numbers
+# however, you can show the actual data by accessing the application
+# this is to ensure security since you are releasing this shit to public eye. 
+
 
