@@ -2,10 +2,10 @@ import numpy as np
 import csv
 import os
 from datetime import datetime
-from collections import Counter
+from collections import Counter, defaultdict
 import matplotlib.pyplot as plt
 
-raw_data_file = 'fabricated_data.csv'
+raw_data_file = 'tambay_tracker_data.csv'
 date_file = 'date_list.csv'
 score_file = 'scores_list.csv'
 member_file = 'member_list.csv'
@@ -25,7 +25,7 @@ def latex_font1(): # Aesthetic choice
         'font.size': 12
     })
     cmfont = font_manager.FontProperties(fname=mpl.get_data_path() + '/fonts/ttf/cmr10.ttf')
-latex_font1()
+latex_font()
 
 # Validation Functions
 def validate_date_format(date_string):
@@ -53,92 +53,74 @@ valid_names = load_valid_names(member_file)
 def is_valid_members(members, valid_names):
     """Check if all members are valid names from the list."""
     invalid_members = [name for name in members if name not in valid_names]
-    return invalid_members  # Return the list of invalid members, or an empty list if all are valid
-
+    return invalid_members 
 
 program_options = ['Enter new entry','Show raw data', 'Visualize Data', 'Show Points', 'Show Point Order', 'Show Date Frequency', 'Exit']
 
 # Update functions
-
-# Options
 def update_scores():
-    # Initialize two Counters to keep track of occurrences as sender and as attendee
     sender_counts = Counter()
     attendee_counts = Counter()
-
-    # Read 'data.csv' and count occurrences of each name as sender or attendee
     with open(raw_data_file, mode='r') as data_file:
         reader = csv.reader(data_file, delimiter=':')
         for row in reader:
-            # Count the sender name in `row[1]`
+          
             sender_name = row[1].strip()
             sender_counts[sender_name] += 1
 
-            # Count the attendees in `row[2]`
             members_present = row[2].split(', ')
             attendee_counts.update(members_present)
-
-    # Read 'scores.csv' to get the list of names and update both sender and attendee counts
     updated_scores = []
     with open(score_file, mode='r') as scores_file:
         reader = csv.reader(scores_file)
-        next(reader)  # Skip the header row
+        next(reader)  
         for row in reader:
             name = row[0]
-            # Update counts from sender and attendee Counters
             updated_sender_count = sender_counts.get(name, 0)
             updated_attendee_count = attendee_counts.get(name, 0)
             updated_total_score = updated_sender_count + updated_attendee_count
-            # Append the updated scores for each name
             updated_scores.append([name, updated_sender_count, updated_attendee_count, updated_total_score ])
-
-    # Write the updated scores back to 'scores.csv'
     with open(score_file, mode='w', newline='') as scores_file:
         writer = csv.writer(scores_file)
-        writer.writerow(["Name", "Sender Count", "Attendance Count", 'Total points'])  # Write headers
+        writer.writerow(["Name", "Sender Count", "Attendance Count", 'Total points']) 
         writer.writerows(updated_scores)
-
     print("Scores updated successfully.")
 
 def update_date_freq():
-    # Initialize a Counter to track attendance per date with dates from 'date_list.csv'
-    date_attendance_count = Counter()
+    date_attendance_count = defaultdict(set)  # Using a set to ensure uniqueness
     
-    # Read 'date_list.csv' to get all possible dates and initialize them with 0 attendance
+    # Initialize attendance count from 'date_file'
     with open(date_file, mode='r') as date_file_:
         reader = csv.reader(date_file_)
         next(reader)  # Skip header
         for row in reader:
             if row:
                 date = row[0].strip()
-                date_attendance_count[date] = 0
+                date_attendance_count[date] = set()  # Initialize an empty set for each date
 
-    # Read 'fabricated_data.csv' and count attendees per date
+    # Read entries from 'raw_data_file' and collect unique members per date
     with open(raw_data_file, mode='r') as data_file:
         reader = csv.reader(data_file, delimiter=':')
         for row in reader:
             if not row or len(row) < 3:
                 continue  # Skip empty or incomplete rows
-
             date = row[0].strip()
             members_present = row[2].split(', ')
-            # Update the count only if the date is in 'date_list.csv'
             if date in date_attendance_count:
-                date_attendance_count[date] += len(members_present)
+                date_attendance_count[date].update(members_present)  # Add members uniquely
 
-    # Write the updated attendance frequency per date back to 'date_list.csv'
+    # Calculate attendance count per date and write to 'date_file'
     with open(date_file, mode='w', newline='') as date_file_:
         writer = csv.writer(date_file_)
         writer.writerow(["Date", "Attendance Count"])  # Write header
-        for date, count in date_attendance_count.items():
-            writer.writerow([date, count])
+        for date, members in date_attendance_count.items():
+            writer.writerow([date, len(members)])  # Count unique members per date
 
     print("Date attendance frequency updated successfully.")
 
 # Terminal options
 def clear_screen():
     """Clears the terminal screen."""
-    # Clear command based on operating system
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def set_terminal_size(width=100, height=30):
@@ -167,7 +149,6 @@ def get_option_input(options, max_attempts=5):
     print('What else would you like to do?')
     for i, option in enumerate(options, start=1):
         print(f"{i}. {option}")
-
     attempts = 0
     while attempts < max_attempts:
         try:
@@ -195,7 +176,7 @@ def get_input_with_quit(prompt):
 
 def save_entry(date, sender, members_present):
     # Saving the entry to a CSV file with ':' as the delimiter
-    with open('shit_tests/tambay_tracker_data.csv', mode='a', newline='') as file:
+    with open(raw_data_file, mode='a', newline='') as file:
         writer = csv.writer(file, delimiter=':')
         writer.writerow([date, sender, members_present])
     print("Entry saved successfully.")
@@ -214,7 +195,6 @@ def get_entry_input():
                 break
         if date is None:
             break  # Exit the main loop if 'QUIT' was entered
-
         # Validate sender name input
         sender = get_input_with_quit('Sender name : ')
         if sender is None:
@@ -226,7 +206,6 @@ def get_entry_input():
                 break
         if sender is None:
             break
-
         # Validate members present input
         while True:
             members_present = get_input_with_quit('Members present (comma-separated) : ')
@@ -239,10 +218,8 @@ def get_entry_input():
             if not invalid_members:  # If no invalid members, break out of the loop
                 break  # Exit the member validation loop
             print(f"Invalid member(s) present: {', '.join(invalid_members)}. Please enter valid names.")
-        
         if date is None or sender is None:  # Check if 'QUIT' was entered during input
             break
-
         # Save entry
         save_entry(date, sender, members_present)
 
@@ -265,11 +242,9 @@ def handle_option_choice(option_choice):
         visualize_data()
     elif option_choice == 4:
         print("Showing Points List...")
-        # Insert functionality here for 'Show Points'
         show_points()
     elif option_choice == 5:
         print("Showing Point Order List and Graph...")
-        # Insert functionality here for 'Show Point Order'
         show_point_order()
         visualize_data_ordered()
     elif option_choice == 6:
@@ -312,24 +287,18 @@ def show_points():
 def visualize_data():
     names = []
     total_scores = []
-
-    # Read scores.csv
     with open(score_file, mode='r') as file:
         reader = csv.reader(file)
-        next(reader)  # Skip header
+        next(reader) 
         for row in reader:
             if len(row) < 3:
-                continue  # Skip rows with insufficient data
-
+                continue  
             name = row[0]
             sender_count = int(row[1]) if row[1].isdigit() else 0
             attendance_count = int(row[2]) if row[2].isdigit() else 0
             total_score = sender_count + attendance_count
-
-            # Append to lists
             names.append(name)
             total_scores.append(total_score)
-
     # Plot the bar graph
     plt.bar(names, total_scores, color='r')
     plt.xlabel('Names')
@@ -337,36 +306,30 @@ def visualize_data():
     plt.title('Scores Bar Graph (Original Order)')
     plt.xticks(rotation=60, ha='right')
     plt.tight_layout()
-
     plt.show()
 
 def visualize_data_ordered():
     scores = {}
-
-    # Read scores.csv
     with open(score_file, mode='r') as file:
         reader = csv.reader(file)
-        next(reader)  # Skip header
+        next(reader)  
         for row in reader:
             if len(row) < 3:
-                continue  # Skip rows with insufficient data
-
+                continue 
             name = row[0]
             sender_count = int(row[1]) if row[1].isdigit() else 0
             attendance_count = int(row[2]) if row[2].isdigit() else 0
             total_score = sender_count + attendance_count
             scores[name] = total_score
-
     # Sort scores from highest to lowest
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
     names, total_scores = zip(*sorted_scores)
-
     # Plot the bar graph
     plt.figure(figsize=(10, 6))
     plt.bar(names, total_scores, color='b')
-    plt.xlabel('Names')
+    plt.xlabel('Brod Names')
     plt.ylabel('Total Score')
-    plt.title('Scores Bar Graph (Sorted from Highest to Lowest)')
+    plt.title(r'\textbf{Scores Bar Graph (Sorted)}')
     plt.xticks(rotation=60, ha='right')
     plt.tight_layout()
     save_image_query('Ordered Points')
@@ -388,21 +351,17 @@ def show_points():
 
 def show_point_order():
     scores = {}
-
-    # Read scores.csv
     with open(score_file, mode='r') as file:
         reader = csv.reader(file)
-        next(reader)  # Skip header
+        next(reader) 
         for row in reader:
             if len(row) < 3:
-                continue  # Skip rows with insufficient data
-
+                continue
             name = row[0]
             sender_count = int(row[1]) if row[1].isdigit() else 0
             attendance_count = int(row[2]) if row[2].isdigit() else 0
             total_score = sender_count + attendance_count
             scores[name] = total_score
-
     # Sort scores from highest to lowest
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
     names, total_scores = zip(*sorted_scores)
@@ -460,7 +419,7 @@ def plot_date_frequency():
     plt.bar(filtered_dates, filtered_counts, color='r')
     plt.xlabel('Date')
     plt.ylabel('Attendance Count')
-    plt.title('Attendance Frequency per Date')
+    plt.title(r'\textbf{Attendance Frequency}')
     plt.xticks(rotation=60, ha='right')
     plt.tight_layout()
 
@@ -475,6 +434,7 @@ def save_image_query(filename):
         plt.savefig(f'Images\\{filename} {current_datetime}.png', format="png", dpi=300)
         print('Image saved')
     return 
+
 def main():
     prompt = starting_menu() 
     if prompt == 'y':
