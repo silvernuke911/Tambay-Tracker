@@ -43,14 +43,23 @@ def update_scores():
 
     print("Scores updated successfully.")
 
-# Run the function
-update_scores()
+import csv
+from collections import Counter
 
 def update_date_freq():
-    # Initialize a Counter to track attendance per date
+    # Initialize a Counter to track attendance per date with dates from 'date_list.csv'
     date_attendance_count = Counter()
+    
+    # Read 'date_list.csv' to get all possible dates and initialize them with 0 attendance
+    with open('date_list.csv', mode='r') as date_file:
+        reader = csv.reader(date_file)
+        next(reader)  # Skip header
+        for row in reader:
+            if row:
+                date = row[0].strip()
+                date_attendance_count[date] = 0
 
-    # Read 'data.csv' and count attendees per date
+    # Read 'fabricated_data.csv' and count attendees per date
     with open('fabricated_data.csv', mode='r') as data_file:
         reader = csv.reader(data_file, delimiter=':')
         for row in reader:
@@ -59,10 +68,11 @@ def update_date_freq():
 
             date = row[0].strip()
             members_present = row[2].split(', ')
-            # Count the number of attendees for each date
-            date_attendance_count[date] += len(members_present)
+            # Update the count only if the date is in 'date_list.csv'
+            if date in date_attendance_count:
+                date_attendance_count[date] += len(members_present)
 
-    # Write the attendance frequency per date to 'date_frequency.csv'
+    # Write the updated attendance frequency per date back to 'date_list.csv'
     with open('date_list.csv', mode='w', newline='') as date_file:
         writer = csv.writer(date_file)
         writer.writerow(["Date", "Attendance Count"])  # Write header
@@ -73,3 +83,4 @@ def update_date_freq():
 
 # Run the function
 update_date_freq()
+update_scores()

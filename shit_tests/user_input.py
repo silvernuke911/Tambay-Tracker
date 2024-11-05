@@ -5,6 +5,28 @@ from datetime import datetime
 from collections import Counter
 import matplotlib.pyplot as plt
 
+raw_data_file = 'fabricated_data.csv'
+date_file = 'date_list.csv'
+score_file = 'scores_list.csv'
+member_file = 'member_list.csv'
+
+def latex_font(): # Aesthetic choice
+    plt.rc('text', usetex=True)
+    plt.rc('font', family='serif', size=12)
+
+def latex_font1(): # Aesthetic choice
+    import matplotlib as mpl
+    import matplotlib.font_manager as font_manager
+    plt.rcParams.update({
+        'font.family': 'serif',
+        'mathtext.fontset': 'cm',
+        'axes.unicode_minus': False,
+        'axes.formatter.use_mathtext': True,
+        'font.size': 12
+    })
+    cmfont = font_manager.FontProperties(fname=mpl.get_data_path() + '/fonts/ttf/cmr10.ttf')
+latex_font1()
+
 # Validation Functions
 def validate_date_format(date_string):
     """Validates if the date string is in MM/DD/YY format."""
@@ -19,14 +41,14 @@ def load_valid_names(filename):
     """Loads valid names from a CSV file into a list."""
     with open(filename, mode='r') as file:
         reader = csv.reader(file)
-        valid_names = [row[0] for row in reader]  # Assumes names are in the first column
+        valid_names = [row[0] for row in reader]
     return valid_names
 
 def is_valid_sender(sender_name, valid_names):
     """Checks if the sender's name is valid."""
     return sender_name in valid_names
 
-valid_names = load_valid_names('member_list.csv')
+valid_names = load_valid_names(member_file)
 
 def is_valid_members(members, valid_names):
     """Check if all members are valid names from the list."""
@@ -45,7 +67,7 @@ def update_scores():
     attendee_counts = Counter()
 
     # Read 'data.csv' and count occurrences of each name as sender or attendee
-    with open('fabricated_data.csv', mode='r') as data_file:
+    with open(raw_data_file, mode='r') as data_file:
         reader = csv.reader(data_file, delimiter=':')
         for row in reader:
             # Count the sender name in `row[1]`
@@ -58,14 +80,11 @@ def update_scores():
 
     # Read 'scores.csv' to get the list of names and update both sender and attendee counts
     updated_scores = []
-    with open('scores_list.csv', mode='r') as scores_file:
+    with open(score_file, mode='r') as scores_file:
         reader = csv.reader(scores_file)
         next(reader)  # Skip the header row
         for row in reader:
             name = row[0]
-            # # Get current scores if they exist
-            # current_sender_count = int(row[1]) if len(row) > 1 else 0
-            # current_attendee_count = int(row[2]) if len(row) > 2 else 0
             # Update counts from sender and attendee Counters
             updated_sender_count = sender_counts.get(name, 0)
             updated_attendee_count = attendee_counts.get(name, 0)
@@ -74,7 +93,7 @@ def update_scores():
             updated_scores.append([name, updated_sender_count, updated_attendee_count, updated_total_score ])
 
     # Write the updated scores back to 'scores.csv'
-    with open('scores_list.csv', mode='w', newline='') as scores_file:
+    with open(score_file, mode='w', newline='') as scores_file:
         writer = csv.writer(scores_file)
         writer.writerow(["Name", "Sender Count", "Attendance Count", 'Total points'])  # Write headers
         writer.writerows(updated_scores)
@@ -86,7 +105,7 @@ def update_date_freq():
     date_attendance_count = Counter()
 
     # Read 'data.csv' and count attendees per date
-    with open('fabricated_data.csv', mode='r') as data_file:
+    with open(raw_data_file, mode='r') as data_file:
         reader = csv.reader(data_file, delimiter=':')
         for row in reader:
             if not row or len(row) < 3:
@@ -98,8 +117,8 @@ def update_date_freq():
             date_attendance_count[date] += len(members_present)
 
     # Write the attendance frequency per date to 'date_frequency.csv'
-    with open('date_list.csv', mode='w', newline='') as date_file:
-        writer = csv.writer(date_file)
+    with open(date_file, mode='w', newline='') as date_file_:
+        writer = csv.writer(date_file_)
         writer.writerow(["Date", "Attendance Count"])  # Write header
         for date, count in date_attendance_count.items():
             writer.writerow([date, count])
@@ -118,7 +137,7 @@ def set_terminal_size(width=100, height=30):
 def safe_exit():
     update_scores()
     update_date_freq()
-    print('Exiting')
+    print('Exiting...')
     exit()
 
 # Main system
@@ -254,7 +273,7 @@ def handle_option_choice(option_choice):
 
 def show_raw_data():
     try:
-        with open(r'fabricated_data.csv', mode='r') as file:
+        with open(raw_data_file, mode='r') as file:
             reader = csv.reader(file, delimiter=':')
             for row in reader:
                 date_ = row[0].ljust(5)
@@ -268,7 +287,7 @@ def show_raw_data():
 
 def show_points():
     try:
-        with open(r'scores_list.csv', mode='r') as file:
+        with open(score_file, mode='r') as file:
             reader = csv.reader(file, delimiter=',')
             for row in reader:
                 member_name = row[0].ljust(10)
@@ -284,7 +303,7 @@ def visualize_data():
     total_scores = []
 
     # Read scores.csv
-    with open('scores_list.csv', mode='r') as file:
+    with open(score_file, mode='r') as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
         for row in reader:
@@ -305,7 +324,7 @@ def visualize_data():
     plt.xlabel('Names')
     plt.ylabel('Total Score')
     plt.title('Scores Bar Graph (Original Order)')
-    plt.xticks(rotation=45, ha='right')
+    plt.xticks(rotation=60, ha='right')
     plt.tight_layout()
 
     plt.show()
@@ -314,7 +333,7 @@ def visualize_data_ordered():
     scores = {}
 
     # Read scores.csv
-    with open('scores_list.csv', mode='r') as file:
+    with open(score_file, mode='r') as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
         for row in reader:
@@ -339,16 +358,12 @@ def visualize_data_ordered():
     plt.title('Scores Bar Graph (Sorted from Highest to Lowest)')
     plt.xticks(rotation=60, ha='right')
     plt.tight_layout()
-    response = get_yes_no_input('Do you want to save the image? (Y/N) :')
-    if response == 'y':
-        current_datetime = datetime.now().strftime(r"%Y-%m-%d %H-%M-%S")
-        plt.savefig(f'Images\\Ordered Points {current_datetime}.png', format="png", dpi=300)
-        print('Image saved')
+    save_image_query('Ordered Points')
     plt.show()
 
 def show_points():
     try:
-        with open(r'scores_list.csv', mode='r') as file:
+        with open(score_file, mode='r') as file:
             reader = csv.reader(file, delimiter=',')
             next(reader)
             for row in reader:
@@ -364,7 +379,7 @@ def show_point_order():
     scores = {}
 
     # Read scores.csv
-    with open('scores_list.csv', mode='r') as file:
+    with open(score_file, mode='r') as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
         for row in reader:
@@ -386,7 +401,7 @@ def show_point_order():
 
 def show_date_data():
     date_counts = {}
-    with open('date_list.csv', mode='r') as file:
+    with open(date_file, mode='r') as file:
         reader = csv.reader(file, delimiter=',')
         next(reader)
         for row in reader:
@@ -398,7 +413,7 @@ def plot_date_frequency():
     date_counts = {}
 
     # Read date_frequency.csv
-    with open('date_list.csv', mode='r') as file:
+    with open(date_file, mode='r') as file:
         reader = csv.reader(file, delimiter=',')
         next(reader)
         for row in reader:
@@ -423,13 +438,16 @@ def plot_date_frequency():
     plt.title('Attendance Frequency per Date')
     plt.xticks(rotation=60, ha='right')
     plt.tight_layout()
+    save_image_query('Date Frequency')
+    plt.show()
+
+def save_image_query(filename):
     response = get_yes_no_input('Do you want to save the image? (Y/N) :')
     if response == 'y':
         current_datetime = datetime.now().strftime(r"%Y-%m-%d %H-%M-%S")
-        plt.savefig(f'Images\\Date Frequency {current_datetime}.png', format="png", dpi=300)
+        plt.savefig(f'Images\\{filename} {current_datetime}.png', format="png", dpi=300)
         print('Image saved')
-    plt.show()
-
+    return 
 def main():
     prompt = starting_menu() 
     if prompt == 'y':
