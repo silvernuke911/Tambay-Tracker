@@ -2,6 +2,8 @@ import numpy as np
 import csv
 import os
 from datetime import datetime
+from collections import Counter
+import matplotlib.pyplot as plt
 
 # Validation Functions
 def validate_date_format(date_string):
@@ -34,6 +36,76 @@ def is_valid_members(members, valid_names):
 
 program_options = ['Enter new entry','Show raw data', 'Visualize Data', 'Show Points', 'Show Point Order', 'Show Date Frequency', 'Exit']
 
+# Update functions
+
+# Options
+def update_scores():
+    # Initialize two Counters to keep track of occurrences as sender and as attendee
+    sender_counts = Counter()
+    attendee_counts = Counter()
+
+    # Read 'data.csv' and count occurrences of each name as sender or attendee
+    with open('fabricated_data.csv', mode='r') as data_file:
+        reader = csv.reader(data_file, delimiter=':')
+        for row in reader:
+            # Count the sender name in `row[1]`
+            sender_name = row[1].strip()
+            sender_counts[sender_name] += 1
+
+            # Count the attendees in `row[2]`
+            members_present = row[2].split(', ')
+            attendee_counts.update(members_present)
+
+    # Read 'scores.csv' to get the list of names and update both sender and attendee counts
+    updated_scores = []
+    with open('scores_list.csv', mode='r') as scores_file:
+        reader = csv.reader(scores_file)
+        next(reader)  # Skip the header row
+        for row in reader:
+            name = row[0]
+            # # Get current scores if they exist
+            # current_sender_count = int(row[1]) if len(row) > 1 else 0
+            # current_attendee_count = int(row[2]) if len(row) > 2 else 0
+            # Update counts from sender and attendee Counters
+            updated_sender_count = sender_counts.get(name, 0)
+            updated_attendee_count = attendee_counts.get(name, 0)
+            updated_total_score = updated_sender_count + updated_attendee_count
+            # Append the updated scores for each name
+            updated_scores.append([name, updated_sender_count, updated_attendee_count, updated_total_score ])
+
+    # Write the updated scores back to 'scores.csv'
+    with open('scores_list.csv', mode='w', newline='') as scores_file:
+        writer = csv.writer(scores_file)
+        writer.writerow(["Name", "Sender Count", "Attendance Count", 'Total points'])  # Write headers
+        writer.writerows(updated_scores)
+
+    print("Scores updated successfully.")
+
+def update_date_freq():
+    # Initialize a Counter to track attendance per date
+    date_attendance_count = Counter()
+
+    # Read 'data.csv' and count attendees per date
+    with open('fabricated_data.csv', mode='r') as data_file:
+        reader = csv.reader(data_file, delimiter=':')
+        for row in reader:
+            if not row or len(row) < 3:
+                continue  # Skip empty or incomplete rows
+
+            date = row[0].strip()
+            members_present = row[2].split(', ')
+            # Count the number of attendees for each date
+            date_attendance_count[date] += len(members_present)
+
+    # Write the attendance frequency per date to 'date_frequency.csv'
+    with open('date_list.csv', mode='w', newline='') as date_file:
+        writer = csv.writer(date_file)
+        writer.writerow(["Date", "Attendance Count"])  # Write header
+        for date, count in date_attendance_count.items():
+            writer.writerow([date, count])
+
+    print("Date attendance frequency updated successfully.")
+
 # Terminal options
 def clear_screen():
     """Clears the terminal screen."""
@@ -44,8 +116,9 @@ def set_terminal_size(width=100, height=30):
     os.system(f'mode con: cols={width} lines={height}')
 
 def safe_exit():
-    update_points()
-    update_date_frequency()
+    update_scores()
+    update_date_freq()
+    print('Exiting')
     exit()
 
 # Main system
@@ -153,22 +226,25 @@ def handle_option_choice(option_choice):
     if   option_choice == 1:
         get_entry_input()
     elif option_choice == 2:
-        print("Executing 'Showing raw data'...")
+        print("Showing raw data...")
         print('\n')
         show_raw_data()
         print('\n')
     elif option_choice == 3:
-        print("Executing 'Visualizing Data'...")
-        # Insert functionality here for 'Visualize Data'
+        print("Visualizing Data...")
+        visualize_data()
     elif option_choice == 4:
-        print("Executing 'Showing Points List'...")
+        print("Showing Points List...")
         # Insert functionality here for 'Show Points'
+        show_points()
     elif option_choice == 5:
-        print("Executing 'Showing Point Order List and Graph'...")
+        print("Showing Point Order List and Graph...")
         # Insert functionality here for 'Show Point Order'
+        show_point_order()
+        visualize_data_ordered()
     elif option_choice == 6:
-        print("Executing 'Show Date Frequency List and Graph'...")
-        # Insert functionality here for 'Show Date Frequency'
+        print("Showing Date Frequency List and Graph...")
+        plot_date_frequency()
     elif option_choice == 7:
         exit_question = get_yes_no_input('Are you sure you want to exit? (Y/N): ')
         if exit_question == 'y':
@@ -176,16 +252,9 @@ def handle_option_choice(option_choice):
         else:
             input('Returning to the main menu. Press enter')
 
-# Options
-def update_points():
-    pass
-
-def update_date_frequency():
-    pass
-
 def show_raw_data():
     try:
-        with open(r'shit_tests\tambay_tracker_data.csv', mode='r') as file:
+        with open(r'fabricated_data.csv', mode='r') as file:
             reader = csv.reader(file, delimiter=':')
             for row in reader:
                 date_ = row[0].ljust(5)
@@ -197,20 +266,169 @@ def show_raw_data():
     except Exception as e:
         print(f"An error occurred: {e}")
 
+def show_points():
+    try:
+        with open(r'scores_list.csv', mode='r') as file:
+            reader = csv.reader(file, delimiter=',')
+            for row in reader:
+                member_name = row[0].ljust(10)
+                points = row[3].ljust(3)
+                print(f"Member: {member_name},\t Points: {points}")
+    except FileNotFoundError:
+        print("The data file does not exist.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
 def visualize_data():
-    pass 
+    names = []
+    total_scores = []
+
+    # Read scores.csv
+    with open('scores_list.csv', mode='r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+        for row in reader:
+            if len(row) < 3:
+                continue  # Skip rows with insufficient data
+
+            name = row[0]
+            sender_count = int(row[1]) if row[1].isdigit() else 0
+            attendance_count = int(row[2]) if row[2].isdigit() else 0
+            total_score = sender_count + attendance_count
+
+            # Append to lists
+            names.append(name)
+            total_scores.append(total_score)
+
+    # Plot the bar graph
+    plt.bar(names, total_scores, color='r')
+    plt.xlabel('Names')
+    plt.ylabel('Total Score')
+    plt.title('Scores Bar Graph (Original Order)')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+
+    plt.show()
+
+def visualize_data_ordered():
+    scores = {}
+
+    # Read scores.csv
+    with open('scores_list.csv', mode='r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+        for row in reader:
+            if len(row) < 3:
+                continue  # Skip rows with insufficient data
+
+            name = row[0]
+            sender_count = int(row[1]) if row[1].isdigit() else 0
+            attendance_count = int(row[2]) if row[2].isdigit() else 0
+            total_score = sender_count + attendance_count
+            scores[name] = total_score
+
+    # Sort scores from highest to lowest
+    sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    names, total_scores = zip(*sorted_scores)
+
+    # Plot the bar graph
+    plt.figure(figsize=(10, 6))
+    plt.bar(names, total_scores, color='b')
+    plt.xlabel('Names')
+    plt.ylabel('Total Score')
+    plt.title('Scores Bar Graph (Sorted from Highest to Lowest)')
+    plt.xticks(rotation=60, ha='right')
+    plt.tight_layout()
+    response = get_yes_no_input('Do you want to save the image? (Y/N) :')
+    if response == 'y':
+        current_datetime = datetime.now().strftime(r"%Y-%m-%d %H-%M-%S")
+        plt.savefig(f'Images\\Ordered Points {current_datetime}.png', format="png", dpi=300)
+        print('Image saved')
+    plt.show()
 
 def show_points():
-    pass 
+    try:
+        with open(r'scores_list.csv', mode='r') as file:
+            reader = csv.reader(file, delimiter=',')
+            next(reader)
+            for row in reader:
+                member_name = row[0].ljust(10)
+                points = row[3].ljust(3)
+                print(f"Member: {member_name},\t Points: {points}")
+    except FileNotFoundError:
+        print("The data file does not exist.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 def show_point_order():
-    pass 
+    scores = {}
 
-def show_date_freq():
-    pass 
+    # Read scores.csv
+    with open('scores_list.csv', mode='r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip header
+        for row in reader:
+            if len(row) < 3:
+                continue  # Skip rows with insufficient data
 
-def random_data_generator():
-    pass
+            name = row[0]
+            sender_count = int(row[1]) if row[1].isdigit() else 0
+            attendance_count = int(row[2]) if row[2].isdigit() else 0
+            total_score = sender_count + attendance_count
+            scores[name] = total_score
+
+    # Sort scores from highest to lowest
+    sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    names, total_scores = zip(*sorted_scores)
+
+    for i in range(len(names)):
+        print(f'Member: {names[i].ljust(10)}, \t Points: {total_scores[i]}')
+
+def show_date_data():
+    date_counts = {}
+    with open('date_list.csv', mode='r') as file:
+        reader = csv.reader(file, delimiter=',')
+        next(reader)
+        for row in reader:
+            date = row[0]
+            attendance_count = int(row[1]) if row[1].isdigit() else 0
+            date_counts[date] = attendance_count
+
+def plot_date_frequency():
+    date_counts = {}
+
+    # Read date_frequency.csv
+    with open('date_list.csv', mode='r') as file:
+        reader = csv.reader(file, delimiter=',')
+        next(reader)
+        for row in reader:
+            date = row[0]
+            attendance_count = int(row[1]) if row[1].isdigit() else 0
+            date_counts[date] = attendance_count
+    dates = list(date_counts.keys())
+    attendance_counts = list(date_counts.values())
+
+    for i in range(len(dates)):
+        print(f'Date : {dates[i]} \t Attendace: {attendance_counts[i]}')
+
+    # Prepare data for plotting, sorted by date
+    dates = list(date_counts.keys())
+    attendance_counts = list(date_counts.values())
+
+    # Plot the bar graph
+    plt.figure(figsize=(10, 6))
+    plt.bar(dates, attendance_counts, color='r')
+    plt.xlabel('Date')
+    plt.ylabel('Attendance Count')
+    plt.title('Attendance Frequency per Date')
+    plt.xticks(rotation=60, ha='right')
+    plt.tight_layout()
+    response = get_yes_no_input('Do you want to save the image? (Y/N) :')
+    if response == 'y':
+        current_datetime = datetime.now().strftime(r"%Y-%m-%d %H-%M-%S")
+        plt.savefig(f'Images\\Date Frequency {current_datetime}.png', format="png", dpi=300)
+        print('Image saved')
+    plt.show()
 
 def main():
     prompt = starting_menu() 
