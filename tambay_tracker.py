@@ -9,6 +9,8 @@ date_file = r'Data\date_list.csv'
 score_file = r'Data\scores_list.csv'
 member_file = r'Data\member_list.csv'
 
+## Something something, comment here on the purpose of this shit and shit like that, something something.
+
 # Valid entries / options
 valid_names = validators.load_valid_names(member_file)
 program_options = ['Enter new entry','Show raw data', 'Update scores', 'Show Points', 'Show Point Order', 'Show Date Frequency', 'Enter special points','Exit']

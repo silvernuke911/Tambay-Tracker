@@ -127,4 +127,4 @@ def update_special_points(valid_names, score_file):
         for row in score_data.values():
             writer.writerow(row)
 
-    print("Scores updated successfully.")
+    print("Special scores updated successfully.")
