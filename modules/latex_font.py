@@ -25,4 +25,3 @@ def latex_font2():
         'font.family': 'serif',
         'font.size': 12
     })
-latex_font2()

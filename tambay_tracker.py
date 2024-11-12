@@ -1,15 +1,15 @@
-import csv
+
 from modules import validators
 from modules import entry
 from modules import query
 
+## Something something, comment here on the purpose of this shit and shit like that, something something.
+
 # Data files
 raw_data_file = r'Data\tambay_tracker_data.csv'
-date_file = r'Data\date_list.csv'
-score_file = r'Data\scores_list.csv'
-member_file = r'Data\member_list.csv'
-
-## Something something, comment here on the purpose of this shit and shit like that, something something.
+date_file     = r'Data\date_list.csv'
+score_file    = r'Data\scores_list.csv'
+member_file   = r'Data\member_list.csv'
 
 # Valid entries / options
 valid_names = validators.load_valid_names(member_file)

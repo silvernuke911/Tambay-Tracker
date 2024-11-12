@@ -73,7 +73,7 @@ def visualize_data_ordered(raw_data_file, score_file, date_file):
     plt.bar(names, total_scores, color='b')
     plt.xlabel('Brod Names')
     plt.ylabel('Total Score')
-    plt.title(r'\textbf{Scores Bar Graph (Sorted)}')
+    plt.title(r'\textbf{Tambay Scores (As of 11/08/2024 11:00)}')
     plt.xticks(rotation=60, ha='right')
     max_score = max(total_scores)
     plt.yticks(range(0, max_score, 5))
@@ -138,9 +138,6 @@ def show_date_data(date_file, cutoff_date):
     for i in range(len(filtered_dates)):
         print(f'Date : {filtered_dates[i]}  ,  Attendance count = {filtered_counts[i]}')
     
-
-
-
 def plot_date_frequency(raw_data_file, score_file, date_file):
     date_counts = {}
 
@@ -156,7 +153,7 @@ def plot_date_frequency(raw_data_file, score_file, date_file):
     # Get the cutoff date from the user
     cutoff_date = query.get_valid_date()
     show_date_data(date_file, cutoff_date)
-    
+
     # Filter the data based on the cutoff date
     filtered_dates = []
     filtered_counts = []
