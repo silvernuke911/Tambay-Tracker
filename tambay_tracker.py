@@ -1,4 +1,3 @@
-
 from modules import validators
 from modules import entry
 from modules import query

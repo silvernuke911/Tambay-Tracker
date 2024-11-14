@@ -3,10 +3,10 @@ import csv
 
 # Validation Functions
 def validate_date_format(date_string):
-    """Validates if the date string is in MM/DD/YY format."""
+    """Validates if the date string is in MM/DD/YY format"""
     try:
-        # Attempt to parse the date string
-        datetime.strptime(date_string, '%m/%d/%y')
+        # Attempt to parse the date string to check if it's in the correct format
+        datetime.strptime(date_string, r'%m/%d/%y')
         return True  # Return True if successful
     except ValueError:
         return False  # Return False if there's a ValueError

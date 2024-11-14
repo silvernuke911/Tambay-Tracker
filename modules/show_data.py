@@ -55,6 +55,7 @@ def visualize_data(score_file):
     plt.show()
 
 def visualize_data_ordered(raw_data_file, score_file, date_file):
+    current_datetime = datetime.now().strftime(r"%m/%d/%Y %H:%M")
     scores = {}
     with open(score_file, mode='r') as file:
         reader = csv.reader(file)
@@ -73,7 +74,7 @@ def visualize_data_ordered(raw_data_file, score_file, date_file):
     plt.bar(names, total_scores, color='b')
     plt.xlabel('Brod Names')
     plt.ylabel('Total Score')
-    plt.title(r'\textbf{Tambay Scores (As of 11/08/2024 11:00)}')
+    plt.title(rf'\textbf{{Tambay Scores (As of {current_datetime})}}')
     plt.xticks(rotation=60, ha='right')
     max_score = max(total_scores)
     plt.yticks(range(0, max_score, 5))

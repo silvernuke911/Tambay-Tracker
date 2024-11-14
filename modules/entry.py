@@ -1,4 +1,5 @@
 import csv
+from datetime import datetime
 from modules import query
 from modules import validators
 from modules import show_data
@@ -6,7 +7,8 @@ from modules import updaters
 from modules import safe_exit
 
 def starting_menu(raw_data_file, score_file, date_file):
-    print(f'WELCOME TO THE TAMBAY TRACKER!\n')
+    print(f'--------------------------------\n WELCOME TO THE TAMBAY TRACKER!\n--------------------------------\n')
+    print(f'UP PI SIGMA FRATERNITY TAMBAY TRACKER \n CC: Juan. V\n')
     return query.get_yes_no_input('Do you want to put a new entry? (Y/N): ', raw_data_file, score_file, date_file)
 
 def save_entry(raw_data_file,date, sender, members_present):
@@ -20,9 +22,11 @@ def save_entry(raw_data_file,date, sender, members_present):
 def get_entry_input(raw_data_file, score_file, date_file, valid_names):
     while True:
         # Validate date input
-        date = query.get_input_with_quit('Date (MM/DD/YY) : ')
+        date = query.get_input_with_quit('Date (MM/DD/YY) (Press Enter for today): ')
         if date is None:  # Check if 'QUIT' was entered
             break
+        if date == '':
+            date = datetime.now().strftime(r'%m/%d/%y')
         while not validators.validate_date_format(date):
             print("Invalid date format. Please enter the date in MM/DD/YY format.")
             date = query.get_input_with_quit('Date (MM/DD/YY) : ')
@@ -53,7 +57,7 @@ def get_entry_input(raw_data_file, score_file, date_file, valid_names):
             if not invalid_members:  # If no invalid members, break out of the loop
                 break  # Exit the member validation loop
             print(f"Invalid member(s) present: {', '.join(invalid_members)}. Please enter valid names.")
-        if date is None or sender is None:  # Check if 'QUIT' was entered during input
+        if date is None or sender or members_present is None:  # Check if 'QUIT' was entered during input
             break
         # Save entry
         save_entry(raw_data_file, date, sender, members_present)
