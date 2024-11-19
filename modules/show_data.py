@@ -89,8 +89,11 @@ def show_points(score_file):
             next(reader)
             for row in reader:
                 member_name = row[0].ljust(10)
-                points = row[4].ljust(3)
-                print(f"Member: {member_name},\t Points: {points}")
+                sender_points = row[1].ljust(3)
+                attendance_points = row[2].ljust(3)
+                special_points = row[3].ljust(3)
+                total_points = row[4].ljust(3)
+                print(f"Member: {member_name} Sender pts: {sender_points}, Attd pts: {attendance_points}, Special pts: {special_points},  Total points: {total_points}")
     except FileNotFoundError:
         print("The data file does not exist.")
     except Exception as e:
@@ -105,9 +108,7 @@ def show_point_order(score_file):
             if len(row) < 3:
                 continue
             name = row[0]
-            sender_count = int(row[1]) if row[1].isdigit() else 0
-            attendance_count = int(row[2]) if row[2].isdigit() else 0
-            total_score = sender_count + attendance_count
+            total_score = int(row[4]) if row[4].isdigit() else 0
             scores[name] = total_score
     # Sort scores from highest to lowest
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)

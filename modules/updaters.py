@@ -128,3 +128,34 @@ def update_special_points(valid_names, score_file):
             writer.writerow(row)
 
     print("Special scores updated successfully.")
+
+def update_member_list(member_file, score_file):
+    valid_credit = [299792458, 2718281828, 3141592654, 1414213562, 'Inuke', 'Silvernuke']
+    new_name = query.get_input_with_quit('New member name: ')
+    credentials = query.get_input_with_quit('Please enter credentials to edit document: ')
+    if credentials not in valid_credit:
+        print("Operation cancelled.")
+        return
+    if not new_name:
+        print("Operation cancelled.")
+        return
+    with open(member_file, 'r') as f:
+        members = [line.strip() for line in f.readlines()]
+    if new_name in members:
+        print("Member already exists, please pick a new name.")
+        return
+    members.append(new_name)
+    members.sort()
+    with open(member_file, 'w') as f:
+        f.write('\n'.join(members) + '\n')
+    with open(score_file, 'r') as f:
+        reader = csv.reader(f)
+        header = next(reader)  
+        scores = list(reader) 
+    scores.append([new_name, '0', '0', '0', '0'])
+    scores.sort(key=lambda x: x[0])
+    with open(score_file, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(header) 
+        writer.writerows(scores)
+    print("Member list updated successfully.")

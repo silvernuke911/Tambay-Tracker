@@ -19,6 +19,7 @@ def get_yes_no_input(prompt_text, raw_data_file, score_file, date_file, max_atte
         attempts += 1
     print("Too many invalid attempts. Exiting program.")
     # print("Please stop putting wrong inputs, I will destroy you and your entire fucking bloodline, it's a yes/no question why you gotta put in random shit you fucking retard")
+    input('Press enter')
     safe_exit.safe_exit(raw_data_file, score_file, date_file)
 
 def get_option_input(options, raw_data_file, score_file, date_file, max_attempts=5):
@@ -52,7 +53,8 @@ def prompt_for_integer(prompt_message):
 
 def save_image_query(filename,  raw_data_file, score_file, date_file):
     response = get_yes_no_input('Do you want to save the image? (Y/N) :', raw_data_file, score_file, date_file)
-    if response == 'y':
+    if response == 'y' or '':
+        print('Loading image...')
         current_datetime = datetime.now().strftime(r"%Y%m%d-%H%M%S")
         plt.savefig(f'Images\\{filename} {current_datetime}.png', format="png", dpi=300)
         print('Image saved')
