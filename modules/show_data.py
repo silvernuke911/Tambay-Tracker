@@ -173,7 +173,9 @@ def plot_date_frequency(raw_data_file, score_file, date_file):
     plt.title(r'\textbf{Attendance Frequency}')
     plt.xticks(rotation=60, ha='right')
     plt.tight_layout()
-
+    max_count = max(filtered_counts)
+    plt.yticks(range(0, max_count, 5))
+    
     # Prompt for image saving
     query.save_image_query('Date Frequency', raw_data_file, score_file, date_file)
     plt.show()
