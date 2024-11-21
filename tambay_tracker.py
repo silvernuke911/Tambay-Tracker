@@ -12,7 +12,7 @@ member_file   = r'Data\member_list.csv'
 
 # Valid entries / options
 valid_names = validators.load_valid_names(member_file)
-program_options = ['Enter new entry','Show raw data', 'Update scores', 'Show Points', 'Show Point Order', 'Show Date Frequency', 'Enter Special Points', 'Enter New Member','Exit']
+program_options = ['Enter new entry','Show raw data', 'Update scores', 'Show Points', 'Show Point Order', 'Show Date Frequency', 'Show Attendance Proportion', 'Enter Special Points', 'Enter New Member','Exit']
 
 def main():
     prompt = entry.starting_menu(raw_data_file, score_file, date_file) 

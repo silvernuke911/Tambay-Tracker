@@ -97,10 +97,13 @@ def handle_option_choice(option_choice, raw_data_file, score_file, date_file, va
         print("Showing Date Frequency List and Graph...")
         show_data.plot_date_frequency(raw_data_file, score_file, date_file)
     elif option_choice == 7:
-        updaters.update_special_points(valid_names, score_file)
+        print("Showing Attendance Proportion ...")
+        show_data.show_date_frequency_proportion(raw_data_file, date_file)
     elif option_choice == 8:
-        updaters.update_member_list(member_file, score_file)
+        updaters.update_special_points(valid_names, score_file)
     elif option_choice == 9:
+        updaters.update_member_list(member_file, score_file)
+    elif option_choice == 10:
         exit_question = query.get_yes_no_input('Are you sure you want to exit? (Y/N): ', raw_data_file, score_file, date_file)
         if exit_question == 'y':
             safe_exit.safe_exit(raw_data_file, score_file, date_file)

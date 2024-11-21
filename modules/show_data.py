@@ -180,3 +180,5 @@ def plot_date_frequency(raw_data_file, score_file, date_file):
     query.save_image_query('Date Frequency', raw_data_file, score_file, date_file)
     plt.show()
 
+def show_date_frequency_proportion(raw_data_file, date_file):
+    return
