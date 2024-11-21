@@ -1,6 +1,5 @@
 import csv
 from collections import defaultdict
-
 from modules import validators
 from modules import query
 
@@ -60,17 +59,41 @@ def update_scores(raw_data_file, score_file):
             })
     print("Scores updated successfully.")
 
-def update_date_freq(raw_data_file, date_file):
+def add_mem_count(date_file, valid_names):
+    from datetime import datetime
+    # Get today's date in the format MM/DD/YY
+    today = datetime.now().strftime('%m/%d/%y')
+    updated_data = []
+
+    # Read the date_file and update today's member count
+    with open(date_file, mode='r') as file:
+        lines = file.readlines()
+        updated_data.append(lines[0].strip())  # Add header row
+        for line in lines[1:]:
+            date, attendance, member_count = line.strip().split(',')
+            if date == today:
+                member_count = len(valid_names)  # Update member count for today
+            updated_data.append(f"{date},{attendance},{member_count}")
+
+    # Write the updated data back to the date_file
+    with open(date_file, mode='w') as file:
+        file.write('\n'.join(updated_data))
+
+def update_date_freq(raw_data_file, date_file, valid_names):
     date_attendance_count = defaultdict(set)  # Using a set to ensure uniqueness
-    
-    # Initialize attendance count from 'date_file'
+    member_counts = {}  # To store member counts from date_file
+
+    # Initialize attendance count and member count from 'date_file'
     with open(date_file, mode='r') as date_file_:
         reader = csv.reader(date_file_)
         next(reader)  # Skip header
         for row in reader:
             if row:
                 date = row[0].strip()
+                attendance = int(row[1].strip())
+                member_count = int(row[2].strip()) if row[2].strip().isdigit() else 0
                 date_attendance_count[date] = set()  # Initialize an empty set for each date
+                member_counts[date] = member_count  # Store the member count
 
     # Read entries from 'raw_data_file' and collect unique members per date
     with open(raw_data_file, mode='r') as data_file:
@@ -86,13 +109,18 @@ def update_date_freq(raw_data_file, date_file):
     # Calculate attendance count per date and write to 'date_file'
     with open(date_file, mode='w', newline='') as date_file_:
         writer = csv.writer(date_file_)
-        writer.writerow(["Date", "Attendance Count"])  # Write header
+        writer.writerow(["Date", "Attendance Count", "Member Count"])  # Write header
         for date, members in date_attendance_count.items():
-            writer.writerow([date, len(members)])  # Count unique members per date
+            attendance_count = len(members)  # Count unique members per date
+            member_count = member_counts.get(date, 0)  # Get stored member count
+            writer.writerow([date, attendance_count, member_count])  # Write attendance and member count
 
+    # Update today's member count using valid_names
+    add_mem_count(date_file, valid_names)
     print("Date attendance frequency updated successfully.")
 
 def update_special_points(valid_names, score_file):
+    valid_credit = ['299792458', '2.718281828', '3.141592654', '1.414213562', 'Inuke', 'Silvernuke']
     # Get recipient's name and validate it
     while True:
         name = query.get_input_with_quit("Recipient name: ")
@@ -108,6 +136,12 @@ def update_special_points(valid_names, score_file):
     # Get special points and validate it's an integer
     special_points = query.prompt_for_integer("Special points: ")
 
+    # Get credentials
+    credentials = query.get_input_with_quit('Please enter credentials to edit document: ')
+    if credentials not in valid_credit:
+        print("Operation cancelled.")
+        return
+    
     # Load current score data
     score_data = {}
     with open(score_file, 'r') as f:
@@ -130,13 +164,21 @@ def update_special_points(valid_names, score_file):
     print("Special scores updated successfully.")
 
 def update_member_list(member_file, score_file):
-    valid_credit = [299792458, 2718281828, 3141592654, 1414213562, 'Inuke', 'Silvernuke']
-    new_name = query.get_input_with_quit('New member name: ')
+    valid_credit = ['299792458', '2.718281828', '3.141592654', '1.414213562', 'Inuke', 'Silvernuke','Jieru']
+
+    attempts = 0
+    max_attempts = 5
+    while attempts < max_attempts:
+        new_name = query.get_input_with_quit('New member name: ').strip()
+        if new_name:  # Check if input is not blank
+            break
+        print("Name cannot be blank. Please try again.")
+        attempts += 1
+    if not new_name:
+        print("Maximum attempts reached. Exiting...")
+        return
     credentials = query.get_input_with_quit('Please enter credentials to edit document: ')
     if credentials not in valid_credit:
-        print("Operation cancelled.")
-        return
-    if not new_name:
         print("Operation cancelled.")
         return
     with open(member_file, 'r') as f:

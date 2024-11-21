@@ -6,11 +6,11 @@ from modules import show_data
 from modules import updaters
 from modules import safe_exit
 
-def starting_menu(raw_data_file, score_file, date_file):
+def starting_menu(raw_data_file, score_file, date_file, valid_names):
     print(f'--------------------------------\n WELCOME TO THE TAMBAY TRACKER!\n--------------------------------\n')
     print(f'================================')
     print(f'UP PI SIGMA FRATERNITY TAMBAY TRACKER \n CC: Juan. V\n')
-    return query.get_yes_no_input('Do you want to put a new entry? (Y/N): ', raw_data_file, score_file, date_file)
+    return query.get_yes_no_input('Do you want to put a new entry? (Y/N): ', raw_data_file, score_file, date_file, valid_names)
 
 def save_entry(raw_data_file,date, sender, members_present):
     # Saving the entry to a CSV file with ':' as the delimiter
@@ -83,29 +83,30 @@ def handle_option_choice(option_choice, raw_data_file, score_file, date_file, va
         show_data.show_raw_data(raw_data_file)
         print('\n')
     elif option_choice == 3:
-        print("Updating scores...")
+        print("Updating scores ...")
         updaters.update_scores(raw_data_file, score_file)
-        updaters.update_date_freq(raw_data_file, date_file)
+        updaters.update_date_freq(raw_data_file, date_file, valid_names)
     elif option_choice == 4:
-        print("Showing Points List...")
+        print("Showing Points List ...")
         show_data.show_points(score_file)
     elif option_choice == 5:
-        print("Showing Point Order List and Graph...")
+        print("Showing Point Order List and Graph ...")
         show_data.show_point_order(score_file)
-        show_data.visualize_data_ordered(raw_data_file, score_file, date_file)
+        show_data.visualize_data_ordered(raw_data_file, score_file, date_file,valid_names)
     elif option_choice == 6:
-        print("Showing Date Frequency List and Graph...")
-        show_data.plot_date_frequency(raw_data_file, score_file, date_file)
+        print("Showing Date Frequency List and Graph ...")
+        show_data.plot_date_frequency(raw_data_file, score_file, date_file, valid_names)
     elif option_choice == 7:
         print("Showing Attendance Proportion ...")
-        show_data.show_date_frequency_proportion(raw_data_file, date_file)
+        show_data.show_date_frequency_proportion(raw_data_file, date_file, valid_names, score_file)
     elif option_choice == 8:
+        print('Updating special points ...')
         updaters.update_special_points(valid_names, score_file)
     elif option_choice == 9:
         updaters.update_member_list(member_file, score_file)
-    elif option_choice == 10:
-        exit_question = query.get_yes_no_input('Are you sure you want to exit? (Y/N): ', raw_data_file, score_file, date_file)
-        if exit_question == 'y':
-            safe_exit.safe_exit(raw_data_file, score_file, date_file)
+    elif option_choice == 10 or option_choice == 'e':
+        exit_question = query.get_yes_no_input('Are you sure you want to exit? (Y/N): ', raw_data_file, score_file, date_file, valid_names)
+        if exit_question in ['y','']:
+            safe_exit.safe_exit(raw_data_file, score_file, date_file, valid_names)
         else:
             input('Returning to the main menu. Press enter')

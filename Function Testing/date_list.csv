@@ -1,4 +1,4 @@
-Date,Attendance Count,Member Count
+Date,Attendance Count, Member Count
 10/09/24,7,23
 10/10/24,8,23
 10/11/24,6,23
@@ -43,7 +43,7 @@ Date,Attendance Count,Member Count
 11/19/24,19,34
 11/20/24,7,34
 11/21/24,17,34
-11/22/24,0,34
+11/22/24,0,0
 11/23/24,0,0
 11/24/24,0,0
 11/25/24,0,0
