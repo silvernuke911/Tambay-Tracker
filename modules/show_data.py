@@ -71,13 +71,14 @@ def visualize_data_ordered(raw_data_file, score_file, date_file, valid_names):
     names, total_scores = zip(*sorted_scores)
     # Plot the bar graph
     plt.figure(figsize=(10, 6))
-    plt.bar(names, total_scores, color='b')
+    plt.bar(names, total_scores, color='b', zorder = 2)
     plt.xlabel('Brod Names')
     plt.ylabel('Total Score')
     plt.title(rf'\textbf{{Tambay Scores (As of {current_datetime})}}')
     plt.xticks(rotation=60, ha='right')
     max_score = max(total_scores)
     plt.yticks(range(0, max_score, 5))
+    plt.grid(axis='y', linestyle='--', zorder = 0)
     plt.tight_layout()
     query.save_image_query('Ordered Points', raw_data_file, score_file, date_file, valid_names)
     plt.show()
@@ -194,12 +195,13 @@ def plot_date_frequency(raw_data_file, score_file, date_file, valid_names):
 
     # Plot the bar graph
     plt.figure(figsize=(10, 6))
-    plt.bar(filtered_dates, filtered_counts, color='r')
+    plt.bar(filtered_dates, filtered_counts, color='r', zorder = 2)
     plt.xlabel('Date')
     plt.ylabel('Attendance Count')
     plt.title(r'\textbf{Attendance Frequency}')
     plt.xticks(rotation=60, ha='right')
     plt.tight_layout()
+    plt.grid(axis='y', linestyle='--', zorder = 0)
     max_count = max(filtered_counts)
     plt.yticks(range(0, max_count, 5))
     
@@ -236,7 +238,7 @@ def show_date_frequency_proportion(raw_data_file, date_file, valid_names, score_
 
     # Plot the bar graph
     plt.figure(figsize=(10, 6))
-    plt.bar(filtered_dates, filtered_proportions, color='b', zorder = 2)  # Use blue color for proportion
+    plt.bar(filtered_dates, filtered_proportions, color='g', zorder = 2) 
     plt.xlabel('Date')
     plt.ylabel(r'Attendance (\%)')
     plt.title(r'\textbf{Attendance Percentage compared to Total Member Count}')

@@ -139,7 +139,7 @@ def update_special_points(valid_names, score_file):
     # Get credentials
     credentials = query.get_input_with_quit('Please enter credentials to edit document: ')
     if credentials not in valid_credit:
-        print("Operation cancelled.")
+        print("Invalid credenitals, Operation cancelled.")
         return
     
     # Load current score data
@@ -179,7 +179,7 @@ def update_member_list(member_file, score_file):
         return
     credentials = query.get_input_with_quit('Please enter credentials to edit document: ')
     if credentials not in valid_credit:
-        print("Operation cancelled.")
+        print("Invalid credentials, operation cancelled.")
         return
     with open(member_file, 'r') as f:
         members = [line.strip() for line in f.readlines()]

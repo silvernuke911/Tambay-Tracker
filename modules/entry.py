@@ -68,7 +68,7 @@ def get_entry_input(raw_data_file, score_file, date_file, valid_names):
         save_entry(raw_data_file, date, sender, members_present)
 
         # Ask if the user wants to add another entry
-        another_entry = query.get_yes_no_input('Do you want to add another entry? (Y/N): ', raw_data_file, score_file, date_file)
+        another_entry = query.get_yes_no_input('Do you want to add another entry? (Y/N): ', raw_data_file, score_file, date_file, valid_names)
         if another_entry == 'n':
             break
     print("Entry not saved. Please debug")
