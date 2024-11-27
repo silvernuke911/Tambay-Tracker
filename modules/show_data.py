@@ -251,4 +251,3 @@ def show_date_frequency_proportion(raw_data_file, date_file, valid_names, score_
     query.save_image_query('Date Frequency Proportion', raw_data_file, score_file, date_file, valid_names)
     plt.grid(axis='y', linestyle='--', zorder = 0)
     plt.show()
-
