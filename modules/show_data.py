@@ -199,7 +199,7 @@ def plot_date_frequency(raw_data_file, score_file, date_file, valid_names):
     plt.xlabel('Date')
     plt.ylabel('Attendance Count')
     plt.title(r'\textbf{Attendance Frequency}')
-    plt.xticks(rotation=60, ha='right')
+    plt.xticks(rotation=90, ha='right', fontsize = 8)
     plt.tight_layout()
     plt.grid(axis='y', linestyle='--', zorder = 0)
     max_count = max(filtered_counts)
@@ -242,7 +242,7 @@ def show_date_frequency_proportion(raw_data_file, date_file, valid_names, score_
     plt.xlabel('Date')
     plt.ylabel(r'Attendance (\%)')
     plt.title(r'\textbf{Attendance Percentage compared to Total Member Count}')
-    plt.xticks(rotation=60, ha='right')
+    plt.xticks(rotation=90, ha='right', fontsize = 8)
     plt.yticks(list(range(0,120,20)))
     plt.tight_layout()
     plt.ylim(0, 100)  # Set y-axis limit to 0-100% for clarity
