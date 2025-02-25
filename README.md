@@ -29,3 +29,19 @@ Functionalities to remove special points and remove names to be added later. A m
 
 To new developers of this project, add your name to the count
 1. Juan V.
+
+## Tambay Tracker 2.0
+
+A New Semester is Afoot!
+
+Well, it's the same old thing except I plan on using pandas and implementing JL's requests of showing individual attendance points, so and so. Just an update of the old codebase, really. Maybe the next few updates, we're gonna do JavaScript as a website, but oh well.
+
+Work on this on your free time, we're gonna get there.
+
+# Tasks
+[ ] Pandas Implementation
+[ ] Every Individual has a graph
+[ ] Remove Weekeds
+[ ] Only show weekly
+[ ] Add more graph information such as days and all
+[ ] Improve UI
