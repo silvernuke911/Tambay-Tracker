@@ -12,7 +12,7 @@ def days_in_month(month, year):
     else:
         return 31  # All other months have 31 days
 
-for yr in range(24,26):  # Loop over years (e.g., 2024 and 2025)
+for yr in range(24,30):  # Loop over years (e.g., 2024 and 2025)
     for mo in range(1, 12 + 1):  # Loop over each month
         for day in range(1, days_in_month(mo, yr) + 1):  # Loop up to the correct day count
             print(f'{mo:02}/{day:02}/{yr},0,0')
