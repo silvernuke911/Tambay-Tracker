@@ -39,9 +39,9 @@ Well, it's the same old thing except I plan on using pandas and implementing JL'
 Work on this on your free time, we're gonna get there.
 
 # Tasks
-[ ] Pandas Implementation
-[ ] Every Individual has a graph
-[ ] Remove Weekeds
-[ ] Only show weekly
-[ ] Add more graph information such as days and all
-[ ] Improve UI
+- [ ] Implement Pandas
+- [ ] Generate Graphs for Each Individual
+- [ ] Remove Weekends from Attendance Data
+- [ ] Display Only Weekly Attendance
+- [ ] Add More Graph Information (e.g., Days)
+- [ ] Improve UI
