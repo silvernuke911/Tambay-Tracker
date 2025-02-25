@@ -36,6 +36,8 @@ A New Semester is Afoot!
 
 Well, it's the same old thing except I plan on using pandas and implementing JL's requests of showing individual attendance points, so and so. Just an update of the old codebase, really. Maybe the next few updates, we're gonna do JavaScript as a website, but oh well.
 
+Current developer is yours truly, but an assistant to me is Jam Fernandez for the data collection, which is lovely. 
+
 Work on this on your free time, we're gonna get there.
 
 # Tasks
