@@ -40,10 +40,116 @@ Current developer is yours truly, but an assistant to me is Jam Fernandez for th
 
 Work on this on your free time, we're gonna get there.
 
+---- 
+
+ADD AN OPERATING SYSTEM EMULATOR WITH Commands
+
+# Tambay Tracker Operating System Emulator
+
+## Commands
+Follows a **verb-noun** system.
+
+### Nouns
+
+#### `help`
+- Shows all the commands in the system.
+- `\command` shows help for the specific command.
+
+#### `add`
+- Add new entries:
+  - `entry` - Add new entry.
+  - `new member` - Add new member.
+  - `special points` - Add special points.
+  - `` - (empty string) Shortcut for help; shows available commands.
+
+#### `list`
+- Lists entries in plain text.
+  - `raw points` - Lists the raw points.
+  - `date frequency` - Lists the date frequency.
+    - `--rm wknd` - Remove weekends.
+    - `--start` - Set start date (default: start of semester).
+    - `--end` - Set end date (default: today).
+  - `attendance proportion` - Lists attendance proportion.
+    - `--rm wknd` - Remove weekends.
+    - `--start` - Set start date (default: start of semester).
+    - `--end` - Set end date (default: today).
+  - `point order` - Lists point order.
+  - `individual attendance` - Lists individual attendance.
+    - `--name` - Enter name.
+  - `` - Shortcut for help.
+
+#### `show`
+- Displays graphs.
+  - `point order` - Graphs point order.
+    - `--top` - Shows top N pointers.
+    - `--save` - Save image (default: yes).
+    - `--unsave` - Do not save image.
+  - `attendance frequency` - Graphs attendance frequency.
+    - `--rm wknd` - Remove weekends (default: no).
+    - `--start date` - Set start date (default: start of semester).
+    - `--end date` - Set end date (default: now).
+    - `--save` - Save image (default: yes).
+    - `--unsave` - Do not save image.
+  - `attendance proportion` - Graphs attendance proportion.
+    - `--rm wknd` - Remove weekends (default: no).
+    - `--start date` - Set start date (default: start of semester).
+    - `--end date` - Set end date (default: now).
+    - `--save` - Save image (default: yes).
+    - `--unsave` - Do not save image.
+  - `individual attendance` - Graphs individual attendance.
+    - `--name` - Specify name.
+    - `--rm wknd` - Remove weekends (default: no).
+    - `--start date` - Set start date (default: start of semester).
+    - `--end date` - Set end date (default: now).
+    - `--save` - Save image (default: yes).
+    - `--unsave` - Do not save image.
+
+#### `update`
+- Updates all necessary data.
+  - `--scores` - Updates only scores.
+
+#### `exit`
+- Exits the program.
+- Requires confirmation with `y` or `n`.
+
+#### `e`
+- Shortcut for `exit`.
+
+#### `home`
+- Returns to the home page header.
+
+#### `hm`
+- Shortcut for `home`.
+
+#### `quit`
+- Quits the entry and returns to home.
+
+#### `qt`
+- Shortcut for `quit`.
+
+#### `clearscreen`
+- Clears the screen.
+
+#### `cls`
+- Shortcut for `clearscreen`.
+
+---
+
+## Error Handling
+If an invalid command is entered:
+```plaintext
+"{term} is not in the accepted valid commands for {noun}".
+```
+
+---
+
 # Tasks
 - [ ] Implement Pandas
+- [ ] Make OS commands
 - [ ] Generate Graphs for Each Individual
 - [ ] Remove Weekends from Attendance Data
 - [ ] Display Only Weekly Attendance
 - [ ] Add More Graph Information (e.g., Days)
 - [ ] Improve UI
+
+
