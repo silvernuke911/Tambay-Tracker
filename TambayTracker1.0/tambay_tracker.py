@@ -4,11 +4,19 @@ from modules import query
 
 ## Something something, comment here on the purpose of this shit and shit like that, something something.
 
+<<<<<<< HEAD
 # Data files
 raw_data_file = r'TambayTracker1.0\Data\tambay_tracker_data.csv'
 date_file     = r'TambayTracker1.0\Data\date_list.csv'
 score_file    = r'TambayTracker1.0\Data\scores_list.csv'
 member_file   = r'TambayTracker1.0\Data\member_list.csv'
+=======
+# Data files path
+raw_data_file = r'Data\tambay_tracker_data.csv'
+date_file     = r'Data\date_list.csv'
+score_file    = r'Data\scores_list.csv'
+member_file   = r'Data\member_list.csv'
+>>>>>>> ff2dc8ade2718d57f3bc69d10edfcedf300293ca
 
 # Valid entries / options
 valid_names = validators.load_valid_names(member_file)
@@ -56,5 +64,6 @@ def main():
             member_file
         )
 
+# Run main program 
 if __name__ == '__main__':
     main()
