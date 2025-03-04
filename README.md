@@ -4,6 +4,7 @@ A terminal application to track the tambay attendance and for point marking
 
 The official tambay tracker of UP PSF 2425A.
 
+# Tambay Tracker 1.0
 ## Operation
 
 Can show data in graphs for visual analysis, add attendance entries, show points and raw data, and add / delete members from the system, has additional dependencies such as the presence of database csv's to store data, but otherwise, completely understandable and friendly for users.
@@ -30,7 +31,7 @@ Functionalities to remove special points and remove names to be added later. A m
 To new developers of this project, add your name to the count
 1. Juan V.
 
-## Tambay Tracker 2.0
+# Tambay Tracker 2.0
 
 A New Semester is Afoot!
 
@@ -44,7 +45,7 @@ Work on this on your free time, we're gonna get there.
 
 ADD AN OPERATING SYSTEM EMULATOR WITH Commands
 
-# Tambay Tracker Operating System Emulator
+## Tambay Tracker Operating System Emulator
 
 ## Commands
 Follows a **verb-noun** system.
