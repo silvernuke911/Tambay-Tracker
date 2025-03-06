@@ -3,6 +3,7 @@ The tracker follows a verb-noun-flags command system.
 Available commands:
     help    - Show all commands or help for a specific command.
     add     - Add new entries, members, or special points.
+    remove  - Remove entries, members, or special points.
     list    - List entries, raw points, and other data.
     show    - Display graphs for necessary data
     update  - Update data

@@ -1,0 +1,3 @@
+Available commands:
+    new member      - Remove an existing member.
+    special points  - Remove special points from the records.

@@ -72,7 +72,9 @@ def process_update(noun, flags):
 def process_git(noun, flags):
     match noun:
         case None:
-            print("Missing git command. Available: add, commit, push")
+            print("Missing git command. Available: add, commit, push, status")
+        case 'status':
+            subprocess.run(["git", "status"])
         case "add":
             print("Executing: git add .")
             subprocess.run(["git", "add", "."])
@@ -88,7 +90,25 @@ def process_git(noun, flags):
             subprocess.run(["git", "push"])
         case _:
             print(f"Unknown git command: {noun}")
-            
+
+def process_color(noun,flags):
+    color = noun
+    utils.set_color(color)
+    return
+def process_remove(noun, flags):
+    match noun:
+        case None:
+            print(f"Command 'remove' cannot have empty argument. Here are some available commands")
+            print(filepaths.help_rm_file)
+        case 'help':
+            print(filepaths.help_rm_file)
+        case 'new member':
+            utils.temporary_output()
+        case 'special points':
+            utils.temporary_output()
+        case _:
+            print(f"'{noun}' is not a recognized noun for 'remove'")
+
 def execute_command(verb, noun, flags):
     match verb:
         case None:
@@ -131,6 +151,10 @@ def execute_command(verb, noun, flags):
             utils.set_color('g')
         case 'git':
             process_git(noun, flags)
+        case 'color':
+            process_color(noun, flags)
+        case 'remove' | 'rm':
+            process_remove(noun, flags)
         case _:
             print(f"Command '{verb}' is not a valid command. Please type 'help' for more information.")
     print()
