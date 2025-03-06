@@ -1,0 +1,16 @@
+The tracker follows a verb-noun-flags command system. 
+
+Available commands:
+    help    - Show all commands or help for a specific command.
+    add     - Add new entries, members, or special points.
+    list    - List entries, raw points, and other data.
+    show    - Display graphs for necessary data
+    update  - Update data
+    exit    - Exit the program.
+    e       - shortcut for Exit
+    home    - Return to the home page header.
+    hm      - shortcut for home
+    quit    - Quit the entry and return to home.
+    cls     - Clear the screen.
+
+For help with the available subcommands, type help {command}.

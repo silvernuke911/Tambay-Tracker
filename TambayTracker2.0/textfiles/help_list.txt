@@ -1,0 +1,17 @@
+Available commands and flags for 'list':
+    raw points                  - List the raw points of all members.
+    
+    date frequency              - List the frequency of entries per date.
+        --rmwknd                 - Remove weekends.
+        --startdate <YYYY-MM-DD> - Set the start date (default: start of semester).
+        --enddate <YYYY-MM-DD>   - Set the end date (default: today).
+    
+    attendance proportion       - List the attendance proportion of members.
+        --rmwknd                 - Remove weekends.
+        --startdate <YYYY-MM-DD> - Set the start date (default: start of semester).
+        --enddate <YYYY-MM-DD>   - Set the end date (default: today).
+    
+    point order                 - List members in order of points.
+    
+    individual attendance       - List an individual's attendance records.
+        -name <NAME>            - Specify the name.
