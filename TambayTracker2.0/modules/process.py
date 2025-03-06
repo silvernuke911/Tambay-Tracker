@@ -5,6 +5,7 @@ from modules import adder
 from modules import shower
 
 import subprocess
+import pandas as pd
 
 def process_add(noun, flags):
     match noun:
@@ -32,7 +33,7 @@ def process_list(noun, flags):
         case 'raw points' | 'raw data':
             lister.list_raw_data()
         case 'date frequency':
-            utils.temporary_output()
+            lister.list_date_frequency()
         case 'attendance proportion':
             utils.temporary_output()
         case 'point order':
@@ -118,7 +119,7 @@ def execute_command(verb, noun, flags):
         case None:
             print()
             return 
-        case 'exit' | 'e':
+        case 'exit' | 'e' | '.':
             print('Exiting...')
             exit()
         case 'help' | 'h':
