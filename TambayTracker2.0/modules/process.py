@@ -1,5 +1,8 @@
 from modules import utils
 from modules import filepaths
+from modules import lister
+from modules import adder
+from modules import shower
 
 import subprocess
 
@@ -10,7 +13,7 @@ def process_add(noun, flags):
             print(filepaths.help_add_file)
         case 'help':
             print(filepaths.help_add_file)
-        case 'entry':
+        case 'entry' | 'new entry':
             utils.temporary_output()
         case 'new member':
             utils.temporary_output()
@@ -26,8 +29,8 @@ def process_list(noun, flags):
             print(filepaths.help_list_file)
         case 'help':
             print(filepaths.help_list_file)
-        case 'raw points':
-            utils.temporary_output()
+        case 'raw points' | 'raw data':
+            lister.list_raw_data()
         case 'date frequency':
             utils.temporary_output()
         case 'attendance proportion':
@@ -95,6 +98,7 @@ def process_color(noun,flags):
     color = noun
     utils.set_color(color)
     return
+
 def process_remove(noun, flags):
     match noun:
         case None:
@@ -129,8 +133,12 @@ def execute_command(verb, noun, flags):
                     print(filepaths.help_show_file)
                 case 'update':
                     print(filepaths.help_update_file)
-                case _:
+                case 'remove':
+                    print(filepaths.help_rm_file)
+                case ('exit'|'home')|('cls'|'quit'):
                     print(f"Command '{noun}' does not have subcommands.\nType 'help' for general command purpose" )
+                case _:
+                    print(f"Command '{noun} is not a valid command")
         case 'add':
             process_add(noun, flags)
         case 'list':
@@ -138,7 +146,7 @@ def execute_command(verb, noun, flags):
         case 'show':
             process_show(noun, flags)
         case 'update':
-            process_update(flags)
+            process_update(noun, flags)
         case 'home' | 'hm':
             print('Returning to home...')
             print('\033c', end='')
@@ -158,4 +166,4 @@ def execute_command(verb, noun, flags):
         case _:
             print(f"Command '{verb}' is not a valid command. Please type 'help' for more information.")
     print()
-    return 
+    return

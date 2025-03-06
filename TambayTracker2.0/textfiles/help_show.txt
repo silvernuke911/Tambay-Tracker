@@ -1,27 +1,32 @@
+-------------------------------------------------------------------------------------
 Available commands and flags for 'show':
-    point order                - Display a graph of the point order.
-        --top <N>               - Show the top N pointers.
-        --save                  - Save the image (default: yes).
-        --unsave                - Do not save the image.
+    point order                    - Display a graph of the point order.
+        --top <N>                  - Show the top N pointers.
+        --save                     - Save the image (default: yes).
+        --unsave                   - Do not save the image.
     
-    attendance frequency          - Display a graph of attendance frequency.
+    attendance frequency           - Display a graph of attendance frequency.
+        --rmwknd                   - Remove weekends (default: no).
+        --startdate <YYYY-MM-DD>   - Set the start date (default: start of semester).
+        --enddate <YYYY-MM-DD>     - Set the end date (default: now).
+        --wkave                    - Show the average week attendance.
+        --save                     - Save the image (default: yes).
+        --unsave                   - Do not save the image.
+    
+    attendance proportion          - Display a graph of attendance proportion.
         --rmwknd                   - Remove weekends (default: no).
         --startdate <YYYY-MM-DD>   - Set the start date (default: start of semester).
         --enddate <YYYY-MM-DD>     - Set the end date (default: now).
         --save                     - Save the image (default: yes).
+        --wkave                    - Show the average week attendance.
         --unsave                   - Do not save the image.
     
-    attendance proportion         - Display a graph of attendance proportion.
-        --rmwknd                   - Remove weekends (default: no).
-        --startdate <YYYY-MM-DD>   - Set the start date (default: start of semester).
-        --enddate <YYYY-MM-DD>     - Set the end date (default: now).
-        --save                     - Save the image (default: yes).
-        --unsave                   - Do not save the image.
-    
-    individual attendance         - Display a graph of an individual's attendance.
+    individual attendance          - Display a graph of an individual's attendance.
         --name <NAME>              - Specify the name.
         --rmwknd                   - Remove weekends (default: no).
+        --wkave                    - Show the average week attendance.
         --startdate <YYYY-MM-DD>   - Set the start date (default: start of semester).
         --enddate <YYYY-MM-DD>     - Set the end date (default: now).
         --save                     - Save the image (default: yes).
         --unsave                   - Do not save the image.
+-------------------------------------------------------------------------------------

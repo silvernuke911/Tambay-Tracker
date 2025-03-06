@@ -1,3 +1,4 @@
+-----------------------------------------------------------------
 The tracker follows a verb-noun-flags command system. 
 
 Available commands:
@@ -15,3 +16,4 @@ Available commands:
     cls     - Clear the screen.
 
 For help with the available subcommands, type help {command}.
+-----------------------------------------------------------------
