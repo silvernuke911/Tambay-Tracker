@@ -2,8 +2,6 @@ from modules import utils
 from modules import filepaths
 from modules import execute
 
-        # utils.input_analyzer(verb, noun, flags)
-
 def main():
     print('\033c', end='')
     utils.set_color('g')

@@ -16,4 +16,5 @@ def validate_member(name):
     valid_names = member_file['Name'].str.strip().str.lower().tolist()
     if name in valid_names:
         return True
+    else:
         return False

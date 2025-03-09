@@ -31,7 +31,7 @@ help_rm_file        = utils.text_reader(help_rm_filepath)
 help_color_file     = utils.text_reader(help_color_filepath)
 
 
-# ✅ FUNCTIONS TO LOAD DATAFRAMES (ALWAYS UPDATED)
+# FUNCTIONS TO LOAD DATAFRAMES (ALWAYS UPDATED)
 def load_raw_data():
     return pd.read_csv(raw_data_filepath)
 def load_date_data():

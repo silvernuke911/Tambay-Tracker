@@ -3,6 +3,7 @@ from modules import filepaths
 from modules import lister
 from modules import adder
 from modules import shower
+from modules import updaters
 
 import subprocess
 import pandas as pd
@@ -70,8 +71,10 @@ def p_update(noun, flags):
             print(filepaths.help_update_file)
         case 'help':
             print(filepaths.help_update_file)
-        case 'scores':
-            utils.temporary_output()
+        case 'scores' | 's':
+            updaters.update_scores()
+        case 'date frequency'| 'df':
+            updaters.update_date_frequency()
         case _:
             print(f"'{noun}' is not a recognized noun for 'update'")
 
@@ -161,7 +164,7 @@ def p_help(noun, flags):
                 'remove': filepaths.help_rm_file,       'rm' : filepaths.help_rm_file,
                 'color' : filepaths.help_color_file,    'clr': filepaths.help_color_file
             }
-    nosubcommand_nouns = {'exit', 'e', '.' 'home', 'cls', 'quit', 'qt', 'hm', 'clearscreen'}
+    nosubcommand_nouns = {'exit', 'e', '.' 'home', 'cls', 'quit', 'qt', 'hm', 'clearscreen', 'help', 'note'}
     match noun:
         case _ if noun in nosubcommand_nouns:
             print(f"Command '{noun}' does not have subcommands.\nType 'help' for general command purpose")
@@ -179,7 +182,6 @@ def p_clearscreen():
     return
 
 def p_none():
-    print()
     return 
 
 def p_rest(verb, noun, flags):

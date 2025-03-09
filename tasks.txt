@@ -1,4 +1,6 @@
 [ ] Add functionality
+    Update and scoring logic
+        Calculate scores
     List functions 
 -        list members 
     Add functions

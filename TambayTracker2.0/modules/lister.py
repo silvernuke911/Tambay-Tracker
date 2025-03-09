@@ -1,6 +1,6 @@
 from modules import filepaths
-from modules import updaters
 from modules import utils
+
 def list_members():
     member_list = filepaths.load_member_data().copy()
     member_list = member_list.reset_index(drop=True)
@@ -25,10 +25,8 @@ def list_raw_data():
     return
 
 def list_date_frequency():
-    updaters.update_date_frequency()
-    date_points = filepaths.load_date_data().copy()
-    print(date_points)
-
+    utils.temporary_output()
+    
 def list_attendance_proportion():
     utils.temporary_output()
 

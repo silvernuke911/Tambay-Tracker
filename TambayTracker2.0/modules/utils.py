@@ -1,6 +1,4 @@
 import shlex  
-import csv 
-import os 
 
 def text_reader(filepath):
     with open(filepath, "r") as file:

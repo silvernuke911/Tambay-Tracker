@@ -20,6 +20,6 @@ Available commands and flags for 'list':
 
     individual attendance        - List an individual's attendance records.
         --name <NAME>            - Specify the name.
-        --rmwknd                 - Remove weekends.
+        --rmwknd                a - Remove weekends.
         --wkave                  - List the average weekly attendance.
 -------------------------------------------------------------------------------------
