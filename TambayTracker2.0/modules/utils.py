@@ -73,8 +73,8 @@ def input_analyzer(verb, noun, flags):
     print('flags : ', flags)
     
 def temporary_output():
-    print('Nothing to see here yet')
-
+    output = text_reader(r'TambayTracker2.0\textfiles\temp_output.txt')
+    print(output)
 
 def parse_command(command):
     try:

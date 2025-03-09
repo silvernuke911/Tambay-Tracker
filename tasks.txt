@@ -1,0 +1,11 @@
+[ ] Add functionality
+    List functions 
+    Add functions 
+    Show functions
+[ ] Generate data
+[ ] Generate Graphs for Each Individual
+[ ] Remove Weekends from Attendance Data
+[ ] Display Only Weekly Attendance
+[ ] Add More Graph Information (e.g., Days)
+[ ] Improve UI
+[ ] Add notes system

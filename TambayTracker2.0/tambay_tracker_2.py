@@ -1,6 +1,6 @@
 from modules import utils
 from modules import filepaths
-from modules import process
+from modules import execute
 
         # utils.input_analyzer(verb, noun, flags)
 
@@ -11,7 +11,7 @@ def main():
     while True:
         command = utils.prompt()
         verb, noun, flags = utils.parse_command(command)
-        process.execute_command(verb, noun, flags)
+        execute.execute_command(verb, noun, flags)
         
 if __name__ == "__main__":
     main()
