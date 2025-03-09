@@ -1,0 +1,6 @@
+-------------------------------------------------------------------------------------
+Available commands for 'add':
+    entry          - Add a new entry.
+    new member     - Add a new member.
+    special points - Add special points.
+-------------------------------------------------------------------------------------
