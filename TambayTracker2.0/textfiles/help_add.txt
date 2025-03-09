@@ -5,4 +5,4 @@ Available commands for 'add':
     special points - Add special points.
 
 This returns a prompt for needed information.
--------------------------------------------------------------------------------------a
+-------------------------------------------------------------------------------------

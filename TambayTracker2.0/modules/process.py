@@ -191,6 +191,7 @@ def p_rest(verb, noun, flags):
 def p_note(noun, flags):
     ## enters a note in a text file written in a different folder
     ## nouns : help, entry, read
-    pass 
+    utils.temporary_output()
+    return
 
 
