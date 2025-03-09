@@ -30,9 +30,9 @@ def p_list(noun, flags):
             print(filepaths.help_list_file)
         case 'help':
             print(filepaths.help_list_file)
-        case 'members':
+        case 'members' | 'member':
             lister.list_members()
-        case 'raw points' | 'raw data':
+        case 'raw points' | 'raw data' | 'raw':
             lister.list_raw_data()
         case 'date frequency':
             lister.list_date_frequency()
@@ -141,6 +141,7 @@ def p_exit():
             print('Please enter a valid answer')
             count += 1
     print('Maximum tries exceeded. Returning to main program.')
+    return
 
 
 def p_home():
@@ -166,6 +167,7 @@ def p_help(noun, flags):
             print(f"Command '{noun}' does not have subcommands.\nType 'help' for general command purpose")
         case _:
             print(help_files.get(noun, f"Command '{noun}' is not a valid command"))
+    return
             
 def p_quit(noun, flags):
     print('Quitting entry and returning to home...')
@@ -175,6 +177,15 @@ def p_clearscreen():
     print('\033c', end='')  
     utils.set_color('g')
     return
+
+def p_none():
+    print()
+    return 
+
+def p_rest(verb, noun, flags):
+    print(f"Command '{verb}' is not a valid command. Please type 'help' for more information.")
+    return 
+
 def p_note(noun, flags):
     ## enters a note in a text file written in a different folder
     ## nouns : help, entry, read

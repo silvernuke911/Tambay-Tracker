@@ -1,4 +1,6 @@
 import shlex  
+import csv 
+import os 
 
 def text_reader(filepath):
     with open(filepath, "r") as file:
@@ -9,6 +11,23 @@ def text_writer(filepath, entry):
     with open(filepath, 'a') as file:
         file.write(entry + '\n')
     print("Entry added successfully.")
+
+def yes_no_query(prompt, limit=5):
+    count = 0
+    while count < limit:
+        query = input(prompt).strip()
+        if query in ['y', ""]:
+            return True 
+        elif query == 'n':
+            return False
+        else:
+            print(f'{query} is not a valid answer, please enter Y/N')
+            count += 1
+    print('Exceeded invalid answer limit, returning to main program')
+    return True 
+    
+def sepline(width, char = '-'):
+    return char*width
 
 # Dictionary mapping color names to ANSI codes
 color_codes = {

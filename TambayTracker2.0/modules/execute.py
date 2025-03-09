@@ -1,11 +1,10 @@
 from modules import process
 def execute_command(verb, noun, flags):
     match verb:
-        case None:
-            print()
-            return 
         case '..'|',,': # edit this out later, this is for quick exits only
             exit()
+        case None:
+            process.p_none()
         case 'exit' | 'e' | '.':
             process.p_exit()
         case 'help' | 'h':
@@ -33,6 +32,6 @@ def execute_command(verb, noun, flags):
         case 'note':
             process.p_note(noun, flags)
         case _:
-            print(f"Command '{verb}' is not a valid command. Please type 'help' for more information.")
+            process.p_rest(verb, noun, flags)
     print()
     return

@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------------
 Available commands and flags for 'list':
     raw points                   - List the raw points of all members.
-    
+    members                      - List the current members
     date frequency               - List the frequency of entries per date.
         --rmwknd                 - Remove weekends.
         --startdate <YYYY-MM-DD> - Set the start date (default: start of semester).

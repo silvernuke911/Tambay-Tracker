@@ -1,6 +1,10 @@
 [ ] Add functionality
     List functions 
-    Add functions 
+-        list members 
+    Add functions
+-       add new entry
+        add members
+        add special points
     Show functions
 [ ] Generate data
 [ ] Generate Graphs for Each Individual
