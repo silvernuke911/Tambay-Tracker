@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------------
+Available commands and flags for 'color':
+    <color>                      - Set the terminal text color to the given color.
+                                   Available colors: 
+                                   black, red, green, yellow, blue, magenta, cyan, white
+                                   bright black, bright red, bright green, bright yellow
+                                   bright blue, bright magenta, bright cyan, bright white
+    
+Example usage:
+    color red                    - Set text color to red.
+    color green                  - Set text color to green.
+    color reset                  - Reset to default terminal color.
+-------------------------------------------------------------------------------------

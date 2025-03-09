@@ -14,6 +14,8 @@ Available commands:
     hm      - shortcut for home
     quit    - Quit the entry and return to home.
     cls     - Clear the screen.
+    color   - Set the terminal color.
+    note    - Add a note (saved in a different file)
 
 For help with the available subcommands, type help {command}.
 -----------------------------------------------------------------
