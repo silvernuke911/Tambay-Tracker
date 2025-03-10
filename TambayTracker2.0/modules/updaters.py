@@ -10,11 +10,12 @@ def update_date_frequency():
         date_file = pd.read_csv(filepaths.date_filepath)
     except FileNotFoundError:
         print(f"{filepaths.date_filepath} not found. Creating new file...")
-        start_date = pd.to_datetime('01/30/25', format='%m/%d/%y')
+        start_date = pd.to_datetime('01/20/25', format='%m/%d/%y')
         end_date = pd.to_datetime('09/20/25', format='%m/%d/%y')
         date_range = pd.date_range(start=start_date, end=end_date, freq='D')
         date_file = pd.DataFrame({
             'Date': date_range.strftime('%m/%d/%y'),  # Fix the date format here
+            'Day': date_range.strftime('%A'),        # Add day of the week
             'Attendance Count': [0] * len(date_range),
             'Member Count': [0] * len(date_range)
         })
@@ -47,11 +48,11 @@ def update_date_frequency():
 
     # Convert the Date back to MM/DD/YY before saving
     date_file['Date'] = date_file['Date'].dt.strftime('%m/%d/%y')
+    date_file['Day'] = date_file['Date'].apply(lambda x: pd.to_datetime(x, format='%m/%d/%y').strftime('%A'))
 
     # Save the updated file
     date_file.to_csv(filepaths.date_filepath, index=False)
-    print(f'✅ Date frequency successfully updated and saved to {filepaths.date_filepath}.')
-
+    print(f'Date frequency successfully updated')
 
 
 
