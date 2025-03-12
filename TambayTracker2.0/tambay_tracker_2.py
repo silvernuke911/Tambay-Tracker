@@ -9,6 +9,7 @@ def main():
     while True:
         command = utils.prompt()
         verb, noun, flags = utils.parse_command(command)
+        # utils.input_analyzer(verb, noun, flags)
         execute.execute_command(verb, noun, flags)
         
 if __name__ == "__main__":

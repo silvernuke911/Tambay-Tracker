@@ -10,6 +10,9 @@ date_filepath     = r'TambayTracker2.0\data\date_list.csv'
 score_filepath    = r'TambayTracker2.0\data\score_data.csv'
 member_filepath   = r'TambayTracker2.0\data\member_list.csv'
 
+# Image Save paths
+imsave_path = r'TambayTracker2.0\images'
+
 # Text files
 home_filepath           = r'TambayTracker2.0\textfiles\homepage.txt'
 help_filepath           = r'TambayTracker2.0\textfiles\help_general.txt'

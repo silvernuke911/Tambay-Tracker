@@ -210,9 +210,9 @@ def add_special_points():
             if points in ['quit', 'qt']:
                 print('Operation cancelled.')
                 return
-            if points < 0:
-                print('Points cannot be negative. Try again.')
-                continue
+            # if points < 0:
+            #     print('Points cannot be negative. Try again.')
+            #     continue
             break
         except ValueError:
             print('Invalid input. Please enter a valid integer.')

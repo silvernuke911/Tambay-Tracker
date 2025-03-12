@@ -32,17 +32,22 @@ def p_list(noun, flags):
         case 'help':
             print(filepaths.help_list_file)
         case 'members' | 'member':
-            lister.list_members()
+            lister.list_members(flags)
         case 'raw points' | 'raw data' | 'raw':
-            lister.list_raw_data()
-        case 'date frequency':
-            lister.list_date_frequency()
-        case 'attendance proportion':
-            lister.list_attendance_proportion()
-        case 'point order':
-            lister.list_point_order()
+            lister.list_raw_data(flags)
+        case 'date frequency' | 'af':
+            lister.list_date_frequency(flags)
+        case 'attendance proportion' | 'ap':
+            lister.list_attendance_proportion(flags)
+        case 'points' | 'point' |'p':
+            if not flags:  # Empty dictionary or None
+                lister.list_points()
+            elif flags.get('order'):
+                lister.list_point_order()
+            elif flags.get('name'):
+                lister.list_point_names()
         case 'individual attendance':
-            lister.list_individual_attendance()
+            lister.list_individual_attendance(flags)
         case _:
             print(f"'{noun}' is not a recognized noun for 'list'")
 
@@ -53,14 +58,14 @@ def p_show(noun, flags):
             print(filepaths.help_show_file)
         case 'help':
             print(filepaths.help_show_file)
-        case 'point order':
-            shower.show_point_order()
-        case 'attendance frequency':
-            shower.show_attendance_frequency()
-        case 'attendance proportion':
-            shower.show_attendance_proportion()
-        case 'individual attendance':
-            shower.show_individual_attendance()
+        case 'point order' | 'points':
+            shower.show_point_order(flags)
+        case 'attendance frequency' | 'af':
+            shower.show_attendance_frequency(flags)
+        case 'attendance proportion' | 'ap':
+            shower.show_attendance_proportion(flags)
+        case 'individual attendance' | 'ia':
+            shower.show_individual_attendance(flags)
         case _:
             print(f"'{noun}' is not a recognized noun for 'show'")
 
