@@ -1,12 +1,10 @@
 from modules import filepaths
-from modules import updaters
 from modules import utils
 from modules import sciplots
 
 from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates 
-import numpy as np 
 import pandas as pd
 import os
 

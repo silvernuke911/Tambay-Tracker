@@ -34,37 +34,37 @@ def sepline(width, char = '-'):
 # Dictionary mapping color names to ANSI codes
 color_codes = {
     # Basic colors
-    'black': '30',
-    'red': '31',
-    'green': '32',
-    'yellow': '33',
-    'blue': '34',
+    'black'  : '30',
+    'red'    : '31',
+    'green'  : '32',
+    'yellow' : '33',
+    'blue'   : '34',
     'magenta': '35',
-    'cyan': '36',
-    'white': '37',
+    'cyan'   : '36',
+    'white'  : '37',
     # Shortcuts
     '0a': '32',
-    'g': '32',
-    'r':'31',
-    'b':'34',
-    'bg':'92',
-    'c': '36',
-    'm': '35',
-    'y': '33',
-    'k': '30',
-    'w': '37',
+    'g' : '32',
+    'r' : '31',
+    'b' : '34',
+    'bg': '92',
+    'c' : '36',
+    'm' : '35',
+    'y' : '33',
+    'k' : '30',
+    'w' : '37',
     # Bright colors
-    'bright black': '90',
-    'bright red': '91',
-    'bright green': '92',
-    'bright yellow': '93',
-    'bright blue': '94',
+    'bright black'  : '90',
+    'bright red'    : '91',
+    'bright green'  : '92',
+    'bright yellow' : '93',
+    'bright blue'   : '94',
     'bright magenta': '95',
-    'bright cyan': '96',
-    'bright white': '97',
+    'bright cyan'   : '96',
+    'bright white'  : '97',
     # Reset
     # 'reset': '0',s
-    'reset' : '32'
+    'reset'         : '32'
 }
     
 def set_color(color):

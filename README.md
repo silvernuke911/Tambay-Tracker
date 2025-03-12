@@ -147,12 +147,13 @@ If an invalid command is entered:
 # Tasks
 - [x] Implement Pandas
 - [x] Make OS commands
-- [ ] Add functionality
-- [ ] Generate data
+- [x] Add functionality
+- [x] Generate data
 - [ ] Generate Graphs for Each Individual
-- [ ] Remove Weekends from Attendance Data
+- [x] Remove Weekends from Attendance Data
 - [ ] Display Only Weekly Attendance
 - [ ] Add More Graph Information (e.g., Days)
+- [ ] Per batch graph
 - [ ] Improve UI
 - [ ] Add notes system
 

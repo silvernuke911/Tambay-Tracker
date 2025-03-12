@@ -6,12 +6,11 @@ from modules import shower
 from modules import updaters
 
 import subprocess
-import pandas as pd
 
 def quick_exit():
     updaters.update_all(silent=True)
     exit()
-    
+
 def p_add(noun, flags):
     match noun:
         case None:
@@ -149,8 +148,11 @@ def p_exit():
         prompt = input("> ").lower().strip()
         if prompt in ['y','.']:
             print('Updating all systems')
+            print(utils.sepline(65))
             updaters.update_all()
+            print(utils.sepline(65))
             print('Exiting...')
+            utils.sepline(65,char = '=')
             exit()
         elif prompt == 'n':
             return
