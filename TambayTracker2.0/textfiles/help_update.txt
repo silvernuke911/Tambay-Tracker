@@ -2,6 +2,7 @@
 Available commands for 'update':
     scores         - Update the score file based on raw data.
     date frequency - Update the attendance count per day.
-    
+    all            - Update all data systems
+
 This will automatically process the data files and update the necessary records.
 -------------------------------------------------------------------------------------

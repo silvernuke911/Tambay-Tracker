@@ -8,6 +8,10 @@ from modules import updaters
 import subprocess
 import pandas as pd
 
+def quick_exit():
+    updaters.update_all(silent=True)
+    exit()
+    
 def p_add(noun, flags):
     match noun:
         case None:
@@ -76,6 +80,9 @@ def p_update(noun, flags):
             print(filepaths.help_update_file)
         case 'help':
             print(filepaths.help_update_file)
+        case 'all' | 'a':
+            updaters.update_all()
+            print('All systems updates')
         case 'scores' | 's':
             updaters.update_scores()
         case 'date frequency'| 'df':
@@ -141,6 +148,8 @@ def p_exit():
     while count < tries:
         prompt = input("> ").lower().strip()
         if prompt in ['y','.']:
+            print('Updating all systems')
+            updaters.update_all()
             print('Exiting...')
             exit()
         elif prompt == 'n':

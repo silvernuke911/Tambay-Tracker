@@ -4,7 +4,7 @@ import pandas as pd
 import os 
 import csv 
 
-def update_date_frequency():
+def update_date_frequency(silent = False):
     # Attempt to load the date file or create it if it doesn't exist
     try:
         date_file = pd.read_csv(filepaths.date_filepath)
@@ -52,11 +52,12 @@ def update_date_frequency():
 
     # Save the updated file
     date_file.to_csv(filepaths.date_filepath, index=False)
-    print(f'Date frequency successfully updated')
+    if not silent:
+        print(f'Date frequency successfully updated')
 
 
 
-def update_scores():
+def update_scores(silent = False):
     # Load the raw data and member list
     raw_data_file = pd.read_csv(filepaths.raw_data_filepath)
     member_file = pd.read_csv(filepaths.member_filepath)
@@ -107,7 +108,7 @@ def update_scores():
 
     # Merge the old Special Points back in
     score_data = pd.merge(score_data, score_file[['Name', 'Special Points']], on='Name', how='left')
-
+    score_data['Special Points'] = score_data['Special Points'].astype(int)
     # Fill missing special points with 0 (for new members)
     score_data = score_data.assign(**{'Special Points': score_data['Special Points'].fillna(0)})
 
@@ -116,12 +117,11 @@ def update_scores():
         score_data['Sender Count'] + 
         score_data['Attendance Count'] + 
         score_data['Special Points']
-    )
+    ).astype(int)
     # Overwrite the score file
     score_data.to_csv(filepaths.score_filepath, index=False)
-    print('✅ Scores successfully updated.')
-    print(utils.sepline(65))
-
+    if not silent:
+        print('Scores successfully updated.')
 
 
     
@@ -143,3 +143,7 @@ def save_entry(date, sender, attendees):
             ', '.join(attendees)
         ])
     return
+
+def update_all(silent = False):
+    update_date_frequency(silent=silent)
+    update_scores(silent=silent)

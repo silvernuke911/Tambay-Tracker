@@ -46,8 +46,8 @@ def show_point_order(flags):
     plt.title(rf'\textbf{{Tambay Scores (As of {current_datetime})}}')
     plt.xticks(rotation=90, ha='center')
     plt.grid(axis='x', visible=False)
-    max_score = max(scores)
-    step  = 1
+    max_score = int(max(scores))
+    step  = 5
     plt.yticks(range(0, max_score + step, step))
     plt.tight_layout()
     
@@ -127,7 +127,7 @@ def show_attendance_frequency(flags):
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d-%y'))  # Set date format
     plt.xticks(rotation=80)  # Rotate x-axis labels for better readability
     step = 5
-    max_count = max(counts)
+    max_count = int(max(counts))
     plt.yticks(range(0, max_count + step, step))
     plt.tight_layout()
     
