@@ -20,7 +20,7 @@ def update_date_frequency(silent = False):
             'Member Count': [0] * len(date_range)
         })
         date_file.to_csv(filepaths.date_filepath, index=False)
-        print(f'✅ New date file created with zeros: {filepaths.date_filepath}')
+        print(f'New date file created with zeros: {filepaths.date_filepath}')
 
     # Load raw data
     raw_data_file = pd.read_csv(filepaths.raw_data_filepath)
@@ -112,7 +112,7 @@ def update_scores(silent = False):
     # Fill missing special points with 0 (for new members)
     score_data = score_data.assign(**{'Special Points': score_data['Special Points'].fillna(0)})
 
-    # ✅ NEW: Calculate Total Points
+    # Calculate Total Points
     score_data['Total Points'] = (
         score_data['Sender Count'] + 
         score_data['Attendance Count'] + 
@@ -122,8 +122,7 @@ def update_scores(silent = False):
     score_data.to_csv(filepaths.score_filepath, index=False)
     if not silent:
         print('Scores successfully updated.')
-
-
+    
     
 def save_entry(date, sender, attendees):
     # Define the CSV file name

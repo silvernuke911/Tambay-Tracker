@@ -121,18 +121,19 @@ def add_member():
                          '1.414213562', 'Inuke', 'Silvernuke', 'Jieru']
     print("Enter the credential password (Type 'quit' to cancel):")
     password = input('> ').strip()
-    if password.lower() in ['quit', 'qt']:
-        print("❌ Operation cancelled.")
+    if password.lower() in ['quit', 'qt', '..']:
+        print("Operation cancelled.")
         return
     if password not in valid_credentials:
-        print("❌ Invalid credential password. Aborting.")
+        print("Invalid credential password. Aborting.")
         return
     else:
-        print('✅ Valid password, proceed with adding new member')
+        print('Valid password, proceed with adding new member')
+    print(utils.sepline(65))
     # Prompt for new member name
     print("Enter the new member's name (Type 'quit' to cancel):")
     name = input('> ').strip()
-    if name.lower() in ['quit', 'qt']:
+    if name.lower() in ['quit', 'qt', ".."]:
         print("❌ Operation cancelled.")
         return
     # Validate if the member already exists
@@ -143,7 +144,7 @@ def add_member():
     # Prompt for Batch, College, and Course (all optional)
     print("Enter the batch (Press Enter to leave blank, or 'quit' to cancel):")
     batch = input('> ').strip()
-    if batch.lower() in ['quit', 'qt']:
+    if batch.lower() in ['quit', 'qt',".."]:
         print("❌ Operation cancelled.")
         return
     print("Enter the college (Press Enter to leave blank, or 'quit' to cancel):")
@@ -165,7 +166,7 @@ def add_member():
     })
     member_file = pd.concat([member_file, new_member], ignore_index=True)
     member_file.to_csv(filepaths.member_filepath, index=False)
-    print(f"✅ Member '{name}' successfully added.")
+    print(f"Member '{name}' successfully added.")
     # Add the new member to the score file with zero scores
     try:
         score_file = pd.read_csv(filepaths.score_filepath)

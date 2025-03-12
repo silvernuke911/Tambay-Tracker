@@ -15,7 +15,7 @@ def clearline():
 def yes_no_query(prompt, limit=5):
     count = 0
     while count < limit:
-        query = input(prompt).strip()
+        query = input(prompt).strip().lower()
         if query in ['y', ""]:
             clearline()
             print('> Y')
@@ -23,7 +23,7 @@ def yes_no_query(prompt, limit=5):
         elif query in ['n', '..']:
             return False
         else:
-            print(f'{query} is not a valid answer, please enter Y/N')
+            print(f'{query} is not a valid answer, please enter [Y/N]')
             count += 1
     print('Exceeded invalid answer limit, returning to main program')
     return True 
