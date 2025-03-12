@@ -3,6 +3,7 @@ from modules import filepaths
 from modules import execute
 
 def main():
+    
     print('\033c', end='')
     utils.set_color('g')
     print(filepaths.home_file)

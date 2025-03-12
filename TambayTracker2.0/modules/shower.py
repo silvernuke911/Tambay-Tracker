@@ -13,7 +13,7 @@ import os
 sciplots.science_plot(fontsize=12)
 
 def show_point_order(flags):
-    print(utils.sepline(65))
+    print(utils.sepline(80))
     print('Loading image ... ')
     # Load the data
     data = filepaths.load_score_data()
@@ -67,10 +67,10 @@ def show_point_order(flags):
         )
         print(f"Plot saved to {filename}")
     plt.show()
-    print(utils.sepline(65))
+    print(utils.sepline(80))
 
 def show_attendance_frequency(flags):
-    print(utils.sepline(65))
+    print(utils.sepline(80))
     print('Loading image ... ')
     # Load the data
     data = filepaths.load_date_data()
@@ -125,7 +125,7 @@ def show_attendance_frequency(flags):
     # Format x-axis ticks to MM-DD-YY
     ax = plt.gca()  # Get the current axis
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d-%y'))  # Set date format
-    plt.xticks(rotation=90)  # Rotate x-axis labels for better readability
+    plt.xticks(rotation=80)  # Rotate x-axis labels for better readability
     step = 5
     max_count = max(counts)
     plt.yticks(range(0, max_count + step, step))

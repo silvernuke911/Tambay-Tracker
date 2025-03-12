@@ -11,19 +11,21 @@ def add_entry():
     has_sender = False 
     has_attendees = False 
     entry_done = False
+    has_quit = False
     print(utils.sepline(65))  
     while not entry_done:
         # Step 1: Ask for Date
         while not has_date:
             print('Date (MM/DD/YY) [Press Enter for Today]')
             date = input('> ').strip().lower()
-            if date in ['quit', 'qt']:
+            if date in ['quit', 'qt', '..']:
                 print('Entry cancelled.')
                 entry_done = True
+                has_quit = True
                 break
             if date == '':
                 date = datetime.now().strftime(r'%m/%d/%y')
-                print('\033[F\033[K', end='')  # Move cursor up and clear line
+                utils.clearline()
                 print(f'> {date}')
             if validators.validate_date_format(date):
                 has_date = True
@@ -34,11 +36,13 @@ def add_entry():
 
         # Step 2: Ask for Sender
         while not has_sender:
+            print(utils.sepline(65))
             print('Sender Name:')
             sender = input('> ').strip()
-            if sender.lower() in ['quit', 'qt']:
+            if sender.lower() in ['quit', 'qt', '..']:
                 print('Entry cancelled.')
                 entry_done = True
+                has_quit = True
                 break
             if validators.validate_member(sender):
                 print(f'Sender confirmed: {sender}')
@@ -55,9 +59,10 @@ def add_entry():
         while not has_attendees:
             attendee = input('> ').strip()
             # Handle quit
-            if attendee.lower() in ['quit', 'qt']:
+            if attendee.lower() in ['quit', 'qt', '..']:
                 print('Entry cancelled.')
                 entry_done = True
+                has_quit = True
                 break
             # Handle "done"
             if attendee.lower() in ['done','.',',']:
@@ -81,15 +86,17 @@ def add_entry():
             # Append the valid attendee
             attendees.append(attendee)
             print(f"Added: {attendee}")
-            
-        # Step 4: Save the Entry
-        print(utils.sepline(65))
-        print(f"Date       : {date}")
-        print(f"Sender     : {sender}")
-        print(f"Attendees  : {', '.join(attendees)}")
-        print(utils.sepline(65))
-        print(f"Entry Added Successfully")
-        updaters.save_entry(date, sender, attendees)
+        
+        if not has_quit:
+            # Step 4: Save the Entry
+            print(utils.sepline(65))
+            print(f"Date       : {date}")
+            print(f"Sender     : {sender}")
+            print(f"Attendees  : {', '.join(attendees)}")
+            print(utils.sepline(65))
+            print(f"Entry Added Successfully")
+            print(utils.sepline(65))
+            updaters.save_entry(date, sender, attendees)
         
         # Step 5: Query for a new entry
         print('Would you like to add a new entry? [Y/N]')
