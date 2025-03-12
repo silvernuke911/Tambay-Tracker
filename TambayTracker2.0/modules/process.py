@@ -108,6 +108,19 @@ def p_git(noun, flags):
         case "push":
             print("Executing: git push")
             subprocess.run(["git", "push"])
+        case "all":
+            message = flags.get("m", None)  # Get the commit message
+            subprocess.run(["git", "add", "."])
+            if message:
+                subprocess.run(["git", "commit", "-m", message])
+            else:
+                print("Error: Commit message required. Use --m 'message'")
+                return
+            subprocess.run(["git", "push"])
+            print(utils.sepline(65))
+            print("Succesfully pushed to remote repository") 
+            print(utils.sepline(65))
+            utils.set_color('g')
         case _:
             print(f"Unknown git command: {noun}")
 
@@ -152,7 +165,7 @@ def p_exit():
             updaters.update_all()
             print(utils.sepline(65))
             print('Exiting...')
-            utils.sepline(65,char = '=')
+            print(utils.sepline(65,char = '='))
             exit()
         elif prompt == 'n':
             return

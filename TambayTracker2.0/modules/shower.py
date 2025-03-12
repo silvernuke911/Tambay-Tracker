@@ -11,7 +11,7 @@ import os
 sciplots.science_plot(fontsize=12)
 
 def show_point_order(flags):
-    print(utils.sepline(80))
+    print(utils.sepline(65))
     print('Loading image ... ')
     # Load the data
     data = filepaths.load_score_data()
