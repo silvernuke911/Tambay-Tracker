@@ -38,7 +38,7 @@ def p_list(noun, flags):
             lister.list_members(flags)
         case 'raw points' | 'raw data' | 'raw':
             lister.list_raw_data(flags)
-        case 'date frequency' | 'af':
+        case 'date frequency' | 'af' | 'df':
             lister.list_date_frequency(flags)
         case 'attendance proportion' | 'ap':
             lister.list_attendance_proportion(flags)
@@ -63,7 +63,7 @@ def p_show(noun, flags):
             print(filepaths.help_show_file)
         case 'point order' | 'points':
             shower.show_point_order(flags)
-        case 'attendance frequency' | 'af':
+        case 'attendance frequency' | 'af' | 'df' | 'date frequency':
             shower.show_attendance_frequency(flags)
         case 'attendance proportion' | 'ap':
             shower.show_attendance_proportion(flags)

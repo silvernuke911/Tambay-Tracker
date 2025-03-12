@@ -11,7 +11,7 @@ import os
 sciplots.science_plot(fontsize=12)
 
 def show_point_order(flags):
-    print(utils.sepline(65))
+    print(utils.sepline(80))
     print('Loading image ... ')
     # Load the data
     data = filepaths.load_score_data()
@@ -70,7 +70,7 @@ def show_point_order(flags):
 def show_attendance_frequency(flags):
     print(utils.sepline(80))
     print('Loading image ... ')
-    # Load the data
+    # Load the datas
     data = filepaths.load_date_data()
     
     # Convert the 'Date' column to datetime format
@@ -81,7 +81,7 @@ def show_attendance_frequency(flags):
         start_date = pd.to_datetime(
             flags.get(
                 'startdate', 
-                '01/22/25'
+                '01/20/25'
             ), 
             format='%m/%d/%y'
         )
@@ -104,7 +104,7 @@ def show_attendance_frequency(flags):
         filtered_data = filtered_data[~filtered_data['Day'].isin(['Saturday', 'Sunday'])]
     
     dates  = filtered_data['Date']
-    counts =filtered_data['Attendance Count']
+    counts = filtered_data['Attendance Count']
 
     # Plot the bar graph
     plt.figure(figsize=(12, 6))
@@ -146,7 +146,7 @@ def show_attendance_frequency(flags):
         print(f"Plot saved to {filename}")
     # Show the plot
     plt.show()
-    print(utils.sepline(65))
+    print(utils.sepline(80))
     
     # TODO: Implement 'wkave' flag for average week attendance
     # if flags.get('wkave', False):
