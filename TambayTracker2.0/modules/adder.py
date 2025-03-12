@@ -4,6 +4,7 @@ from modules import utils
 from modules import validators
 
 import pandas as pd
+import bcrypt
 from datetime import datetime
 
 def add_entry():
@@ -119,7 +120,7 @@ def add_member():
     # Prompt for credential password
     valid_credentials = ['299792458', '2.718281828', '3.141592654', 
                          '1.414213562', 'Inuke', 'Silvernuke', 'Jieru']
-    print("Enter the credential password (Type 'quit' to cancel):")
+    print("Enter your credential password (Type 'quit' to cancel):")
     password = input('> ').strip()
     if password.lower() in ['quit', 'qt', '..']:
         print("Operation cancelled.")

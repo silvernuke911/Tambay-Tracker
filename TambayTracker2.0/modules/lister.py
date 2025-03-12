@@ -69,55 +69,44 @@ def list_date_frequency(flags):
     if flags.get('rmwknd', False):
         filtered_data = filtered_data[~filtered_data['Day'].isin(['Saturday', 'Sunday'])]
     filtered_data['Date'] = filtered_data['Date'].dt.strftime('%m/%d/%y')
+    if flags.get('rmdays', False):
+        filtered_data = filtered_data.drop(columns=['Day'])
     filtered_data = filtered_data.reset_index(drop=True)
-    print(utils.sepline(65))
-    print(
-        f"{filtered_data.columns[0]:^8} "
-        f"{filtered_data.columns[1]:^15} "
-        f"{filtered_data.columns[2]:^15}"
-    )
-    print(utils.sepline(65))
-    for _, row in filtered_data.iterrows():
+    
+    print(utils.sepline(80))
+    if flags.get('rmdays', False):
         print(
-            f"{row.iloc[0]:^8} "
-            f"{row.iloc[1]:^15} "
-            f"{row.iloc[2]:^15}"
+            f"{filtered_data.columns[0]:^8} "
+            f"{filtered_data.columns[1]:^15}"
         )
+    else:
+        print(
+            f"{filtered_data.columns[0]:^8} "
+            f"{filtered_data.columns[1]:^15} "
+            f"{filtered_data.columns[2]:^15}"
+        )
+    print(utils.sepline(80))
+    for _, row in filtered_data.iterrows():
+        if flags.get('rmdays', False):
+            print(
+                f"{row.iloc[0]:^8} "  
+                f"{row.iloc[1]:^15}"  
+            )
+        else:
+            print(
+                f"{row.iloc[0]:^8} " 
+                f"{row.iloc[1]:^15} "  
+                f"{row.iloc[2]:^15}"  
+            )
     
     # Print the footer
-    print(utils.sepline(65))
+    print(utils.sepline(80))
     
     # Handle the 'wkave' flag (average weekly attendance)
     if flags.get('wkave', False):
         # TODO: Implement weekly average attendance calculation
         print("Warning: The --wkave flag is not yet implemented.")
-    
     return
-    
-def list_attendance_proportion(flags):
-    utils.temporary_output()
-
-def list_points():
-    points = filepaths.load_score_data()
-    points = points.reset_index(drop=True)
-    print(utils.sepline(80))
-    print(
-        f"{points.columns[0]:<10} "
-        f"{points.columns[1]:^15} "
-        f"{points.columns[2]:^20} "
-        f"{points.columns[3]:^15} "
-        f"{points.columns[4]:^15}"
-    )
-    print(utils.sepline(80))
-    for _, row in points.iterrows():
-        print(
-            f"{row.iloc[0]:<10} "
-            f"{row.iloc[1]:^15} "
-            f"{row.iloc[2]:^20} "
-            f"{row.iloc[3]:^15} "
-            f"{row.iloc[4]:^15}"
-        ) 
-    print(utils.sepline(80))
 
 def list_point_names():
     utils.temporary_output()
