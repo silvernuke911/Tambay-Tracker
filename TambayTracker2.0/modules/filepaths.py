@@ -22,6 +22,7 @@ help_show_filepath      = r'TambayTracker2.0\textfiles\help_show.txt'
 help_update_filepath    = r'TambayTracker2.0\textfiles\help_update.txt'
 help_rm_filepath        = r'TambayTracker2.0\textfiles\help_remove.txt'
 help_color_filepath     = r'TambayTracker2.0\textfiles\help_color.txt'
+help_note_filepath      = r'TambayTracker2.0\textfiles\help_note.txt'
 
 # Text readers
 home_file           = utils.text_reader(home_filepath)
@@ -32,7 +33,7 @@ help_show_file      = utils.text_reader(help_show_filepath)
 help_update_file    = utils.text_reader(help_update_filepath)
 help_rm_file        = utils.text_reader(help_rm_filepath)
 help_color_file     = utils.text_reader(help_color_filepath)
-
+help_note_file      = utils.text_reader(help_note_filepath)
 
 # FUNCTIONS TO LOAD DATAFRAMES (ALWAYS UPDATED)
 def load_raw_data():

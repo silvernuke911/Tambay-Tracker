@@ -191,9 +191,10 @@ def p_help(noun, flags):
                 'show'  : filepaths.help_show_file,     's'  : filepaths.help_show_file,
                 'update': filepaths.help_update_file,   'ud' : filepaths.help_update_file,
                 'remove': filepaths.help_rm_file,       'rm' : filepaths.help_rm_file,
-                'color' : filepaths.help_color_file,    'clr': filepaths.help_color_file
+                'color' : filepaths.help_color_file,    'clr': filepaths.help_color_file,
+                'note'  : filepaths.help_note_file
             }
-    nosubcommand_nouns = {'exit', 'e', '.' 'home', 'cls', 'quit', 'qt', 'hm', 'clearscreen', 'help', 'note'}
+    nosubcommand_nouns = {'exit', 'e', '.' 'home', 'cls', 'quit', 'qt', 'hm', 'clearscreen', 'help'}
     match noun:
         case _ if noun in nosubcommand_nouns:
             print(f"Command '{noun}' does not have subcommands.\nType 'help' for general command purpose")
@@ -220,7 +221,16 @@ def p_rest(verb, noun, flags):
 def p_note(noun, flags):
     ## enters a note in a text file written in a different folder
     ## nouns : help, entry, read
-    utils.temporary_output()
+    match noun:
+        case None:
+            print(f"Command 'note' cannot have empty argument. Here are some available commands")
+            print(filepaths.help_note_file)
+        case 'help':
+            print(filepaths.help_note_file)
+        case 'add' :
+            utils.temporary_output()
+        case 'read':
+            utils.temporary_output()
     return
 
 
