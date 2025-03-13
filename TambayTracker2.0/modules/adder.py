@@ -111,6 +111,7 @@ def add_entry():
             entry_done      = True
             
         if entry_done:
+            updaters.update_all()
             break
         
         
@@ -167,12 +168,13 @@ def add_member():
     })
     member_file = pd.concat([member_file, new_member], ignore_index=True)
     member_file.to_csv(filepaths.member_filepath, index=False)
+    member_file['Batch'] = member_file['Batch'].astype(int)
     print(f"Member '{name}' successfully added.")
     # Add the new member to the score file with zero scores
     try:
         score_file = pd.read_csv(filepaths.score_filepath)
     except FileNotFoundError:
-        print("⚠️ Score file not found. Creating a new one...")
+        print("Score file not found. Creating a new one...")
         score_file = pd.DataFrame(columns=[
             'Name', 'Sender Count', 'Attendance Count', 'Special Points', 'Total Points'
         ])
@@ -189,7 +191,7 @@ def add_member():
     })
     score_file = pd.concat([score_file, new_score], ignore_index=True)
     score_file.to_csv(filepaths.score_filepath, index=False)
-    print(f"✅ Score entry for '{name}' successfully added.")
+    print(f"Score entry for '{name}' successfully added.")
     print(utils.sepline(65))
 
 

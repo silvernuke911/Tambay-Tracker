@@ -68,6 +68,7 @@ def list_date_frequency(flags):
     filtered_data = data[(data['Date'] >= start_date) & (data['Date'] <= end_date)]
     if flags.get('rmwknd', False):
         filtered_data = filtered_data[~filtered_data['Day'].isin(['Saturday', 'Sunday'])]
+    filtered_data = filtered_data.copy()
     filtered_data['Date'] = filtered_data['Date'].dt.strftime('%m/%d/%y')
     if flags.get('rmdays', False):
         filtered_data = filtered_data.drop(columns=['Day'])

@@ -81,7 +81,7 @@ def p_update(noun, flags):
             print(filepaths.help_update_file)
         case 'all' | 'a':
             updaters.update_all()
-            print('All systems updates')
+            print('All systems updated')
         case 'scores' | 's':
             updaters.update_scores()
         case 'date frequency'| 'df':
@@ -108,6 +108,9 @@ def p_git(noun, flags):
         case "push":
             print("Executing: git push")
             subprocess.run(["git", "push"])
+        case 'pull':
+            print("Executing: git pull")
+            subprocess.run(["git", "pull"])
         case "all":
             message = flags.get("m", None)  # Get the commit message
             subprocess.run(["git", "add", "."])
