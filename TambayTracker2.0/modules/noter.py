@@ -8,11 +8,12 @@ from datetime import datetime
 
 def note_add(flags):
     notefile = filepaths.notefile_path
-    hasnote = False
+    has_note = False
+    has_author = False
     print(utils.sepline(65))
     print('Write note. Press enter to save note')
     print(utils.sepline(65))
-    while not hasnote:
+    while not has_note:
         note = input("> ")
         if note == '':
             print('Blank note. Please enter a note')
@@ -20,10 +21,21 @@ def note_add(flags):
         if note.lower() in ['quit', 'qt']:
             print('Operation cancelled')
             return
-        hasnote = True
+        has_note = True
+    print(utils.sepline(65))
+    print("Please write author name. Press [Enter] when done")
+    while not has_author:
+        author = input("> ")
+        if author.lower() in ['quit', 'qt']:
+            print('Operation cancelled')
+            return
+        if author == '':
+            utils.clearline()
+            print('> Anon')
+            author = 'Anon'
+        has_author = True
     date = np.nan if flags.get("nodate", False) else datetime.now().strftime("%m/%d/%y")
     time = np.nan if flags.get("nodate", False) else datetime.now().strftime("%I:%M:%S %p")
-    author = flags["by"].capitalize() if "by" in flags else "Anon"
     new_entry = pd.DataFrame([[date, time, author, note]], columns=["Date","Time", "Author", "Note"])
     try:
         df = pd.read_csv(notefile)
@@ -38,14 +50,14 @@ def note_add(flags):
     print(f'Note   : {new_entry["Note"].iloc[0]}')
     print(utils.sepline(65))
     prompt = utils.yes_no_query('> ')
+    print(utils.sepline(65))
     if prompt:
         df = pd.concat([df, new_entry], ignore_index=True)
         df.to_csv(notefile, index=False)
-        print(utils.sepline(65))
         print("Note added successfully.")
     else:
-        print(utils.sepline(65))
         print("Note cancelled.")
+    print(utils.sepline(65))
     return
 
 

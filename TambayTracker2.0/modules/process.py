@@ -23,8 +23,10 @@ def p_add(noun, flags):
             adder.add_entry()
         case 'member'| 'new member':
             adder.add_member()
-        case 'special points':
+        case 'special points' | 'special':
             adder.add_special_points()
+        case 'note' | 'nt':
+            noter.note_add(flags)
         case _:
             print(f"'{noun}' is not a recognized noun for 'add'")
 
