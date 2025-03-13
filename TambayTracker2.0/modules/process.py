@@ -4,6 +4,7 @@ from modules import lister
 from modules import adder
 from modules import shower
 from modules import updaters
+from modules import noter
 
 import subprocess
 
@@ -228,12 +229,12 @@ def p_note(noun, flags):
         case None:
             print(f"Command 'note' cannot have empty argument. Here are some available commands")
             print(filepaths.help_note_file)
-        case 'help':
+        case 'help' | 'h':
             print(filepaths.help_note_file)
-        case 'add' :
-            utils.temporary_output()
-        case 'read':
-            utils.temporary_output()
+        case 'add'  | 'a':
+            noter.note_add(flags)
+        case 'read' | 'r':
+            noter.note_read(flags)
     return
 
 

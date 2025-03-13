@@ -111,8 +111,10 @@ def add_entry():
             entry_done      = True
             
         if entry_done:
-            updaters.update_all()
+            updaters.update_all(silent=True)
             break
+    print(utils.sepline(65))
+    return
         
         
         
@@ -238,3 +240,4 @@ def add_special_points():
         print(f'Special points updated. {name} now has {score_file.loc[score_file["Name"] == name, "Special Points"].values[0]} points.')
     else:
         print(f'Could not find {name} in the score file.')
+    print(utils.sepline(65))

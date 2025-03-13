@@ -12,6 +12,7 @@ member_filepath   = r'TambayTracker2.0\data\member_list.csv'
 
 # Image Save paths
 imsave_path = r'TambayTracker2.0\images'
+notefile_path = r'TambayTracker2.0\notes\note.csv'
 
 # Text files
 home_filepath           = r'TambayTracker2.0\textfiles\homepage.txt'
