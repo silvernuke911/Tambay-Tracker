@@ -121,19 +121,31 @@ def p_git(noun, flags):
             else:
                 print("Error: Commit message required. Use -m 'message'")
         case "push":
+            print(utils.sepline(65))
             print("Executing: git push")
             subprocess.run(["git", "push"])
+            print(utils.sepline(65))
+            print("Succesfully pushed to remote repository") 
+            print(utils.sepline(65))
         case 'pull':
+            print(utils.sepline(65))
             print("Executing: git pull")
             subprocess.run(["git", "pull"])
+            print(utils.sepline(65))
+            print("Succesfully pulled remote repository") 
+            print(utils.sepline(65))
         case "all":
             message = flags.get("m", None)  # Get the commit message
+            print(utils.sepline(65))
+            print("Executing: git add .")
             subprocess.run(["git", "add", "."])
+            print(f"Executing: git commit -m '{message}'")
             if message:
                 subprocess.run(["git", "commit", "-m", message])
             else:
                 print("Error: Commit message required. Use --m 'message'")
                 return
+            print("Executing: git push")
             subprocess.run(["git", "push"])
             print(utils.sepline(65))
             print("Succesfully pushed to remote repository") 
