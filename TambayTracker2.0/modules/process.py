@@ -197,7 +197,7 @@ def p_exit():
             print('Updating all systems')
             print(utils.sepline(65))
             updaters.update_all()
-            print(utils.sepline(65))
+            print(utils.sepline(65,char = '='))
             print('Exiting...')
             print(utils.sepline(65,char = '='))
             exit()
