@@ -122,7 +122,7 @@ def show_attendance_frequency(flags):
     plt.ylabel('Attendance Count')
     # Format x-axis ticks to MM-DD-YY
     ax = plt.gca()  # Get the current axis
-    ax.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d-%y'))  # Set date format
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%m/%d/%y'))  # Set date format
     plt.xticks(rotation=80)  # Rotate x-axis labels for better readability
     step = 5
     max_count = int(max(counts))

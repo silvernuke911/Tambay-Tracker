@@ -1,11 +1,12 @@
 from modules import utils
+from modules import validators
 from modules import filepaths
 from modules import lister
 from modules import adder
 from modules import shower
 from modules import updaters
 from modules import noter
-
+from modules import valid_flags
 import subprocess
 
 def quick_exit():
@@ -13,6 +14,8 @@ def quick_exit():
     exit()
 
 def p_add(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.f_add, noun):
+        return
     match noun:
         case None:
             print(f"Command 'add' cannot have empty argument. Here are some available commands")
@@ -25,12 +28,14 @@ def p_add(noun, flags):
             adder.add_member()
         case 'special points' | 'special':
             adder.add_special_points()
-        case 'note' | 'nt':
+        case 'note' | 'n':
             noter.note_add(flags)
         case _:
             print(f"'{noun}' is not a recognized noun for 'add'")
 
 def p_list(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.f_list, noun):
+        return
     match noun:
         case None:
             print(f"Command 'list' cannot have empty argument. Here are some available commands")
@@ -58,13 +63,15 @@ def p_list(noun, flags):
             print(f"'{noun}' is not a recognized noun for 'list'")
 
 def p_show(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.f_show, noun):
+        return
     match noun:
         case None:
             print(f"Command 'show' cannot have empty argument. Here are some available commands")
             print(filepaths.help_show_file)
         case 'help':
             print(filepaths.help_show_file)
-        case 'point order' | 'points':
+        case 'point order' | 'points' | 'p':
             shower.show_point_order(flags)
         case 'attendance frequency' | 'af' | 'df' | 'date frequency':
             shower.show_attendance_frequency(flags)
@@ -76,6 +83,8 @@ def p_show(noun, flags):
             print(f"'{noun}' is not a recognized noun for 'show'")
 
 def p_update(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.update, noun):
+        return
     match noun:
         case None:
             print(f"Command 'update' cannot have empty argument. Here are some available commands")
@@ -83,8 +92,11 @@ def p_update(noun, flags):
         case 'help':
             print(filepaths.help_update_file)
         case 'all' | 'a':
+            print(utils.sepline(65))
             updaters.update_all()
+            print(utils.sepline(20))
             print('All systems updated')
+            print(utils.sepline(65))
         case 'scores' | 's':
             updaters.update_scores()
         case 'date frequency'| 'df':
@@ -131,6 +143,8 @@ def p_git(noun, flags):
             print(f"Unknown git command: {noun}")
 
 def p_color(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.f_color, noun):
+        return
     match noun:
         case None:
             print("No color specified. Available commands are:")
@@ -146,6 +160,8 @@ def p_color(noun, flags):
                 print(filepaths.help_color_file)
                 
 def p_remove(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.f_remove, noun):
+        return
     match noun:
         case None:
             print(f"Command 'remove' cannot have empty argument. Here are some available commands")
@@ -182,7 +198,9 @@ def p_exit():
     return
 
 
-def p_home():
+def p_home(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.f_home, noun):
+        return
     print('Returning to home...')
     print('\033c', end='')
     utils.set_color('g')
@@ -190,6 +208,8 @@ def p_home():
     return
 
 def p_help(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.f_help, noun):
+        return
     help_files = {
                 None    : filepaths.help_file,
                 'add'   : filepaths.help_add_file,      'a'  : filepaths.help_add_file,
@@ -212,7 +232,9 @@ def p_quit(noun, flags):
     print('Quitting entry and returning to home...')
     return
 
-def p_clearscreen():
+def p_clearscreen(noun, flags):
+    if not validators.validate_flags(flags, valid_flags.f_cls, noun):
+        return
     print('\033c', end='')  
     utils.set_color('g')
     return
@@ -225,8 +247,8 @@ def p_rest(verb, noun, flags):
     return 
 
 def p_note(noun, flags):
-    ## enters a note in a text file written in a different folder
-    ## nouns : help, entry, read
+    if not validators.validate_flags(flags, valid_flags.f_note, noun):
+        return
     match noun:
         case None:
             print(f"Command 'note' cannot have empty argument. Here are some available commands")

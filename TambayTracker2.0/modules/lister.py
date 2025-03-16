@@ -109,6 +109,31 @@ def list_date_frequency(flags):
         print("Warning: The --wkave flag is not yet implemented.")
     return
 
+def list_points():
+    point_list = filepaths.load_score_data().copy()
+    point_list = point_list.reset_index(drop=True)
+    print(utils.sepline(80))
+    print(
+        f"{point_list.columns[0]:<15} "
+        f"{point_list.columns[1]:^15} "
+        f"{point_list.columns[2]:^15} "
+        f"{point_list.columns[3]:^15} "
+        f"{point_list.columns[4]:^15}"
+    )
+    print(utils.sepline(80))
+    for _, row in point_list.iterrows():
+        print(
+            f"{row.iloc[0]:<15} "
+            f"{row.iloc[1]:^15} "
+            f"{row.iloc[2]:^15} "
+            f"{row.iloc[3]:^15} "
+            f"{row.iloc[4]:^15}"
+        )
+    print(utils.sepline(80))
+    pass
+
+def list_attendance_proportion(flags):
+    utils.temporary_output()
 def list_point_names():
     utils.temporary_output()
     

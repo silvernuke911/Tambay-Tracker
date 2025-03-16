@@ -4,7 +4,6 @@ from modules import utils
 from modules import validators
 
 import pandas as pd
-import bcrypt
 from datetime import datetime
 
 def add_entry():

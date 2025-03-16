@@ -2,7 +2,6 @@
 Available commands and flags for 'note':
     add             - add a note
         --nodate    - do not put a date on note (default false)
-        --by        - signify who wrote the note (default blank)
     read            - read the notes (default all)
         --date      - read the notes from a specific date (default today)
         --today     - read note today, for redundancy

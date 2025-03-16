@@ -1,5 +1,6 @@
 from datetime import datetime
 from modules import filepaths
+from modules import utils
 
 def validate_date_format(date_string):
     """Validates if the date string is in MM/DD/YY format"""
@@ -18,3 +19,12 @@ def validate_member(name):
         return True
     else:
         return False
+    
+def validate_flags(flags, valid_flags, noun):
+    for flag in flags.keys():
+        if flag not in valid_flags:
+            print(utils.sepline(65))
+            print(f"Error: '{flag}' is not a known flag for {noun}")
+            print(utils.sepline(65))
+            return False
+    return True

@@ -4,7 +4,7 @@ def execute_command(verb, noun, flags):
     match verb:
         case '..'|',,': # edit this out later, this is for quick exits only
             process.quick_exit()
-        case None:
+        case None | '':
             process.p_none()
         case 'exit' | 'e' | '.':
             process.p_exit()
@@ -19,11 +19,11 @@ def execute_command(verb, noun, flags):
         case 'update' | 'ud':
             process.p_update(noun, flags)
         case 'home' | 'hm':
-            process.p_home()
+            process.p_home(noun, flags)
         case 'quit' | 'qt':
             process.p_quit(noun, flags)
         case 'clearscreen' | 'cls':
-            process.p_clearscreen()
+            process.p_clearscreen(noun, flags)
         case 'git':
             process.p_git(noun, flags)
         case 'color'|'clr':
