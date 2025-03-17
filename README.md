@@ -150,10 +150,12 @@ If an invalid command is entered:
 - [x] Add functionality
 - [x] Generate data
 - [ ] Generate Graphs for Each Individual
+- [x] Note taking functionality
 - [x] Remove Weekends from Attendance Data
 - [ ] Display Only Weekly Attendance
 - [ ] Add More Graph Information (e.g., Days)
-- [ ] Per batch graph
+- [ ] Generate graph per batch
+- [ ] Generate weekly attendance
 - [ ] Improve UI
 - [ ] Add notes system
 
