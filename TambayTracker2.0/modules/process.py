@@ -83,7 +83,7 @@ def p_show(noun, flags):
             print(f"'{noun}' is not a recognized noun for 'show'")
 
 def p_update(noun, flags):
-    if not validators.validate_flags(flags, valid_flags.update, noun):
+    if not validators.validate_flags(flags, valid_flags.f_update, noun):
         return
     match noun:
         case None:
@@ -107,9 +107,10 @@ def p_update(noun, flags):
 def p_git(noun, flags):
     match noun:
         case None:
-            print("Missing git command. Available: add, commit, push, status")
+            print("Missing git command. Available: add, commit, push, status, all")
         case 'status':
             subprocess.run(["git", "status"])
+            utils.set_color('g')
         case "add":
             print("Executing: git add .")
             subprocess.run(["git", "add", "."])
@@ -235,7 +236,7 @@ def p_help(noun, flags):
     nosubcommand_nouns = {'exit', 'e', '.' 'home', 'cls', 'quit', 'qt', 'hm', 'clearscreen', 'help'}
     match noun:
         case _ if noun in nosubcommand_nouns:
-            print(f"Command '{noun}' does not have subcommands.\nType 'help' for general command purpose")
+            print(f"Command '{noun}' does not have subcommands.\nType 'help' for general command purpose.")
         case _:
             print(help_files.get(noun, f"Command '{noun}' is not a valid command"))
     return
