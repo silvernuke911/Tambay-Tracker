@@ -14,4 +14,4 @@
 [ ] Display Only Weekly Attendance
 [ ] Add More Graph Information (e.g., Days)
 [ ] Improve UI
-[ ] Add notes system
+[x] Add notes system

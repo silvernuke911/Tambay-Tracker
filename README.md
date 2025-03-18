@@ -149,14 +149,15 @@ If an invalid command is entered:
 - [x] Make OS commands
 - [x] Add functionality
 - [x] Generate data
-- [ ] Generate Graphs for Each Individual
 - [x] Note taking functionality
 - [x] Remove Weekends from Attendance Data
+- [x] Add notes system
+- [ ] Generate Graphs for Each Individual
 - [ ] Display Only Weekly Attendance
 - [ ] Add More Graph Information (e.g., Days)
 - [ ] Generate graph per batch
 - [ ] Generate weekly attendance
 - [ ] Improve UI
-- [ ] Add notes system
+
 
 

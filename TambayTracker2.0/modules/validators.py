@@ -12,6 +12,7 @@ def validate_date_format(date_string):
         return False  # Return False if there's a ValueError
     
 def validate_member(name):
+    """Validates if the name in the member is valid"""
     member_file = filepaths.load_member_data().copy() # df of valid members
     name = name.strip().lower()
     valid_names = member_file['Name'].str.strip().str.lower().tolist()
