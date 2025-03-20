@@ -17,7 +17,7 @@ def p_add(noun, flags):
     if not validators.validate_flags(flags, valid_flags.f_add, noun):
         return
     match noun:
-        case None:
+        cMobChart1ase None:
             print(f"Command 'add' cannot have empty argument. Here are some available commands")
             print(filepaths.help_add_file)
         case 'help':
