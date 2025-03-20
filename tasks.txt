@@ -15,3 +15,5 @@
 [ ] Add More Graph Information (e.g., Days)
 [ ] Improve UI
 [x] Add notes system
+
+[ Automate the Mob Chart ]

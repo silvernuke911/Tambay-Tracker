@@ -272,6 +272,8 @@ def p_note(noun, flags):
             noter.note_add(flags)
         case 'read' | 'r':
             noter.note_read(flags)
+        case _:
+            print(f"'{noun}' is not a recognized noun for 'note'")
     return
 
 
