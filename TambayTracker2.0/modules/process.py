@@ -17,7 +17,7 @@ def p_add(noun, flags):
     if not validators.validate_flags(flags, valid_flags.f_add, noun):
         return
     match noun:
-        cMobChart1ase None:
+        case None:
             print(f"Command 'add' cannot have empty argument. Here are some available commands")
             print(filepaths.help_add_file)
         case 'help':
@@ -272,8 +272,6 @@ def p_note(noun, flags):
             noter.note_add(flags)
         case 'read' | 'r':
             noter.note_read(flags)
-        case _:
-            print(f"'{noun}' is not a recognized noun for 'note'")
     return
 
 
