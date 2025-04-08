@@ -1,4 +1,4 @@
-[ ] Add functionality
+[x] Add functionality
 -    Update and scoring logic
 -        Calculate scores
 -    List functions 
@@ -8,12 +8,15 @@
 -        add members
 -        add special points
 -    Show functions
-[X] Generate data
+[x] Generate data
+[x] Add notes system
 [ ] Generate Graphs for Each Individual
+[ ] Generate Graphs for each batch
+[ ] Generate Raw Points
 [ ] Remove Weekends from Attendance Data
 [ ] Display Only Weekly Attendance
 [ ] Add More Graph Information (e.g., Days)
 [ ] Improve UI
-[x] Add notes system
+
 
 [ Automate the Mob Chart ]
