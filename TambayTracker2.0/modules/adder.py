@@ -137,28 +137,28 @@ def add_member():
     print("Enter the new member's name (Type 'quit' to cancel):")
     name = input('> ').strip()
     if name.lower() in ['quit', 'qt', ".."]:
-        print("❌ Operation cancelled.")
+        print("Operation cancelled.")
         return
     # Validate if the member already exists
     member_file = pd.read_csv(filepaths.member_filepath)
     if name in member_file['Name'].tolist():
-        print(f"❌ Member '{name}' already exists. Aborting.")
+        print(f"Member '{name}' already exists. Aborting.")
         return
     # Prompt for Batch, College, and Course (all optional)
     print("Enter the batch (Press Enter to leave blank, or 'quit' to cancel):")
     batch = input('> ').strip()
     if batch.lower() in ['quit', 'qt',".."]:
-        print("❌ Operation cancelled.")
+        print("Operation cancelled.")
         return
     print("Enter the college (Press Enter to leave blank, or 'quit' to cancel):")
     college = input('> ').strip()
     if college.lower() in ['quit', 'qt']:
-        print("❌ Operation cancelled.")
+        print("Operation cancelled.")
         return
     print("Enter the course (Press Enter to leave blank, or 'quit' to cancel):")
     course = input('> ').strip()
     if course.lower() in ['quit', 'qt']:
-        print("❌ Operation cancelled.")
+        print("Operation cancelled.")
         return
     # Add the new member to the member file
     new_member = pd.DataFrame({
@@ -181,7 +181,7 @@ def add_member():
         ])
     # Check if the member already has an entry (shouldn't happen but just in case)
     if name in score_file['Name'].tolist():
-        print(f"⚠️ Score entry for '{name}' already exists. Skipping score entry.")
+        print(f"Score entry for '{name}' already exists. Skipping score entry.")
         return
     new_score = pd.DataFrame({
         'Name': [name],
