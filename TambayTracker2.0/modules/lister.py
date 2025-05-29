@@ -145,7 +145,7 @@ def list_cmdlog(flags):
     )
     print(utils.sepline(80))
     for _, row in cmd_list.iterrows():
-        wrapped_cmd = textwrap.fill(row["Input"], width=80)
+        wrapped_cmd = textwrap.fill(row["Input"], width=50)
         cmd_lines = wrapped_cmd.split("\n")
         print(
             f"{row['Date']:^15} "
