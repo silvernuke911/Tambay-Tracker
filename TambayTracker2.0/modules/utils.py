@@ -88,7 +88,7 @@ def set_color(color):
     # Print the ANSI escape sequence
     print(f"\033[{ansi_code}m", end="")
 
-def prompt(address=True):
+def prompt(address=True, lower = True):
     if address:
         print(r'T:\TambayTracker2.0')
     user_input = input('> ').strip()
@@ -107,8 +107,9 @@ def prompt(address=True):
             writer.writerow([date, time, user_input_log])  
     except Exception as e:
         print(f"[LOGGING ERROR] Could not write to cmdlogs.csv: {e}")
-
-    return user_input.lower()
+    if lower:
+        user_input = user_input.lower()
+    return user_input
 
 def input_analyzer(verb, noun, flags):
     print('verb  : ', verb)

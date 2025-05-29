@@ -14,7 +14,7 @@ def note_add(flags):
     print('Write note. Press enter to save note')
     print(utils.sepline(65))
     while not has_note:
-        note = utils.prompt(address=False)
+        note = utils.prompt(address=False, lower = False)
         if note == '':
             print('Blank note. Please enter a note')
             continue
