@@ -8,6 +8,7 @@ from modules import updaters
 from modules import noter
 from modules import valid_flags
 import subprocess
+import os
 
 def quick_exit():
     updaters.update_all(silent=True)
@@ -231,7 +232,7 @@ def p_help(noun, flags):
                 'update': filepaths.help_update_file,   'ud' : filepaths.help_update_file,
                 'remove': filepaths.help_rm_file,       'rm' : filepaths.help_rm_file,
                 'color' : filepaths.help_color_file,    'clr': filepaths.help_color_file,
-                'note'  : filepaths.help_note_file
+                'note'  : filepaths.help_note_file,     'sys': filepaths.help_sys_file
             }
     nosubcommand_nouns = {'exit', 'e', '.' 'home', 'cls', 'quit', 'qt', 'hm', 'clearscreen', 'help'}
     match noun:
@@ -274,4 +275,18 @@ def p_note(noun, flags):
             noter.note_read(flags)
     return
 
+
+def p_system_shell(noun, flags):
+    print("------------------------------\n Enter valid security code\n------------------------------")
+    prompt = input('> ')
+    if prompt in ['299792458','149597870700','..']:
+        print("Entering system shell... (type 'exit' to return)")
+        shell = os.environ.get("COMSPEC") if os.name == "nt" else os.environ.get("SHELL", "/bin/bash")
+        try:
+            subprocess.run(shell)
+        except Exception as e:
+            print(f"Error launching system shell: {e}")
+    else: 
+        print("Code invalid, returning to home")
+        return
 

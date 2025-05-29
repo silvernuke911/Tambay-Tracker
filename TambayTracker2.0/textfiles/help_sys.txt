@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------------
+Enter command prompt and launches a subprocess that opens the actual system shell.
+
+Requires a security passcode to access
+
+Type "exit" on prompt to exit the cmd and return to the tracker.
+-------------------------------------------------------------------------------------

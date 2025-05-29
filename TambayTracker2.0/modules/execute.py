@@ -32,7 +32,11 @@ def execute_command(verb, noun, flags):
             process.p_remove(noun, flags)
         case 'note' | 'nt':
             process.p_note(noun, flags)
+        case 'sys' | 'system':
+            process.p_system_shell(noun, flags)
         case _:
             process.p_rest(verb, noun, flags)
     print()
     return
+
+    
