@@ -1,5 +1,6 @@
 from modules import filepaths
 from modules import utils
+import textwrap
 
 import pandas as pd 
 from datetime import datetime
@@ -131,6 +132,34 @@ def list_points():
         )
     print(utils.sepline(80))
     pass
+
+def list_cmdlog(flags):
+    cmd_list = pd.read_csv(filepaths.cmdlog_path)
+    cmd_list = cmd_list.reset_index(drop=True)
+    # Print formatted header
+    print(utils.sepline(80))
+    print(
+        f"{'Date':^15} "
+        f"{'Time':^15} "
+        f"{'Input':^50} " 
+    )
+    print(utils.sepline(80))
+    for _, row in cmd_list.iterrows():
+        wrapped_cmd = textwrap.fill(row["Input"], width=80)
+        cmd_lines = wrapped_cmd.split("\n")
+        print(
+            f"{row['Date']:^15} "
+            f"{row['Time']:^15} "
+            f"{cmd_lines[0]:<50}"
+        )
+        for line in cmd_lines[1:]:
+            print(
+                f"{'':<15} "
+                f"{'':<15} "
+                f"{line:<50}"
+            )
+    print(utils.sepline(80))
+    return 
 
 def list_attendance_proportion(flags):
     utils.temporary_output()

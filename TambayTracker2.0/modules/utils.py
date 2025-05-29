@@ -92,7 +92,6 @@ def prompt(address=True):
     if address:
         print(r'T:\TambayTracker2.0')
     user_input = input('> ').strip()
-    lower_input = user_input.lower()
     # Get current date and time
     date = datetime.now().strftime("%m/%d/%Y")
     time = datetime.now().strftime("%I:%M:%S %p")
@@ -100,13 +99,16 @@ def prompt(address=True):
     cmdlog = filepaths.cmdlog_path
     try:
         os.makedirs(os.path.dirname(cmdlog), exist_ok=True)
+        user_input_log = user_input
+        if user_input == "":
+            user_input_log = " "
         with open(cmdlog, 'a', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow([date, time, user_input])  # Save original input, not lowercase
+            writer.writerow([date, time, user_input_log])  
     except Exception as e:
         print(f"[LOGGING ERROR] Could not write to cmdlogs.csv: {e}")
 
-    return lower_input
+    return user_input.lower()
 
 def input_analyzer(verb, noun, flags):
     print('verb  : ', verb)

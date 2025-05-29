@@ -60,6 +60,8 @@ def p_list(noun, flags):
                 lister.list_point_names()
         case 'individual attendance':
             lister.list_individual_attendance(flags)
+        case 'cmdlog' | 'cmd':
+            lister.list_cmdlog(flags)
         case _:
             print(f"'{noun}' is not a recognized noun for 'list'")
 
