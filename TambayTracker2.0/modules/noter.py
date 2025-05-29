@@ -14,7 +14,7 @@ def note_add(flags):
     print('Write note. Press enter to save note')
     print(utils.sepline(65))
     while not has_note:
-        note = input("> ")
+        note = utils.prompt(address=False)
         if note == '':
             print('Blank note. Please enter a note')
             continue
@@ -25,7 +25,7 @@ def note_add(flags):
     print(utils.sepline(65))
     print("Please write author name. Press [Enter] when done")
     while not has_author:
-        author = input("> ")
+        author = utils.prompt(address=False)
         if author.lower() in ['quit', 'qt']:
             print('Operation cancelled')
             return

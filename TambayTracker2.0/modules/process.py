@@ -194,7 +194,7 @@ def p_exit():
     count = 0
     print('Confirm exit? [Y/N]')
     while count < tries:
-        prompt = input("> ").lower().strip()
+        prompt = utils.prompt(address=False)
         if prompt in ['y','.']:
             print('Updating all systems')
             print(utils.sepline(65))
@@ -278,7 +278,7 @@ def p_note(noun, flags):
 
 def p_system_shell(noun, flags):
     print("------------------------------\n Enter valid security code\n------------------------------")
-    prompt = input('> ')
+    prompt = utils.prompt(address=False)
     if prompt in ['299792458','149597870700','..']:
         print("Entering system shell... (type 'exit' to return)")
         shell = os.environ.get("COMSPEC") if os.name == "nt" else os.environ.get("SHELL", "/bin/bash")

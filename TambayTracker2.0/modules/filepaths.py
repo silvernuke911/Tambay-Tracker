@@ -14,6 +14,9 @@ member_filepath   = r'TambayTracker2.0\data\member_list.csv'
 imsave_path = r'TambayTracker2.0\images'
 notefile_path = r'TambayTracker2.0\notes\note.csv'
 
+# Command Log save path
+cmdlog_path = r"TambayTracker2.0\cmdlogs\cmdlogs.csv"
+
 # Text files
 home_filepath           = r'TambayTracker2.0\textfiles\homepage.txt'
 help_filepath           = r'TambayTracker2.0\textfiles\help_general.txt'
@@ -25,17 +28,6 @@ help_rm_filepath        = r'TambayTracker2.0\textfiles\help_remove.txt'
 help_color_filepath     = r'TambayTracker2.0\textfiles\help_color.txt'
 help_note_filepath      = r'TambayTracker2.0\textfiles\help_note.txt'
 help_sys_filepath       = r'TambayTracker2.0\textfiles\help_sys.txt'
-# Text readers
-home_file           = utils.text_reader(home_filepath)
-help_file           = utils.text_reader(help_filepath)
-help_add_file       = utils.text_reader(help_add_filepath)
-help_list_file      = utils.text_reader(help_list_filepath)
-help_show_file      = utils.text_reader(help_show_filepath)
-help_update_file    = utils.text_reader(help_update_filepath)
-help_rm_file        = utils.text_reader(help_rm_filepath)
-help_color_file     = utils.text_reader(help_color_filepath)
-help_note_file      = utils.text_reader(help_note_filepath)
-help_sys_file       = utils.text_reader(help_sys_filepath)
 
 # FUNCTIONS TO LOAD DATAFRAMES (ALWAYS UPDATED)
 def load_raw_data():
@@ -46,3 +38,19 @@ def load_score_data():
     return pd.read_csv(score_filepath)
 def load_member_data():
     return pd.read_csv(member_filepath)
+def text_reader(filepath):
+    with open(filepath, "r") as file:
+        contents = file.read()
+    return contents
+
+# Text readers
+home_file           = text_reader(home_filepath)
+help_file           = text_reader(help_filepath)
+help_add_file       = text_reader(help_add_filepath)
+help_list_file      = text_reader(help_list_filepath)
+help_show_file      = text_reader(help_show_filepath)
+help_update_file    = text_reader(help_update_filepath)
+help_rm_file        = text_reader(help_rm_filepath)
+help_color_file     = text_reader(help_color_filepath)
+help_note_file      = text_reader(help_note_filepath)
+help_sys_file       = text_reader(help_sys_filepath)

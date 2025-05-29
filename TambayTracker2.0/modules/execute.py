@@ -30,7 +30,7 @@ def execute_command(verb, noun, flags):
             process.p_color(noun, flags)
         case 'remove' | 'rm':
             process.p_remove(noun, flags)
-        case 'note' | 'nt':
+        case 'note' | 'nt' | 'n':
             process.p_note(noun, flags)
         case 'sys' | 'system':
             process.p_system_shell(noun, flags)

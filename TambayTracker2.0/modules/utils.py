@@ -1,4 +1,8 @@
 import shlex  
+from datetime import datetime
+from modules import filepaths
+import os  
+import csv 
 
 def text_reader(filepath):
     with open(filepath, "r") as file:
@@ -9,6 +13,7 @@ def text_writer(filepath, entry):
     with open(filepath, 'a') as file:
         file.write(entry + '\n')
     print("Entry added successfully.")
+
 def clearline():
     print('\033[F\033[K', end='')
 
@@ -83,10 +88,25 @@ def set_color(color):
     # Print the ANSI escape sequence
     print(f"\033[{ansi_code}m", end="")
 
-def prompt():
-    print(r'T:\TambayTracker2.0')
-    prompt = input('> ')
-    return prompt.strip().lower()
+def prompt(address=True):
+    if address:
+        print(r'T:\TambayTracker2.0')
+    user_input = input('> ').strip()
+    lower_input = user_input.lower()
+    # Get current date and time
+    date = datetime.now().strftime("%m/%d/%Y")
+    time = datetime.now().strftime("%I:%M:%S %p")
+    # Log to CSV
+    cmdlog = filepaths.cmdlog_path
+    try:
+        os.makedirs(os.path.dirname(cmdlog), exist_ok=True)
+        with open(cmdlog, 'a', newline='', encoding='utf-8') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow([date, time, user_input])  # Save original input, not lowercase
+    except Exception as e:
+        print(f"[LOGGING ERROR] Could not write to cmdlogs.csv: {e}")
+
+    return lower_input
 
 def input_analyzer(verb, noun, flags):
     print('verb  : ', verb)
