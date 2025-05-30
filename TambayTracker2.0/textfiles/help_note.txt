@@ -4,5 +4,6 @@ Available commands and flags for 'note':
         --nodate    - do not put a date on note (default false)
     read            - read the notes (default all)
         --date      - read the notes from a specific date (default today)
-        --today     - read note today, for redundancy
+        --today     - read notes written today (default)
+        --all       - read all the notes recorded
 -----------------------------------------------------------------

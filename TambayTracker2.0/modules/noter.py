@@ -61,52 +61,65 @@ def note_add(flags):
     return
 
 
+
 def note_read(flags):
+    if not flags:
+        flags = {"today": True}
+
     notefile = filepaths.notefile_path
     notes = pd.read_csv(notefile, dtype=str).fillna("")
-    if flags.get("today", False):
+
+    target_date = None
+
+    if flags.get("all", False):
+        target_date = None  # Show all entries
+    elif flags.get("today", False):
         target_date = datetime.now().strftime("%m/%d/%y")
     elif "date" in flags:
-        target_date = flags["date"]
-    else:
-        target_date = None  # Read all if no specific date
+        raw_date = flags["date"]
+        for fmt in ("%m/%d/%Y", "%m/%d/%y"):
+            try:
+                dt = datetime.strptime(raw_date, fmt)
+                target_date = dt.strftime("%m/%d/%y")  
+                break
+            except ValueError:
+                continue
+        else:
+            print(utils.sepline(60))
+            print(f"Invalid date format: '{raw_date}' (use MM/DD/YYYY or MM/DD/YY)")
+            return
 
-    # Filter by date if needed
+    # Filter if a date is given
     if target_date:
         notes = notes[notes["Date"] == target_date]
 
-    # Check if there are no matching entries
     if notes.empty and target_date:
-        print(f"No entries for date {target_date}")
+        print(utils.sepline(40))
+        print(f"No note entries for date {target_date}")
+        print(utils.sepline(40))
         return
 
-    # Reset index for clean output
     notes = notes.reset_index(drop=True)
 
-    # Print formatted header
     print(utils.sepline(85))
     print(
         f"{'Date':^10} "
         f"{'Time':^15} "
-        f"{'Author':<15} " 
+        f"{'Author':<15} "
         f"{'Note':<50}"
     )
     print(utils.sepline(85))
 
-    # Print each row with wrapped text
     for _, row in notes.iterrows():
         wrapped_note = textwrap.fill(row["Note"], width=40)
         note_lines = wrapped_note.split("\n")
 
-        # Print first line with full row data
         print(
             f"{row['Date']:^10} "
             f"{row['Time']:^15} "
-            f"{row['Author']:<15} " 
+            f"{row['Author']:<15} "
             f"{note_lines[0]:<50}"
         )
-
-        # Print remaining wrapped lines, aligning them under the Note column
         for line in note_lines[1:]:
             print(
                 f"{'':<10} "
@@ -114,5 +127,4 @@ def note_read(flags):
                 f"{'':<15} "
                 f"{line:<50}"
             )
-
     print(utils.sepline(85))

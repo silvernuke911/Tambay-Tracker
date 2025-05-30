@@ -5,9 +5,10 @@ import os
 import csv 
 
 def text_reader(filepath):
+    if not os.path.exists(filepath):
+        raise FileNotFoundError(f"Missing file: {filepath}")
     with open(filepath, "r") as file:
-        contents = file.read()
-    return contents
+        return file.read()
 
 def text_writer(filepath, entry):
     with open(filepath, 'a') as file:
@@ -36,6 +37,8 @@ def yes_no_query(prompt, limit=5):
 def sepline(width, char = '-'):
     return char*width
 
+valid_credentials = ['299792458', '2.718281828', '3.141592654', '1.414213562', 'Inuke', 'Silvernuke', 'Jieru', '..', "..."]
+quit_list = ['quit', 'qt',".."]
 # Dictionary mapping color names to ANSI codes
 color_codes = {
     # Basic colors

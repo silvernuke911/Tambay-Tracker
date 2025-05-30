@@ -58,7 +58,7 @@ def p_list(noun, flags):
                 lister.list_point_order()
             elif flags.get('name'):
                 lister.list_point_names()
-        case 'individual attendance':
+        case 'individual attendance' | 'ia':
             lister.list_individual_attendance(flags)
         case 'cmdlog' | 'cmd':
             lister.list_cmdlog(flags)
@@ -279,9 +279,11 @@ def p_note(noun, flags):
 
 
 def p_system_shell(noun, flags):
-    print("------------------------------\n Enter valid security code\n------------------------------")
-    prompt = utils.prompt(address=False)
-    if prompt in ['299792458','149597870700','..']:
+    print(utils.sepline(50))
+    print("Enter valid security code")
+    print(utils.sepline(50))
+    code = utils.prompt(address=False)
+    if code in utils.valid_credentials:
         print("Entering system shell... (type 'exit' to return)")
         shell = os.environ.get("COMSPEC") if os.name == "nt" else os.environ.get("SHELL", "/bin/bash")
         try:
@@ -289,6 +291,8 @@ def p_system_shell(noun, flags):
         except Exception as e:
             print(f"Error launching system shell: {e}")
     else: 
-        print("Code invalid, returning to home")
+        print("Security code invalid, returning to home")
         return
 
+def shortcut(noun,flags):
+    print(utils.text_reader(filepaths.shorcut_filepath))

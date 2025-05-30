@@ -9,13 +9,11 @@ Available commands:
     show    - Display graphs for necessary data
     update  - Update data
     exit    - Exit the program.
-    e       - shortcut for Exit
     home    - Return to the home page header.
-    hm      - shortcut for home
     quit    - Quit the entry and return to home.
     cls     - Clear the screen.
     color   - Set the terminal color.
-    sys     - Enter cmd terminal.
+    system  - Enter cmd terminal.
     note    - Add a note (saved in a different file)
 
 For help with the available subcommands, type help {command}.

@@ -1,0 +1,47 @@
+=================================================================
+                        SHORTCUT LIST
+=================================================================
+    home
+        ..      - shortcut for direct quick exit
+
+    [Y/N] question
+                - generally, pressing Enter defaults to a 'Y'
+
+    add entry 
+        .       - shortcut for done 
+        ..      - shortcut for quit
+
+    security/credential codes
+        ..      - valid shortcut security code 
+
+    shortcut terms
+        s       - show 
+        a       - add 
+        l       - list
+        af, df  - attendance frequency 
+        cmd     - cmdlog 
+        ud      - update 
+        e       - exit 
+        h       - help 
+        hm      - home 
+        qt      - quit 
+        clr     - color 
+        cls     - clear screen 
+        rm      - remove 
+        nt      - note 
+        n       - note 
+        sys     - system
+        n e     - new entry 
+        l raw   - list raw data 
+        l p     - list points 
+        l ap    - list attendance proportion 
+        l af    - list attendance frequency 
+        n a     - note add 
+        n r     - note read
+        ud a    - update all 
+        cmdlog  - list command logs
+        sc      - shortcut 
+
+-----------------------------------------------------------------
+     "Nothing is more permanent than a temporary solution"
+=================================================================

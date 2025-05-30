@@ -100,10 +100,7 @@ def list_date_frequency(flags):
                 f"{row.iloc[1]:^15} "  
                 f"{row.iloc[2]:^15}"  
             )
-    
-    # Print the footer
     print(utils.sepline(80))
-    
     # Handle the 'wkave' flag (average weekly attendance)
     if flags.get('wkave', False):
         # TODO: Implement weekly average attendance calculation
@@ -134,34 +131,37 @@ def list_points():
     pass
 
 def list_cmdlog(flags):
-    if not flags:  # Empty dict means default to --today
+    if not flags:  # Default to --today
         flags = {"today": True}
     cmdlog_file = filepaths.cmdlog_path
     cmd_list = pd.read_csv(cmdlog_file, dtype=str).fillna("")
-    # Determine target date
     target_date = None
     if flags.get("today", False):
         target_date = datetime.now().strftime("%m/%d/%Y")
     elif "date" in flags:
         raw_date = flags["date"]
-        for fmt in ("%m/%d/%Y", "%m/%d/%y"):
-            try:
-                dt = datetime.strptime(raw_date, fmt)
-                target_date = dt.strftime("%m/%d/%Y")  # Normalize to full-year format
-                break
-            except ValueError:
-                continue
+        if not isinstance(raw_date, str) or not raw_date.strip():
+            target_date = datetime.now().strftime("%m/%d/%Y")
         else:
-            print(f"Invalid date format: '{raw_date}' (use MM/DD/YYYY or MM/DD/YY)")
-            return
+            for fmt in ("%m/%d/%Y", "%m/%d/%y"):
+                try:
+                    dt = datetime.strptime(raw_date, fmt)
+                    target_date = dt.strftime("%m/%d/%Y")
+                    break
+                except ValueError:
+                    continue
+            else:
+                print(utils.sepline(60))
+                print(f"Invalid date format: '{raw_date}' (use MM/DD/YYYY or MM/DD/YY)")
+                return
     if target_date:
         cmd_list = cmd_list[cmd_list["Date"] == target_date]
     if cmd_list.empty and target_date:
+        print(utils.sepline(40))
         print(f"No command logs found for {target_date}")
+        print(utils.sepline(40))
         return
-    # Reset index
     cmd_list = cmd_list.reset_index(drop=True)
-    # Display
     print(utils.sepline(85))
     print(
         f"{'Date':^15} "
@@ -172,13 +172,11 @@ def list_cmdlog(flags):
     for _, row in cmd_list.iterrows():
         wrapped_cmd = textwrap.fill(row["Input"], width=50)
         cmd_lines = wrapped_cmd.split("\n")
-        # First line with full metadata
         print(
             f"{row['Date']:^15} "
             f"{row['Time']:^15} "
             f"{cmd_lines[0]:<50}"
         )
-        # Extra lines aligned to "Input" column
         for line in cmd_lines[1:]:
             print(
                 f"{'':<15} "

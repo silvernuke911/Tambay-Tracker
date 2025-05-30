@@ -34,6 +34,10 @@ def execute_command(verb, noun, flags):
             process.p_note(noun, flags)
         case 'sys' | 'system':
             process.p_system_shell(noun, flags)
+        case 'cmdlog':
+            process.p_list('cmdlog',flags)
+        case 'shortcut' | 'sc':
+            process.shortcut(noun,flags)
         case _:
             process.p_rest(verb, noun, flags)
     print()

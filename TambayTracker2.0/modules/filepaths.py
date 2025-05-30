@@ -32,6 +32,8 @@ help_note_filepath      = os.path.join(BASE_DIR, "textfiles", "help_note.txt")
 help_sys_filepath       = os.path.join(BASE_DIR, "textfiles", "help_sys.txt")
 temp_output_filepath    = os.path.join(BASE_DIR, "textfiles", "temp_output.txt")
 
+shorcut_filepath        = os.path.join(BASE_DIR, "textfiles", "shortcut.txt")
+
 # FUNCTIONS TO LOAD DATAFRAMES (ALWAYS UPDATED)
 def load_raw_data():
     return pd.read_csv(raw_data_filepath)
