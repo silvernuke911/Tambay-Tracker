@@ -12,7 +12,7 @@
         ..      - shortcut for quit
 
     security/credential codes
-        ..      - valid shortcut security code 
+        ...     - valid shortcut security code 
 
     shortcut terms
         s       - show 

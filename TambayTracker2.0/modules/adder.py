@@ -55,7 +55,8 @@ def add_entry():
         
         # Step 3: Ask for Attendees
         attendees = []
-        print("Enter attendees one by one. Type 'done' to finish, 'del last' to delete last entry, 'quit' to cancel.")
+        print("Enter attendees one by one. Type 'done' to finish,")
+        print("'del last' to delete last entry, and 'quit' to cancel.")
         while not has_attendees:
             attendee = utils.prompt(address=False, lower = False)
             # Handle quit
@@ -100,7 +101,7 @@ def add_entry():
         
         # Step 5: Query for a new entry
         print('Would you like to add a new entry? [Y/N]')
-        result = utils.yes_no_query('> ')
+        result = utils.prompt(address=False,lower=False,yes_no=True)
         if result == True:
             entry_done      = False
             has_date        = False 

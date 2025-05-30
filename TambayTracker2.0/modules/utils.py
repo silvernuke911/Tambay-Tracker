@@ -37,8 +37,9 @@ def yes_no_query(prompt, limit=5):
 def sepline(width, char = '-'):
     return char*width
 
-valid_credentials = ['299792458', '2.718281828', '3.141592654', '1.414213562', 'Inuke', 'Silvernuke', 'Jieru', '..', "..."]
+valid_credentials = ['299792458', '2.718281828', '3.141592654', '1.414213562', 'Inuke', 'Silvernuke', 'Jieru', '..', "...", "Navi0105"]
 quit_list = ['quit', 'qt',".."]
+
 # Dictionary mapping color names to ANSI codes
 color_codes = {
     # Basic colors
@@ -91,25 +92,27 @@ def set_color(color):
     # Print the ANSI escape sequence
     print(f"\033[{ansi_code}m", end="")
 
-def prompt(address=True, lower = True):
-    if address:
-        print(r'T:\TambayTracker2.0')
-    user_input = input('> ').strip()
-    # Get current date and time
+def log_to_cmdlog(text):
     date = datetime.now().strftime("%m/%d/%Y")
     time = datetime.now().strftime("%I:%M:%S %p")
-    # Log to CSV
     cmdlog = filepaths.cmdlog_path
+    os.makedirs(os.path.dirname(cmdlog), exist_ok=True)
     try:
-        os.makedirs(os.path.dirname(cmdlog), exist_ok=True)
-        user_input_log = user_input
-        if user_input == "":
-            user_input_log = " "
         with open(cmdlog, 'a', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow([date, time, user_input_log])  
+            writer.writerow([date, time, text if text else " "])
     except Exception as e:
         print(f"[LOGGING ERROR] Could not write to cmdlogs.csv: {e}")
+
+def prompt(address=True, lower=True, yes_no=False):
+    if address:
+        print(r'T:\TambayTracker2.0')
+    if yes_no:
+        result = yes_no_query('> ')
+        log_to_cmdlog('Y' if result else 'N')
+        return result  # Boolean
+    user_input = input('> ').strip()
+    log_to_cmdlog(user_input)
     if lower:
         user_input = user_input.lower()
     return user_input

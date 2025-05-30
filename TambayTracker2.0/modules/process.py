@@ -234,7 +234,8 @@ def p_help(noun, flags):
                 'update': filepaths.help_update_file,   'ud' : filepaths.help_update_file,
                 'remove': filepaths.help_rm_file,       'rm' : filepaths.help_rm_file,
                 'color' : filepaths.help_color_file,    'clr': filepaths.help_color_file,
-                'note'  : filepaths.help_note_file,     'sys': filepaths.help_sys_file
+                'note'  : filepaths.help_note_file,     'sys': filepaths.help_sys_file,
+                'n'  : filepaths.help_note_file, 
             }
     nosubcommand_nouns = {'exit', 'e', '.' 'home', 'cls', 'quit', 'qt', 'hm', 'clearscreen', 'help'}
     match noun:
@@ -278,7 +279,7 @@ def p_note(noun, flags):
     return
 
 
-def p_system_shell(noun, flags):
+def p_system(noun, flags):
     print(utils.sepline(50))
     print("Enter valid security code")
     print(utils.sepline(50))
