@@ -17,7 +17,7 @@ def add_entry():
         # Step 1: Ask for Date
         while not has_date:
             print('Date (MM/DD/YY) [Press Enter for Today]')
-            date = input('> ').strip().lower()
+            date = utils.prompt(address=False, lower = False)
             if date in ['quit', 'qt', '..']:
                 print('Entry cancelled.')
                 entry_done = True
@@ -38,7 +38,7 @@ def add_entry():
         while not has_sender:
             print(utils.sepline(65))
             print('Sender Name:')
-            sender = input('> ').strip()
+            sender = utils.prompt(address=False, lower = False)
             if sender.lower() in ['quit', 'qt', '..']:
                 print('Entry cancelled.')
                 entry_done = True
@@ -57,7 +57,7 @@ def add_entry():
         attendees = []
         print("Enter attendees one by one. Type 'done' to finish, 'quit' to cancel.")
         while not has_attendees:
-            attendee = input('> ').strip()
+            attendee = utils.prompt(address=False, lower = False)
             # Handle quit
             if attendee.lower() in ['quit', 'qt', '..']:
                 print('Entry cancelled.')
@@ -123,7 +123,7 @@ def add_member():
     valid_credentials = ['299792458', '2.718281828', '3.141592654', 
                          '1.414213562', 'Inuke', 'Silvernuke', 'Jieru']
     print("Enter your credential password (Type 'quit' to cancel):")
-    password = input('> ').strip()
+    password = utils.prompt(address=False, lower = False)
     if password.lower() in ['quit', 'qt', '..']:
         print("Operation cancelled.")
         return
@@ -135,7 +135,7 @@ def add_member():
     print(utils.sepline(65))
     # Prompt for new member name
     print("Enter the new member's name (Type 'quit' to cancel):")
-    name = input('> ').strip()
+    name = utils.prompt(address=False, lower = False)
     if name.lower() in ['quit', 'qt', ".."]:
         print("Operation cancelled.")
         return
@@ -146,17 +146,17 @@ def add_member():
         return
     # Prompt for Batch, College, and Course (all optional)
     print("Enter the batch (Press Enter to leave blank, or 'quit' to cancel):")
-    batch = input('> ').strip()
+    batch = utils.prompt(address=False, lower = False)
     if batch.lower() in ['quit', 'qt',".."]:
         print("Operation cancelled.")
         return
     print("Enter the college (Press Enter to leave blank, or 'quit' to cancel):")
-    college = input('> ').strip()
+    college = utils.prompt(address=False, lower = False)
     if college.lower() in ['quit', 'qt']:
         print("Operation cancelled.")
         return
     print("Enter the course (Press Enter to leave blank, or 'quit' to cancel):")
-    course = input('> ').strip()
+    course = utils.prompt(address=False, lower = False)
     if course.lower() in ['quit', 'qt']:
         print("Operation cancelled.")
         return
@@ -203,7 +203,7 @@ def add_special_points():
     # Step 1: Ask for the name
     while True:
         print('Enter the name to award special points (or type "quit" to cancel):')
-        name = input('> ').strip()
+        name = utils.prompt(address=False, lower = False)
         if name.lower() in ['quit', 'qt']:
             print('Operation cancelled.')
             return
@@ -218,7 +218,7 @@ def add_special_points():
     while True:
         print(f'How many special points to add to {name}?')
         try:
-            points = int(input('> ').strip())
+            points = int(utils.prompt(address=False, lower = False))
             if points in ['quit', 'qt']:
                 print('Operation cancelled.')
                 return

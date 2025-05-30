@@ -1,33 +1,36 @@
-from modules import utils
-
+import os
 import pandas as pd
 
 pd.set_option('display.max_rows', None)
 
+# Get absolute path of TambayTracker2.0 root, regardless of cwd
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # File paths
-raw_data_filepath = r'TambayTracker2.0\data\raw_data.csv'
-date_filepath     = r'TambayTracker2.0\data\date_list.csv'
-score_filepath    = r'TambayTracker2.0\data\score_data.csv'
-member_filepath   = r'TambayTracker2.0\data\member_list.csv'
+raw_data_filepath   = os.path.join(BASE_DIR, "data", "raw_data.csv")
+date_filepath       = os.path.join(BASE_DIR, "data", "date_list.csv")
+score_filepath      = os.path.join(BASE_DIR, "data", "score_data.csv")
+member_filepath     = os.path.join(BASE_DIR, "data", "member_list.csv")
 
 # Image Save paths
-imsave_path = r'TambayTracker2.0\images'
-notefile_path = r'TambayTracker2.0\notes\note.csv'
+imsave_path         = os.path.join(BASE_DIR, "images")
+notefile_path       = os.path.join(BASE_DIR, "notes", "note.csv")
 
 # Command Log save path
-cmdlog_path = r"TambayTracker2.0\cmdlogs\cmdlogs.csv"
+cmdlog_path         = os.path.join(BASE_DIR, "cmdlogs", "cmdlogs.csv")
 
 # Text files
-home_filepath           = r'TambayTracker2.0\textfiles\homepage.txt'
-help_filepath           = r'TambayTracker2.0\textfiles\help_general.txt'
-help_add_filepath       = r'TambayTracker2.0\textfiles\help_add.txt'
-help_list_filepath      = r'TambayTracker2.0\textfiles\help_list.txt'
-help_show_filepath      = r'TambayTracker2.0\textfiles\help_show.txt'
-help_update_filepath    = r'TambayTracker2.0\textfiles\help_update.txt'
-help_rm_filepath        = r'TambayTracker2.0\textfiles\help_remove.txt'
-help_color_filepath     = r'TambayTracker2.0\textfiles\help_color.txt'
-help_note_filepath      = r'TambayTracker2.0\textfiles\help_note.txt'
-help_sys_filepath       = r'TambayTracker2.0\textfiles\help_sys.txt'
+home_filepath           = os.path.join(BASE_DIR, "textfiles", "homepage.txt")
+help_filepath           = os.path.join(BASE_DIR, "textfiles", "help_general.txt")
+help_add_filepath       = os.path.join(BASE_DIR, "textfiles", "help_add.txt")
+help_list_filepath      = os.path.join(BASE_DIR, "textfiles", "help_list.txt")
+help_show_filepath      = os.path.join(BASE_DIR, "textfiles", "help_show.txt")
+help_update_filepath    = os.path.join(BASE_DIR, "textfiles", "help_update.txt")
+help_rm_filepath        = os.path.join(BASE_DIR, "textfiles", "help_remove.txt")
+help_color_filepath     = os.path.join(BASE_DIR, "textfiles", "help_color.txt")
+help_note_filepath      = os.path.join(BASE_DIR, "textfiles", "help_note.txt")
+help_sys_filepath       = os.path.join(BASE_DIR, "textfiles", "help_sys.txt")
+
 
 # FUNCTIONS TO LOAD DATAFRAMES (ALWAYS UPDATED)
 def load_raw_data():
@@ -39,9 +42,10 @@ def load_score_data():
 def load_member_data():
     return pd.read_csv(member_filepath)
 def text_reader(filepath):
+    if not os.path.exists(filepath):
+        raise FileNotFoundError(f"Missing file: {filepath}")
     with open(filepath, "r") as file:
-        contents = file.read()
-    return contents
+        return file.read()
 
 # Text readers
 home_file           = text_reader(home_filepath)
