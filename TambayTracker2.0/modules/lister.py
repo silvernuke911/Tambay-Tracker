@@ -134,32 +134,58 @@ def list_points():
     pass
 
 def list_cmdlog(flags):
-    cmd_list = pd.read_csv(filepaths.cmdlog_path)
+    if not flags:  # Empty dict means default to --today
+        flags = {"today": True}
+    cmdlog_file = filepaths.cmdlog_path
+    cmd_list = pd.read_csv(cmdlog_file, dtype=str).fillna("")
+    # Determine target date
+    target_date = None
+    if flags.get("today", False):
+        target_date = datetime.now().strftime("%m/%d/%Y")
+    elif "date" in flags:
+        raw_date = flags["date"]
+        for fmt in ("%m/%d/%Y", "%m/%d/%y"):
+            try:
+                dt = datetime.strptime(raw_date, fmt)
+                target_date = dt.strftime("%m/%d/%Y")  # Normalize to full-year format
+                break
+            except ValueError:
+                continue
+        else:
+            print(f"Invalid date format: '{raw_date}' (use MM/DD/YYYY or MM/DD/YY)")
+            return
+    if target_date:
+        cmd_list = cmd_list[cmd_list["Date"] == target_date]
+    if cmd_list.empty and target_date:
+        print(f"No command logs found for {target_date}")
+        return
+    # Reset index
     cmd_list = cmd_list.reset_index(drop=True)
-    # Print formatted header
-    print(utils.sepline(80))
+    # Display
+    print(utils.sepline(85))
     print(
         f"{'Date':^15} "
         f"{'Time':^15} "
-        f"{'Input':^50} " 
+        f"{'Input':^50}"
     )
-    print(utils.sepline(80))
+    print(utils.sepline(85))
     for _, row in cmd_list.iterrows():
         wrapped_cmd = textwrap.fill(row["Input"], width=50)
         cmd_lines = wrapped_cmd.split("\n")
+        # First line with full metadata
         print(
             f"{row['Date']:^15} "
             f"{row['Time']:^15} "
             f"{cmd_lines[0]:<50}"
         )
+        # Extra lines aligned to "Input" column
         for line in cmd_lines[1:]:
             print(
                 f"{'':<15} "
                 f"{'':<15} "
                 f"{line:<50}"
             )
-    print(utils.sepline(80))
-    return 
+    print(utils.sepline(85))
 
 def list_attendance_proportion(flags):
     utils.temporary_output()

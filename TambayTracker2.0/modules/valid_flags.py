@@ -1,7 +1,7 @@
 f_help = []
 f_add  = []
 f_remove = []
-f_list = ['rmwknd','startdate','enddate','wkave','order','name']
+f_list = ['rmwknd','startdate','enddate','wkave','order','name','today','date','all']
 f_show = ['top','save','unsave','rmwknd','startdate','enddate','wkave']
 f_update = []
 f_exit = []

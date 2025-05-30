@@ -117,7 +117,7 @@ def input_analyzer(verb, noun, flags):
     print('flags : ', flags)
     
 def temporary_output():
-    output = text_reader(r'TambayTracker2.0\textfiles\temp_output.txt')
+    output = filepaths.temp_output_file
     print(output)
 
 def parse_command(command):

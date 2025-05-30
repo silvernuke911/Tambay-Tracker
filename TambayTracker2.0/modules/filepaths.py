@@ -30,7 +30,7 @@ help_rm_filepath        = os.path.join(BASE_DIR, "textfiles", "help_remove.txt")
 help_color_filepath     = os.path.join(BASE_DIR, "textfiles", "help_color.txt")
 help_note_filepath      = os.path.join(BASE_DIR, "textfiles", "help_note.txt")
 help_sys_filepath       = os.path.join(BASE_DIR, "textfiles", "help_sys.txt")
-
+temp_output_filepath    = os.path.join(BASE_DIR, "textfiles", "temp_output.txt")
 
 # FUNCTIONS TO LOAD DATAFRAMES (ALWAYS UPDATED)
 def load_raw_data():
@@ -58,3 +58,4 @@ help_rm_file        = text_reader(help_rm_filepath)
 help_color_file     = text_reader(help_color_filepath)
 help_note_file      = text_reader(help_note_filepath)
 help_sys_file       = text_reader(help_sys_filepath)
+temp_output_file    = text_reader(temp_output_filepath)
