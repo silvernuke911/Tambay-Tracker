@@ -572,3 +572,23 @@ Date,Time,Input
 05/31/2025,06:19:21 AM,"git all --m ""all"""
 05/31/2025,06:19:28 AM,exit
 05/31/2025,06:19:29 AM,y
+05/31/2025,03:17:40 PM,cmdlog
+05/31/2025,03:17:48 PM,sys
+05/31/2025,03:17:50 PM,..
+05/31/2025,03:17:59 PM,sc
+05/31/2025,10:53:36 PM,a n
+05/31/2025,10:54:06 PM,"Add a time frequency based on time sending. Also add individual attendances, attendance scores only, and other functionalities. So and so"
+05/31/2025,10:54:08 PM,user
+05/31/2025,10:54:12 PM,cmdlog
+05/31/2025,10:54:26 PM,a n
+05/31/2025,10:54:29 PM,..
+05/31/2025,10:54:31 PM,quit
+05/31/2025,10:54:41 PM,n r
+05/31/2025,10:54:56 PM,a n
+05/31/2025,10:55:16 PM,I should probably add a [IDEA NOTE IDEA NOTE IDEA NOTE] to that one
+05/31/2025,10:55:17 PM,user
+05/31/2025,10:55:20 PM,n r
+05/31/2025,10:56:51 PM,n r --all
+05/31/2025,10:57:54 PM,sc
+05/31/2025,10:58:19 PM,ud a
+05/31/2025,10:58:48 PM,"git all --m ""comitt"""
