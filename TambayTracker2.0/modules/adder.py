@@ -125,9 +125,11 @@ def add_member():
     password = utils.prompt(address=False, lower = False)
     if password.lower() in utils.quit_list:
         print("Operation cancelled.")
+        print(utils.sepline(65))
         return
     if password not in utils.valid_credentials:
         print("Invalid credential password. Aborting.")
+        print(utils.sepline(65))
         return
     else:
         print('Valid password, proceed with adding new member')
@@ -137,6 +139,7 @@ def add_member():
     name = utils.prompt(address=False, lower = False)
     if name.lower() in utils.quit_list:
         print("Operation cancelled.")
+        print(utils.sepline(65))
         return
     # Validate if the member already exists
     member_file = pd.read_csv(filepaths.member_filepath)
@@ -148,16 +151,19 @@ def add_member():
     batch = utils.prompt(address=False, lower = False)
     if batch.lower() in utils.quit_list:
         print("Operation cancelled.")
+        print(utils.sepline(65))
         return
     print("Enter the college (Press Enter to leave blank, or 'quit' to cancel):")
     college = utils.prompt(address=False, lower = False)
     if college.lower() in utils.quit_list:
         print("Operation cancelled.")
+        print(utils.sepline(65))
         return
     print("Enter the course (Press Enter to leave blank, or 'quit' to cancel):")
     course = utils.prompt(address=False, lower = False)
     if course.lower() in utils.quit_list:
         print("Operation cancelled.")
+        print(utils.sepline(65))
         return
     # Add the new member to the member file
     new_member = pd.DataFrame({
@@ -205,6 +211,7 @@ def add_special_points():
         name = utils.prompt(address=False, lower = False)
         if name.lower() in utils.quit_list:
             print('Operation cancelled.')
+            print(utils.sepline(65))
             return
         
         # Use your validate_member() function
@@ -220,6 +227,7 @@ def add_special_points():
             points = int(utils.prompt(address=False, lower = False))
             if points in utils.quit_list:
                 print('Operation cancelled.')
+                print(utils.sepline(65))
                 return
             # if points < 0:
             #     print('Points cannot be negative. Try again.')

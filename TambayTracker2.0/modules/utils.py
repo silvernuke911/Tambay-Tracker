@@ -38,8 +38,21 @@ def yes_no_query(prompt, limit=5):
 def sepline(width, char = '-'):
     return char*width
 
-valid_credentials = ['299792458', '2.718281828', '3.141592654', '1.414213562', 'Inuke', 'Silvernuke', 'Jieru', '..', "...", "Navi0105"]
-quit_list = ['quit', 'qt',".."]
+valid_credentials = ['299792458', 
+                     '2.718281828', 
+                     '3.141592654', 
+                     '1.414213562', 
+                     'Inuke', 
+                     'Silvernuke', 
+                     'Jieru', 
+                     '..', 
+                     "...", 
+                     "Navi0105"
+                    ]
+quit_list = ['quit', 
+             'qt',
+             ".."
+            ]
 
 # Dictionary mapping color names to ANSI codes
 color_codes = {
@@ -103,7 +116,7 @@ def log_to_cmdlog(text):
             writer = csv.writer(csvfile)
             writer.writerow([date, time, text if text else " "])
     except Exception as e:
-        print(f"[LOGGING ERROR] Could not write to cmdlogs.csv: {e}")
+        print(f"[LOGGING ERROR] Could not write to cmdlogs: {e}")
 
 def prompt(address=True, lower=True, yes_no=False):
     if address:
