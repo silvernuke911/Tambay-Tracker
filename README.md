@@ -113,9 +113,6 @@ Follows a **verb-noun** system.
 - Exits the program.
 - Requires confirmation with `y` or `n`.
 
-#### `e`
-- Shortcut for `exit`.
-
 #### `home`
 - Returns to the home page header.
 
@@ -145,6 +142,7 @@ If an invalid command is entered:
 - [x] Add notes system
 - [x] Add command log system
 - [x] Add an attendance only point system
+- [x] Automate the system
 - [ ] Generate Graphs for Each Individual
 - [ ] Display Only Weekly Attendance
 - [ ] Add More Graph Information (e.g., Days)
