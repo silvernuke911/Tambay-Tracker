@@ -1,0 +1,62 @@
+
+TASKS
+    [ ] Read the Form 5 and Transcribe it to data
+    [ ] Present the chart in full, with thingies
+    [ ] Search for name, arrive with schedule
+    [ ] Search for time, arrive with available brods
+    [ ] Search for Day, arrive with the brod shedule
+    [ ] 
+First Name (John Lloyd)
+Middle Name (Canomeo)
+Last Name (Calimot)
+Batch (24, 25A)
+Frat Name
+
+
+================================
+[x] set up a cmdlog
+take all the data 
+list all the data 
+transform all the data 
+display the data
+save comments and others
+
+> show
+    mobchart
+        show mobchart in full
+> list 
+    schedules
+        list all schedules 
+    raw data 
+        list the raw data from the form 5 data - requires credentials
+
+> search 
+    schedule 
+        individual name 
+            show whole week matrix
+    available 
+        ask for day 
+        ask for start time 
+        ask for end time 
+            show the individuals available during that time 
+            show the times that they are available
+    profile 
+        -- requires credentials
+        show member profile
+
+> update  -- requires credentials
+    data 
+        --form5     update data from the form5 matrix 
+        --manual    update data manually
+            ask profile 
+            ask schedules 
+                day 
+                entry 
+                    start time 
+                    end time 
+                    subject
+                    location
+
+> note 
+    add note, read note, help note
+
