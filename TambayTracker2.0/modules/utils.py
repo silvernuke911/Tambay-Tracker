@@ -1,8 +1,9 @@
 import shlex  
-from datetime import datetime
-from modules import filepaths
 import os  
 import csv 
+
+from datetime import datetime
+from modules import filepaths
 
 def text_reader(filepath):
     if not os.path.exists(filepath):
