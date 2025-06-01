@@ -614,3 +614,24 @@ Date,Time,Input
 06/01/2025,02:25:59 PM,git status
 06/01/2025,02:26:04 PM,sys
 06/01/2025,02:26:06 PM,..
+06/01/2025,02:27:17 PM,git status
+06/01/2025,02:27:45 PM,show attendance proportion
+06/01/2025,02:28:21 PM,note add
+06/01/2025,02:28:56 PM,"Added a new feature, raw attendance. We're pretty gucci by then. And also that's about that"
+06/01/2025,02:28:59 PM,user
+06/01/2025,02:29:04 PM,l raw
+06/01/2025,02:30:07 PM,hm
+06/01/2025,02:30:08 PM,h
+06/01/2025,02:30:49 PM,h clr
+06/01/2025,02:31:03 PM,color red
+06/01/2025,02:31:10 PM,color 0a
+06/01/2025,02:31:16 PM,color blue
+06/01/2025,02:31:23 PM,color br
+06/01/2025,02:31:59 PM,color reset
+06/01/2025,02:32:10 PM,l cmdlog
+06/01/2025,02:32:18 PM,n r
+06/01/2025,02:32:22 PM,n r --all
+06/01/2025,02:33:28 PM,n
+06/01/2025,02:33:35 PM,h
+06/01/2025,02:34:26 PM,git status
+06/01/2025,02:34:34 PM,"git all --m ""m"""
