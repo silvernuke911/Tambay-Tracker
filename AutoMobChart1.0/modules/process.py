@@ -59,7 +59,7 @@ def p_quit(noun, flags):
     utilities.temporary_output()
 
 def p_clearscreen(noun, flags):
-    print('\033c', end='')  
+    utilities.clearscreen()
     utilities.set_color('g')
     return
 

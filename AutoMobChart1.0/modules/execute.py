@@ -28,8 +28,6 @@ def execute_command(verb, noun, flags):
             process.p_list('cmdlog',flags)
         case 'shortcut' | 'sc':
             process.shortcut(noun,flags)
-        case 'restart' | '...' | ',,,':
-            process.p_restart(noun, flags)
         case _:
             process.p_rest(verb, noun, flags)
     print()

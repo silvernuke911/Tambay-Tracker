@@ -5,6 +5,10 @@ import shlex
 from datetime import datetime
 from modules import filepaths
 
+def clearscreen():
+    print('\033c', end='')
+    return
+
 def sepline(char = "-", length = 70):
     output = char*length
     return output
@@ -58,15 +62,13 @@ def yes_no_query(prompt, limit=5):
     return True 
 
 valid_credentials = ['299792458', 
-                     '2.718281828', 
-                     '3.141592654', 
-                     '1.414213562', 
+                     '2718281828', 
+                     '3141592654', 
+                     '1414213562', 
+                     '091103'
                      'Inuke', 
-                     'Silvernuke', 
-                     'Jieru', 
-                     '..', 
+                     'Jieru',
                      "...", 
-                     "Navi0105"
                      "Fratres!",
                      "Usque@dFinem"
                     ]
@@ -166,12 +168,9 @@ def parse_command(command):
         tokens = shlex.split(command)  # Split but preserve quoted strings
     except Exception as e:  # Catch ANY exception and print it
         print(f"Error: {e}.")
-        # Strip any unmatched trailing quotes (' or ")
         return None, None, {}
-        
     if not tokens:
         return None, None, {}
-    
     verb = tokens[0]
     noun_parts = []
     flags = {}
@@ -187,6 +186,5 @@ def parse_command(command):
         else:
             noun_parts.append(tokens[i])  # Collect noun parts
         i += 1
-
     noun = " ".join(noun_parts) if noun_parts else None
     return verb, noun, flags
