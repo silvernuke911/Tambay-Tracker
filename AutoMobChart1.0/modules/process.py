@@ -5,6 +5,7 @@ from modules import validators
 from modules import updater
 from modules import valid_flags
 
+from datetime import datetime
 import subprocess 
 import os
 
@@ -52,11 +53,9 @@ def p_note(noun, flags):
 def p_help(noun, flags):
     utilities.temporary_output()
 
-def p_home(noun, flags):
-    utilities.temporary_output()
-
 def p_quit(noun, flags):
-    utilities.temporary_output()
+    print('Quitting entry and returning to home...')
+    return
 
 def p_clearscreen(noun, flags):
     utilities.clearscreen()
@@ -119,10 +118,22 @@ def p_home(noun, flags):
     if not validators.validate_flags(flags, valid_flags.f_home, noun):
         return
     print('Returning to home...')
-    print('\033c', end='')
+    utilities.clearscreen()
     utilities.set_color('g')
     print(filepaths.home_file)
     return
+
+def p_time(noun, flags):
+    date = datetime.now().strftime("%m/%d/%Y")
+    time = datetime.now().strftime("%I:%M:%S %p")
+    print(utilities.sepline())
+    print(f"Date : {date}") 
+    print(f"Time : {time}")
+    print(utilities.sepline())
+    return 
+
+def shortcut(noun,flags):
+    utilities.temporary_output()
 
 def p_system(noun, flags):
     utilities.bordertext("Enter valid security code", char = '-')

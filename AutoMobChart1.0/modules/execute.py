@@ -22,6 +22,8 @@ def execute_command(verb, noun, flags):
             process.p_color(noun, flags)
         case 'note' | 'nt' | 'n':
             process.p_note(noun, flags)
+        case 'time' | 'date':
+            process.p_time(noun, flags)
         case 'sys' | 'system':
             process.p_system(noun, flags)
         case 'cmdlog':

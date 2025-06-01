@@ -25,6 +25,8 @@ save comments and others
     mobchart
         show mobchart in full
 > list 
+    members 
+        list all members 
     schedules
         list all schedules 
     raw data 
@@ -56,7 +58,13 @@ save comments and others
                     end time 
                     subject
                     location
-
+> procedure 
+    same as help procedure
+> help 
+    general help guide from last time 
+    new one : 
+    procedure       --command procedures to do certain tasks 
+                    --number options, type on prompt, and display procedure as text 
 > note 
     add note, read note, help note
 
