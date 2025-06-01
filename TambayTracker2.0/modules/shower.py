@@ -3,6 +3,7 @@ from modules import utils
 from modules import sciplots
 
 from datetime import datetime
+
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates 
 import pandas as pd
@@ -153,12 +154,6 @@ def show_attendance_frequency(flags):
     #     # Calculate and plot weekly average attendance
     #     pass
 
-def show_attendance_proportion(flags):
-    utils.temporary_output()
-
-def show_individual_attendance(flags):
-    utils.temporary_output()
-
 def show_raw_attendance(flags):
     print(utils.sepline(80))
     print('Loading image ... ')
@@ -216,3 +211,9 @@ def show_raw_attendance(flags):
         print(f"Plot saved to {filename}")
     plt.show()
     print(utils.sepline(80))
+
+def show_attendance_proportion(flags):
+    utils.temporary_output()
+
+def show_individual_attendance(flags):
+    utils.temporary_output()

@@ -1,9 +1,9 @@
+import textwrap
+import pandas as pd 
+
+from datetime import datetime
 from modules import filepaths
 from modules import utils
-import textwrap
-
-import pandas as pd 
-from datetime import datetime
 
 def list_members(flags):
     member_list = filepaths.load_member_data().copy()
@@ -186,7 +186,9 @@ def list_cmdlog(flags):
     print(utils.sepline(85))
 
 def list_attendance_proportion(flags):
+    ## attendance proportion
     utils.temporary_output()
+
 def list_point_names():
     utils.temporary_output()
     
