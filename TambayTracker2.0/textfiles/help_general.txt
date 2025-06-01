@@ -13,7 +13,7 @@ Available commands:
     quit    - Quit the entry and return to home.
     cls     - Clear the screen.
     color   - Set the terminal color.
-    system  - Enter cmd terminal.
+    system  - Enter cmd terminal
 
 For help with the available subcommands, type help {command}.
 -----------------------------------------------------------------

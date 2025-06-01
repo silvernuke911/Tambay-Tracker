@@ -152,6 +152,8 @@ If an invalid command is entered:
 - [x] Note taking functionality
 - [x] Remove Weekends from Attendance Data
 - [x] Add notes system
+- [x] Add command log system
+- [x] Add an attendance only point system
 - [ ] Generate Graphs for Each Individual
 - [ ] Display Only Weekly Attendance
 - [ ] Add More Graph Information (e.g., Days)
