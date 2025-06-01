@@ -119,20 +119,11 @@ Follows a **verb-noun** system.
 #### `home`
 - Returns to the home page header.
 
-#### `hm`
-- Shortcut for `home`.
-
 #### `quit`
 - Quits the entry and returns to home.
 
-#### `qt`
-- Shortcut for `quit`.
-
 #### `clearscreen`
 - Clears the screen.
-
-#### `cls`
-- Shortcut for `clearscreen`.
 
 ---
 
