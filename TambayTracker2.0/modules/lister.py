@@ -24,7 +24,7 @@ def list_members(flags):
             f"{row.iloc[3]:^10}"
         ) 
     print(utils.sepline(80))
-    pass 
+    return
 
 def list_raw_data(flags):
     raw_points = filepaths.load_raw_data().copy()
@@ -192,7 +192,35 @@ def list_attendance_proportion(flags):
 def list_point_names():
     utils.temporary_output()
     
-def list_point_order():
+def list_point_order(flags):
+    point_list = filepaths.load_score_data().copy()
+    sort_factor = 'Total Points'
+    if flags.get('total'):
+        sort_factor = 'Total Points'
+    elif flags.get('attendance'):
+        sort_factor = 'Attendance Count'
+    elif flags.get('sender'):
+        sort_factor = 'Sender Count'
+    point_list = point_list.sort_values(by=sort_factor, ascending=False).reset_index(drop=True)
+    print(utils.sepline(80))
+    print(
+        f"{point_list.columns[0]:<15} "
+        f"{point_list.columns[1]:^15} "
+        f"{point_list.columns[2]:^15} "
+        f"{point_list.columns[3]:^15} "
+        f"{point_list.columns[4]:^15}"
+    )
+    print(utils.sepline(80))
+    for _, row in point_list.iterrows():
+        print(
+            f"{row.iloc[0]:<15} "
+            f"{row.iloc[1]:^15} "
+            f"{row.iloc[2]:^15} "
+            f"{row.iloc[3]:^15} "
+            f"{row.iloc[4]:^15}"
+        )
+    print(utils.sepline(80))
+    return
     utils.temporary_output()
     
 def list_individual_attendance(flags):

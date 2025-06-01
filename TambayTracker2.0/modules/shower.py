@@ -178,7 +178,7 @@ def show_raw_attendance(flags):
         names,
         scores,
         edgecolor='k',
-        coor = 'r',
+        color = 'g',
         width=1
     )
     

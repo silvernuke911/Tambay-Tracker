@@ -7,8 +7,10 @@ from modules import shower
 from modules import updaters
 from modules import noter
 from modules import valid_flags
+
 import subprocess
 import os
+import sys
 
 def quick_exit():
     updaters.update_all(silent=True)
@@ -34,6 +36,22 @@ def p_add(noun, flags):
         case _:
             print(f"'{noun}' is not a recognized noun for 'add'")
 
+def p_restart(noun, flags):
+    print(utils.sepline(65))
+    print("Restarting...")
+    print(utils.sepline(65))
+    updaters.update_all(silent=True)
+    # Get absolute path to restart.bat (inside modules/)
+    bat_path = os.path.join(os.path.dirname(__file__), 'restart.bat')
+    # Run batch file in a new window (optional: add `creationflags=subprocess.CREATE_NEW_CONSOLE`)
+    subprocess.Popen([bat_path], shell=True)
+    # Forcefully terminate the current process (and its terminal)
+    os._exit(0)
+
+    # # Restart using the same Python interpreter and arguments
+    # os.execv(sys.executable, [sys.executable] + sys.argv)
+    # os._exit(0)
+
 def p_list(noun, flags):
     if not validators.validate_flags(flags, valid_flags.f_list, noun):
         return
@@ -55,7 +73,7 @@ def p_list(noun, flags):
             if not flags:  # Empty dictionary or None
                 lister.list_points()
             elif flags.get('order'):
-                lister.list_point_order()
+                lister.list_point_order(flags)
             elif flags.get('name'):
                 lister.list_point_names()
         case 'individual attendance' | 'ia':

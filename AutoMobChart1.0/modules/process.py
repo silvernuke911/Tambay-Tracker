@@ -91,16 +91,12 @@ def p_git(noun, flags):
             print(utilities.sepline())
             print("Executing: git push")
             subprocess.run(["git", "push"])
-            print(utilities.sepline())
-            print("Succesfully pushed to remote repository") 
-            print(utilities.sepline())
+            utilities.bordertext("Succesfully pushed to remote repository", align='left') 
         case 'pull':
             print(utilities.sepline())
             print("Executing: git pull")
             subprocess.run(["git", "pull"])
-            print(utilities.sepline())
-            print("Succesfully pulled remote repository") 
-            print(utilities.sepline())
+            utilities.bordertext("Succesfully pulled remote repository", align='left') 
         case "all":
             message = flags.get("m", None)  # Get the commit message
             print(utilities.sepline())
@@ -114,9 +110,7 @@ def p_git(noun, flags):
                 return
             print("Executing: git push")
             subprocess.run(["git", "push"])
-            print(utilities.sepline())
-            print("Succesfully pushed to remote repository") 
-            print(utilities.sepline())
+            utilities.bordertext("Succesfully pushed to remote repository", align='left') 
             utilities.set_color('g')
         case _:
             print(f"Unknown git command: {noun}")
@@ -131,21 +125,15 @@ def p_home(noun, flags):
     return
 
 def p_system(noun, flags):
-    print(utilities.sepline())
-    print("Enter valid security code")
-    print(utilities.sepline())
+    utilities.bordertext("Enter valid security code", char = '-')
     code = utilities.prompt(address=False)
-    
     if code in utilities.valid_credentials:
-        print(utilities.sepline())
-        print("Entering system shell... (type 'exit' to return)")
+        utilities.bordertext("Entering system shell... (type 'exit' to return)", char = '-', align='left')
         shell = os.environ.get("COMSPEC") if os.name == "nt" else os.environ.get("SHELL", "/bin/bash")
         try:
             subprocess.run(shell, check=True)
             utilities.set_color('g')
-            print("Returned from system shell")
-            print(utilities.sepline())
-            
+            utilities.bordertext("Returned from system shell", char = '-', align = 'left')
         except subprocess.CalledProcessError as e:
             print(f"Shell exited with error: {e}")
         except Exception as e:

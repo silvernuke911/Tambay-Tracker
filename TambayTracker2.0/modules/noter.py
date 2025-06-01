@@ -31,8 +31,8 @@ def note_add(flags):
             return
         if author == '':
             utils.clearline()
-            print('> Anon')
-            author = 'Anon'
+            print('> user')
+            author = 'user'
         has_author = True
     date = np.nan if flags.get("nodate", False) else datetime.now().strftime("%m/%d/%y")
     time = np.nan if flags.get("nodate", False) else datetime.now().strftime("%I:%M:%S %p")
@@ -65,13 +65,10 @@ def note_add(flags):
 def note_read(flags):
     if not flags:
         flags = {"today": True}
-
     notefile = filepaths.notefile_path
     notes = pd.read_csv(notefile, dtype=str).fillna("")
-
     target_date = None
-
-    if flags.get("all", False):
+    if flags.get("all", False) or flags.get("a", False):
         target_date = None  # Show all entries
     elif flags.get("today", False):
         target_date = datetime.now().strftime("%m/%d/%y")

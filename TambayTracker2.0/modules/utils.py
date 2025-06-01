@@ -48,6 +48,7 @@ valid_credentials = ['299792458',
                      '..', 
                      "...", 
                      "Navi0105"
+                     "Fratres!"
                     ]
 quit_list = ['quit', 
              'qt',

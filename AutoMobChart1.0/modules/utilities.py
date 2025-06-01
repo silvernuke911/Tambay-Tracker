@@ -9,22 +9,22 @@ def sepline(char = "-", length = 70):
     output = char*length
     return output
 
-def aligntext(text, length=70, orientation='center'):
-    if orientation not in ('center', 'left', 'right'):
-        raise ValueError("Wrong orientation, accepted: center, left, right")
-    if orientation == 'center':
+def aligntext(text, length=70, align='center'):
+    if align not in ('center', 'left', 'right'):
+        raise ValueError("Wrong alignment text, accepted: center, left, right")
+    if align == 'center':
         output = f"{text:^{length}}"
-    elif orientation == 'left':
+    elif align == 'left':
         output = f"{text:<{length}}"
-    elif orientation == 'right':
+    elif align == 'right':
         output = f"{text:>{length}}"
     return output
 
-def bordertext(text, char='=', length=70, orientation='center'):
+def bordertext(text, char='-', length=70, align='center'):
     lines = str(text).split('\n')
     print(sepline(char=char, length=length))
     for line in lines:
-        print(aligntext(line, length=length, orientation=orientation))
+        print(aligntext(line, length=length, align=align))
     print(sepline(char=char, length=length))
 
 def text_reader(filepath):
