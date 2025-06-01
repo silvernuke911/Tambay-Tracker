@@ -82,6 +82,8 @@ def p_show(noun, flags):
             shower.show_attendance_proportion(flags)
         case 'individual attendance' | 'ia':
             shower.show_individual_attendance(flags)
+        case 'raw attendance' | 'ra':
+            shower.show_raw_attendance(flags)
         case _:
             print(f"'{noun}' is not a recognized noun for 'show'")
 

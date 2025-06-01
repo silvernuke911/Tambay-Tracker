@@ -21,12 +21,18 @@ Available commands and flags for 'show':
         --wkave                    - Show the average week attendance.
         --unsave                   - Do not save the image.
     
-    individual attendance          - Display a graph of an individual's attendance.
+    individual attendance          - Display a graph of an individual's attendance 
+                                     over dates.
         --name <NAME>              - Specify the name.
         --rmwknd                   - Remove weekends (default: no).
         --wkave                    - Show the average week attendance.
         --startdate <YYYY-MM-DD>   - Set the start date (default: start of semester).
         --enddate <YYYY-MM-DD>     - Set the end date (default: now).
+        --save                     - Save the image (default: yes).
+        --unsave                   - Do not save the image.
+
+    raw attendance                 - Show the graph of the raw attendance points.
+        --top <N>                  - Show the top N pointers.
         --save                     - Save the image (default: yes).
         --unsave                   - Do not save the image.
 -------------------------------------------------------------------------------------

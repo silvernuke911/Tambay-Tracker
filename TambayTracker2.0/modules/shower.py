@@ -158,3 +158,61 @@ def show_attendance_proportion(flags):
 
 def show_individual_attendance(flags):
     utils.temporary_output()
+
+def show_raw_attendance(flags):
+    print(utils.sepline(80))
+    print('Loading image ... ')
+    # Load the data
+    data = filepaths.load_score_data()
+    
+    # Sort the data by 'Total Points' in descending order
+    data_sorted = data.sort_values(by='Attendance Count', ascending=False)
+    
+    # Handle the 'top' flag
+    if 'top' in flags:
+        top_n = int(flags['top'])
+        data_sorted = data_sorted.head(top_n)  # Filter top N scorers
+    
+    # Extract names and scores
+    names = data_sorted['Name']
+    scores = data_sorted['Attendance Count']
+    
+    # Create the plot
+    plt.figure(figsize=(12, 6))
+    plt.bar(
+        names,
+        scores,
+        edgecolor='k',
+        coor = 'r',
+        width=1
+    )
+    
+    # Customize the plot
+    current_datetime = datetime.now().strftime(r"%m/%d/%Y %H:%M")
+    plt.xlabel('Brod Names')
+    plt.ylabel('Attendance')
+    plt.title(rf'\textbf{{Tambay Attendance (As of {current_datetime})}}')
+    plt.xticks(rotation=90, ha='center')
+    plt.grid(axis='x', visible=False)
+    max_score = int(max(scores))
+    step  = 5
+    plt.yticks(range(0, max_score + step, step))
+    plt.tight_layout()
+    
+    # Handle the 'save' and 'unsave' flags..
+    save_path = filepaths.imsave_path
+    if flags.get('unsave', False):  # Do not save if 'unsave' is True
+        pass
+    else:  # Save by default or if 'save' is True
+        if not os.path.exists(save_path):
+            os.makedirs(save_path)  # Create the directory if it doesn't exist
+        current_datetime = datetime.now().strftime(r"%y%m%d-%H%M%S")
+        filename = os.path.join(save_path, f'TambayAttendance_{current_datetime}.png')
+        plt.savefig(
+            filename,
+            format = 'png', 
+            dpi=300, 
+        )
+        print(f"Plot saved to {filename}")
+    plt.show()
+    print(utils.sepline(80))
