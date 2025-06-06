@@ -1,0 +1,98 @@
+{
+  "name": "GAVILAN, SEAN CEDRICK JACOBE",
+  "student number": "2024-08362",
+  "college": "Engg",
+  "degree major": "BS CoE",
+  "subjects": [
+    {
+      "class code": "52467",
+      "subject": "EEE 123",
+      "section": "THX2",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "2:30-4PM",
+          "type": "lec",
+          "room": "EEEI 421"
+        }
+      ]
+    },
+    {
+      "class code": "52501",
+      "subject": "EEE 143",
+      "section": "WFX",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "2:30-4PM",
+          "type": "lec",
+          "room": "EEEI LC1"
+        }
+      ]
+    },
+    {
+      "class code": "14559",
+      "subject": "Eng 13",
+      "section": "THW",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "1-2:30PM",
+          "type": "lec",
+          "room": "CAL 511"
+        }
+      ]
+    },
+    {
+      "class code": "39168",
+      "subject": "Math 21",
+      "section": "TWHFR",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "MB 301"
+        },
+        {
+          "day": "TTh",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "25071",
+      "subject": "PE 2 TPG",
+      "section": "HDE",
+      "units": "(2.0)",
+      "schedule": [
+        {
+          "day": "Th",
+          "time": "10AM-12PM",
+          "type": "PE",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "16107",
+      "subject": "Speech 30",
+      "section": "THY-2",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "4-5:30PM",
+          "type": "lec",
+          "room": "PH 1231-1232"
+        }
+      ]
+    }
+  ]
+}

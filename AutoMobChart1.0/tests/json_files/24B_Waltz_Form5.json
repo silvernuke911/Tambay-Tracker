@@ -1,0 +1,124 @@
+{
+  "name": "ZAMBRANO, JAMES WALTER TABALUS",
+  "student number": "2024-11893",
+  "college": "Engg",
+  "degree major": "BS CoE",
+  "subjects": [
+    {
+      "class code": "52460",
+      "subject": "EEE 121",
+      "section": "WFXY",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "2:30-3:30PM",
+          "type": "lec",
+          "room": "EEEI 204"
+        },
+        {
+          "day": "WF",
+          "time": "3:30-5PM",
+          "type": "lab",
+          "room": "EEEI 204"
+        }
+      ]
+    },
+    {
+      "class code": "52465",
+      "subject": "EEE 123",
+      "section": "THW",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "1-2:30PM",
+          "type": "lec",
+          "room": "EEEI 123"
+        }
+      ]
+    },
+    {
+      "class code": "52628",
+      "subject": "EEE 128",
+      "section": "SVW4",
+      "units": "1.0",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "11:30AM-2:30PM",
+          "type": "lab",
+          "room": "EEEI 301"
+        }
+      ]
+    },
+    {
+      "class code": "45782",
+      "subject": "KAS 1",
+      "section": "THU1",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "10-11:30AM",
+          "type": "lec",
+          "room": "PH 116-118"
+        }
+      ]
+    },
+    {
+      "class code": "39211",
+      "subject": "Math 22",
+      "section": "TWHFR",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "MB 301"
+        },
+        {
+          "day": "WF",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "25139",
+      "subject": "PE 2 TK",
+      "section": "SAB",
+      "units": "(2.0)",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "7-9AM",
+          "type": "PE",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "41403",
+      "subject": "Physics 72",
+      "section": "WFV-TV-1",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "11:30AM-1PM",
+          "type": "lec",
+          "room": "NIP F203"
+        },
+        {
+          "day": "T",
+          "time": "11:45AM-12:45PM",
+          "type": "disc",
+          "room": "NIP F209"
+        }
+      ]
+    }
+  ]
+}

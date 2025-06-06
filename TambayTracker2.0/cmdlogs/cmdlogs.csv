@@ -960,3 +960,6 @@ Date,Time,Input
 06/02/2025,01:15:32 AM,cmdlog --all
 06/02/2025,01:15:55 AM,cmdlog --date 06/01/25
 06/02/2025,01:16:12 AM,..
+06/05/2025,03:13:45 PM,list points
+06/05/2025,03:14:03 PM,list raw
+06/05/2025,03:14:10 PM,show points

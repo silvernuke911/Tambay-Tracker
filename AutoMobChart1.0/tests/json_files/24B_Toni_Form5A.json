@@ -1,0 +1,64 @@
+{
+  "name": "SY, ANTHONY JHON Jr. QUINING",
+  "student number": "2019-01139",
+  "college": "CSSP",
+  "degree major": "BA (PolSci)",
+  "subjects": [
+    {
+      "class code": "66686",
+      "subject": "Econ 190.1",
+      "section": "SCDE",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "9AM-12PM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "43002",
+      "subject": "Hapon 11",
+      "section": "WFR",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "8:30-10AM",
+          "type": "lec",
+          "room": "PH 1315"
+        }
+      ]
+    },
+    {
+      "class code": "15543",
+      "subject": "PI 100",
+      "section": "THR",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "8:30-10AM",
+          "type": "lec",
+          "room": "CAL 401"
+        }
+      ]
+    },
+    {
+      "class code": "44669",
+      "subject": "POLSC 199",
+      "section": "WFW",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "1-2:30PM",
+          "type": "lec",
+          "room": "Conference Room"
+        }
+      ]
+    }
+  ]
+}

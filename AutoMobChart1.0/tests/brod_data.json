@@ -1,0 +1,1786 @@
+[
+    {
+        "name": "ANGELES, ANTHONY JOSE ARENAS",
+        "student number": "2024-07585",
+        "college": "Engg",
+        "degree major": "BS ECE",
+        "subjects": [
+            {
+                "class code": "13926",
+                "subject": "ARTS 1",
+                "section": "THZ-3",
+                "units": "3.0",
+                "instructor": "MANUEL, JN",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "5:30PM",
+                        "time end": "7:00PM",
+                        "type": "lec",
+                        "room": "PH 213-215"
+                    }
+                ]
+            },
+            {
+                "class code": "52620",
+                "subject": "EEE 121",
+                "section": "WFUV",
+                "units": "3.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "10:00AM",
+                        "time end": "11:00AM",
+                        "type": "lec",
+                        "room": "EEEI 205"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "11:00AM",
+                        "time end": "12:30PM",
+                        "type": "lab",
+                        "room": "EEEI 205"
+                    }
+                ]
+            },
+            {
+                "class code": "52466",
+                "subject": "EEE 123",
+                "section": "THX1",
+                "units": "3.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "2:30PM",
+                        "time end": "4:00PM",
+                        "type": "lec",
+                        "room": "EEEI 123"
+                    }
+                ]
+            },
+            {
+                "class code": "52480",
+                "subject": "EEE 128",
+                "section": "SRU1",
+                "units": "1.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "8:30AM",
+                        "time end": "11:30AM",
+                        "type": "lab",
+                        "room": "EEEI 228"
+                    }
+                ]
+            },
+            {
+                "class code": "39414",
+                "subject": "Math 22",
+                "section": "TWHFW-8",
+                "units": "4.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "TWThF",
+                        "time start": "1:15PM",
+                        "time end": "2:15PM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "25070",
+                "subject": "PE 2 TPG",
+                "section": "HBC",
+                "units": "(2.0)",
+                "instructor": "DEMONTANO, JP",
+                "schedule": [
+                    {
+                        "day": "Th",
+                        "time start": "8:00AM",
+                        "time end": "10:00AM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "41396",
+                "subject": "Physics 72",
+                "section": "WFR-TR-2",
+                "units": "4.0",
+                "instructor": "TBA",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "8:30AM",
+                        "time end": "10:00AM",
+                        "type": "lec",
+                        "room": "NIP F204"
+                    },
+                    {
+                        "day": "T",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "disc",
+                        "room": "NIP F210"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "GAVILAN, SEAN CEDRICK JACOBE",
+        "student number": "2024-08362",
+        "college": "Engg",
+        "degree major": "BS CoE",
+        "subjects": [
+            {
+                "class code": "52467",
+                "subject": "EEE 123",
+                "section": "THX2",
+                "units": "3.0",
+                "instructor": "CABAOIG, R",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "2:30PM",
+                        "time end": "4:00PM",
+                        "type": "lec",
+                        "room": "EEEI 421"
+                    }
+                ]
+            },
+            {
+                "class code": "52501",
+                "subject": "EEE 143",
+                "section": "WFX",
+                "units": "3.0",
+                "instructor": "QUIZON, LR",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "2:30PM",
+                        "time end": "4:00PM",
+                        "type": "lec",
+                        "room": "EEEI LC1"
+                    }
+                ]
+            },
+            {
+                "class code": "14559",
+                "subject": "Eng 13",
+                "section": "THW",
+                "units": "3.0",
+                "instructor": "DIAZ, G",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "1:00PM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "CAL 511"
+                    }
+                ]
+            },
+            {
+                "class code": "39168",
+                "subject": "Math 21",
+                "section": "TWHFR",
+                "units": "4.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "MB 301"
+                    },
+                    {
+                        "day": "TTh",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "25071",
+                "subject": "PE 2 TPG",
+                "section": "HDE",
+                "units": "(2.0)",
+                "instructor": "DEMONTANO, JP",
+                "schedule": [
+                    {
+                        "day": "Th",
+                        "time start": "10:00AM",
+                        "time end": "12:00PM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "16107",
+                "subject": "Speech 30",
+                "section": "THY-2",
+                "units": "3.0",
+                "instructor": "MOZO, MS",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "4:00PM",
+                        "time end": "5:30PM",
+                        "type": "lec",
+                        "room": "PH 1231-1232"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "NAME FERNANDEZ, JAM BASA",
+        "student number": "2024-05308",
+        "college": "CS",
+        "degree major": "BS AppPhysics",
+        "subjects": [
+            {
+                "class code": "38714",
+                "subject": "Chem 16",
+                "section": "WFR",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "8:30AM",
+                        "time end": "10:00AM",
+                        "type": "lec",
+                        "room": "IC 307-308"
+                    }
+                ]
+            },
+            {
+                "class code": "14561",
+                "subject": "Eng 13",
+                "section": "WFW-2",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "1:00PM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "CAL 310"
+                    }
+                ]
+            },
+            {
+                "class code": "39248",
+                "subject": "Math 22",
+                "section": "TWHFX-5",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TWThF",
+                        "time start": "2:45PM",
+                        "time end": "3:45PM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "42613",
+                "subject": "Philo 1",
+                "section": "WFV-2",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "11:30AM",
+                        "time end": "1:00PM",
+                        "type": "lec",
+                        "room": "Room 1"
+                    }
+                ]
+            },
+            {
+                "class code": "41437",
+                "subject": "Physics 106",
+                "section": "TWHFU-1",
+                "units": "5.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "F",
+                        "time start": "10:00AM",
+                        "time end": "11:15AM",
+                        "type": "disc",
+                        "room": "NIP F201"
+                    },
+                    {
+                        "day": "TWTh",
+                        "time start": "10:00AM",
+                        "time end": "11:15AM",
+                        "type": "lec",
+                        "room": "NIP F201"
+                    }
+                ]
+            },
+            {
+                "class code": "41478",
+                "subject": "Physics 106.1",
+                "section": "MBCD-1",
+                "units": "1.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "M",
+                        "time start": "8:00AM",
+                        "time end": "11:00AM",
+                        "type": "lab",
+                        "room": "NIP F101"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "BANGAD, JOHN CHRISTOPHER JASMIN",
+        "student number": "2024-10583",
+        "college": "Engg",
+        "degree major": "BS EE",
+        "subjects": [
+            {
+                "class code": "52466",
+                "subject": "EEE 123",
+                "section": "THX1",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "2:30PM",
+                        "time end": "4:00PM",
+                        "type": "lec",
+                        "room": "EEEI 123"
+                    }
+                ]
+            },
+            {
+                "class code": "52627",
+                "subject": "EEE 128",
+                "section": "SRU3",
+                "units": "1.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "8:30AM",
+                        "time end": "11:30AM",
+                        "type": "lab",
+                        "room": "EEEI 301"
+                    }
+                ]
+            },
+            {
+                "class code": "52502",
+                "subject": "EEE 143",
+                "section": "WFY",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "4:00PM",
+                        "time end": "5:30PM",
+                        "type": "lec",
+                        "room": "EEEI LC1"
+                    }
+                ]
+            },
+            {
+                "class code": "14485",
+                "subject": "Eng 13",
+                "section": "THY",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "4:00PM",
+                        "time end": "5:30PM",
+                        "type": "lec",
+                        "room": "CAL 501"
+                    }
+                ]
+            },
+            {
+                "class code": "39209",
+                "subject": "Math 22",
+                "section": "TWHFQ-6",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "7:15AM",
+                        "time end": "8:15AM",
+                        "type": "lec",
+                        "room": "MB 307"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "7:15AM",
+                        "time end": "8:15AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "24999",
+                "subject": "PE 2 CP",
+                "section": "WFC",
+                "units": "(2.0)",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "9:00AM",
+                        "time end": "10:00AM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "41578",
+                "subject": "Physics 72",
+                "section": "WFV-HV-3",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "11:30AM",
+                        "time end": "1:00PM",
+                        "type": "lec",
+                        "room": "NIP F208"
+                    },
+                    {
+                        "day": "Th",
+                        "time start": "11:45AM",
+                        "time end": "12:45PM",
+                        "type": "disc",
+                        "room": "NIP F208"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "EMPERUA, JUSTIN KYLE LAGAYAN",
+        "student number": "2024-09117",
+        "college": "Engg",
+        "degree major": "BS GE",
+        "subjects": [
+            {
+                "class code": "55106",
+                "subject": "GE 12",
+                "section": "1D",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "1:00PM",
+                        "time end": "2:00PM",
+                        "type": "lec",
+                        "room": "MH 310"
+                    }
+                ]
+            },
+            {
+                "class code": "55115",
+                "subject": "GE 12",
+                "section": "1D-1",
+                "units": "0.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "10:00AM",
+                        "time end": "1:00PM",
+                        "type": "lab",
+                        "room": "MH 310"
+                    }
+                ]
+            },
+            {
+                "class code": "55124",
+                "subject": "GE 120",
+                "section": "1D",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "T",
+                        "time start": "2:30PM",
+                        "time end": "3:30PM",
+                        "type": "lec",
+                        "room": "MH 214"
+                    }
+                ]
+            },
+            {
+                "class code": "55137",
+                "subject": "GE 120",
+                "section": "1D-1",
+                "units": "0.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "Th",
+                        "time start": "2:30PM",
+                        "time end": "6:00PM",
+                        "type": "lab",
+                        "room": "MH 214"
+                    },
+                    {
+                        "day": "T",
+                        "time start": "3:30PM",
+                        "time end": "6:00PM",
+                        "type": "lab",
+                        "room": "MH 214"
+                    }
+                ]
+            },
+            {
+                "class code": "55149",
+                "subject": "GE 142",
+                "section": "1D",
+                "units": "1.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "M",
+                        "time start": "11:00AM",
+                        "time end": "12:00PM",
+                        "type": "lec",
+                        "room": "MH 422-424"
+                    }
+                ]
+            },
+            {
+                "class code": "55142",
+                "subject": "GE 30",
+                "section": "1D",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "W",
+                        "time start": "1:30PM",
+                        "time end": "3:30PM",
+                        "type": "lec",
+                        "room": "MH 310"
+                    }
+                ]
+            },
+            {
+                "class code": "55146",
+                "subject": "GE 30",
+                "section": "1D-1",
+                "units": "0.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "F",
+                        "time start": "1:30PM",
+                        "time end": "4:30PM",
+                        "type": "lab",
+                        "room": "MH 310"
+                    }
+                ]
+            },
+            {
+                "class code": "39214",
+                "subject": "Math 22",
+                "section": "TWHFR-3",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "MB 304"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "25171",
+                "subject": "PE 2 AR",
+                "section": "SBC",
+                "units": "(2.0)",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "8:00AM",
+                        "time end": "10:00AM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "41391",
+                "subject": "Physics 72",
+                "section": "WFQ-TQ-2",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "T",
+                        "time start": "7:00AM",
+                        "time end": "8:00AM",
+                        "type": "disc",
+                        "room": "NIP F210"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "7:00AM",
+                        "time end": "8:30AM",
+                        "type": "lec",
+                        "room": "NIP F204"
+                    }
+                ]
+            },
+            {
+                "class code": "41415",
+                "subject": "Physics 72.1",
+                "section": "FDE-1",
+                "units": "1.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "F",
+                        "time start": "10:00AM",
+                        "time end": "12:00PM",
+                        "type": "lab",
+                        "room": "NIP F102"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "MAGSINO, NIKKO CATAQUIS",
+        "student number": "2024-07760",
+        "college": "Engg",
+        "degree major": "BS EE",
+        "subjects": [
+            {
+                "class code": "52454",
+                "subject": "EEE 121",
+                "section": "THVW1",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "11:30AM",
+                        "time end": "12:30PM",
+                        "type": "lec",
+                        "room": "EEEI 308"
+                    },
+                    {
+                        "day": "TTh",
+                        "time start": "12:30PM",
+                        "time end": "2:00PM",
+                        "type": "lab",
+                        "room": "EEEI 308"
+                    }
+                ]
+            },
+            {
+                "class code": "52472",
+                "subject": "EEE 123",
+                "section": "WFW",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "1:00PM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "EEEI 123"
+                    }
+                ]
+            },
+            {
+                "class code": "52628",
+                "subject": "EEE 128",
+                "section": "SVW4",
+                "units": "1.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "11:30AM",
+                        "time end": "2:30PM",
+                        "type": "lab",
+                        "room": "EEEI 301"
+                    }
+                ]
+            },
+            {
+                "class code": "39218",
+                "subject": "Math 22",
+                "section": "TWHFR-7",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "MB 308"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "25015",
+                "subject": "PE 2 JU",
+                "section": "WFK",
+                "units": "(2.0)",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "3:00PM",
+                        "time end": "4:00PM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "41361",
+                "subject": "Physics 72",
+                "section": "THQ-FQ-2",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "F",
+                        "time start": "7:00AM",
+                        "time end": "8:00AM",
+                        "type": "disc",
+                        "room": "NIP F207"
+                    },
+                    {
+                        "day": "TTh",
+                        "time start": "7:00AM",
+                        "time end": "8:30AM",
+                        "type": "lec",
+                        "room": "NIP F202"
+                    }
+                ]
+            },
+            {
+                "class code": "16092",
+                "subject": "Speech 30",
+                "section": "THX",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "2:30PM",
+                        "time end": "4:00PM",
+                        "type": "lec",
+                        "room": "PH 1227-1228"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "GOCHUICO, AKHILLIS DELA CRUZ",
+        "student number": "2024-01872",
+        "college": "Engg",
+        "degree major": "BS IE",
+        "subjects": [
+            {
+                "class code": "52981",
+                "subject": "ES 26",
+                "section": "WYZ1/FYZ1",
+                "units": "3.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "W",
+                        "time start": "4:00PM",
+                        "time end": "6:00PM",
+                        "type": "lec",
+                        "room": "AECH TL3"
+                    },
+                    {
+                        "day": "F",
+                        "time start": "4:00PM",
+                        "time end": "7:00PM",
+                        "type": "lab",
+                        "room": "AECH TL3"
+                    }
+                ]
+            },
+            {
+                "class code": "14609",
+                "subject": "Eng 13",
+                "section": "THZ",
+                "units": "3.0",
+                "instructor": "SY, DP",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "5:30PM",
+                        "time end": "7:00PM",
+                        "type": "lec",
+                        "room": "CAL 211"
+                    }
+                ]
+            },
+            {
+                "class code": "55721",
+                "subject": "IE 31",
+                "section": "WFU",
+                "units": "3.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "10:00AM",
+                        "time end": "11:30AM",
+                        "type": "lec",
+                        "room": "MH 413"
+                    }
+                ]
+            },
+            {
+                "class code": "39213",
+                "subject": "Math 22",
+                "section": "TWHFR-2",
+                "units": "4.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "MB 303"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "25098",
+                "subject": "PE 2 CPW",
+                "section": "SBC-1",
+                "units": "(2.0)",
+                "instructor": "GOPALAN, L",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "8:00AM",
+                        "time end": "10:00AM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "41401",
+                "subject": "Physics 72",
+                "section": "WFV-HV-1",
+                "units": "4.0",
+                "instructor": "TBA",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "11:30AM",
+                        "time end": "1:00PM",
+                        "type": "lec",
+                        "room": "NIP F206"
+                    },
+                    {
+                        "day": "Th",
+                        "time start": "11:45AM",
+                        "time end": "12:45PM",
+                        "type": "disc",
+                        "room": "NIP F209"
+                    }
+                ]
+            },
+            {
+                "class code": "41435",
+                "subject": "Physics 72.1",
+                "section": "WIJ-1",
+                "units": "1.0",
+                "instructor": "TBA",
+                "schedule": [
+                    {
+                        "day": "W",
+                        "time start": "1:00PM",
+                        "time end": "3:00PM",
+                        "type": "lab",
+                        "room": "NIP F102"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "SY, ANTHONY JHON Jr. QUINING",
+        "student number": "2019-01139",
+        "college": "CSSP",
+        "degree major": "BA (PolSci)",
+        "subjects": [
+            {
+                "class code": "66686",
+                "subject": "Econ 190.1",
+                "section": "SCDE",
+                "units": "3.0",
+                "instructor": "BERNARDO, IC",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "9:00AM",
+                        "time end": "12:00PM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "43002",
+                "subject": "Hapon 11",
+                "section": "WFR",
+                "units": "3.0",
+                "instructor": "ALVAREZ, R",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "8:30AM",
+                        "time end": "10:00AM",
+                        "type": "lec",
+                        "room": "PH 1315"
+                    }
+                ]
+            },
+            {
+                "class code": "15543",
+                "subject": "PI 100",
+                "section": "THR",
+                "units": "3.0",
+                "instructor": "ACUÑA, A",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "8:30AM",
+                        "time end": "10:00AM",
+                        "type": "lec",
+                        "room": "CAL 401"
+                    }
+                ]
+            },
+            {
+                "class code": "44669",
+                "subject": "POLSC 199",
+                "section": "WFW",
+                "units": "3.0",
+                "instructor": "ATIENZA, ME",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "1:00PM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "Conference Room"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ZAMBRANO, JAMES WALTER TABALUS",
+        "student number": "2024-11893",
+        "college": "Engg",
+        "degree major": "BS CoE",
+        "subjects": [
+            {
+                "class code": "52460",
+                "subject": "EEE 121",
+                "section": "WFXY",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "2:30PM",
+                        "time end": "3:30PM",
+                        "type": "lec",
+                        "room": "EEEI 204"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "3:30PM",
+                        "time end": "5:00PM",
+                        "type": "lab",
+                        "room": "EEEI 204"
+                    }
+                ]
+            },
+            {
+                "class code": "52465",
+                "subject": "EEE 123",
+                "section": "THW",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "1:00PM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "EEEI 123"
+                    }
+                ]
+            },
+            {
+                "class code": "52628",
+                "subject": "EEE 128",
+                "section": "SVW4",
+                "units": "1.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "11:30AM",
+                        "time end": "2:30PM",
+                        "type": "lab",
+                        "room": "EEEI 301"
+                    }
+                ]
+            },
+            {
+                "class code": "45782",
+                "subject": "KAS 1",
+                "section": "THU1",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "10:00AM",
+                        "time end": "11:30AM",
+                        "type": "lec",
+                        "room": "PH 116-118"
+                    }
+                ]
+            },
+            {
+                "class code": "39211",
+                "subject": "Math 22",
+                "section": "TWHFR",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "MB 301"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "25139",
+                "subject": "PE 2 TK",
+                "section": "SAB",
+                "units": "(2.0)",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "7:00AM",
+                        "time end": "9:00AM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "41403",
+                "subject": "Physics 72",
+                "section": "WFV-TV-1",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "11:30AM",
+                        "time end": "1:00PM",
+                        "type": "lec",
+                        "room": "NIP F203"
+                    },
+                    {
+                        "day": "T",
+                        "time start": "11:45AM",
+                        "time end": "12:45PM",
+                        "type": "disc",
+                        "room": "NIP F209"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "RAMOS, JOHN HENDRIX ANGELO CABAMUNGAN",
+        "student number": "2024-00939",
+        "college": "CSSP",
+        "degree major": "BA (Philo)",
+        "subjects": [
+            {
+                "class code": "45794",
+                "subject": "KAS 1",
+                "section": "THX3",
+                "units": "3.0",
+                "instructor": "ESQUEJO, K",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "2:30PM",
+                        "time end": "4:00PM",
+                        "type": "lec",
+                        "room": "PH 116-118"
+                    }
+                ]
+            },
+            {
+                "class code": "45832",
+                "subject": "Kas 2",
+                "section": "THU1",
+                "units": "3.0",
+                "instructor": "LAPAR, D",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "10:00AM",
+                        "time end": "11:30AM",
+                        "type": "lec",
+                        "room": "PH 212"
+                    }
+                ]
+            },
+            {
+                "class code": "25106",
+                "subject": "PE 1",
+                "section": "WFD-1",
+                "units": "(2.0)",
+                "instructor": "ASERON, M",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "10:00AM",
+                        "time end": "11:00AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "42560",
+                "subject": "Philo 10",
+                "section": "SIJK",
+                "units": "3.0",
+                "instructor": "JESUS, IM",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "1:00PM",
+                        "time end": "4:00PM",
+                        "type": "lec",
+                        "room": "2 DE"
+                    }
+                ]
+            },
+            {
+                "class code": "42561",
+                "subject": "Philo 12",
+                "section": "WFX",
+                "units": "3.0",
+                "instructor": "AGPAOA, J",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "2:30PM",
+                        "time end": "4:00PM",
+                        "type": "disc",
+                        "room": "Room 1"
+                    }
+                ]
+            },
+            {
+                "class code": "42579",
+                "subject": "Philo 197",
+                "section": "THY",
+                "units": "3.0",
+                "instructor": "GUZMAN-DAULAT, SN",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "4:00PM",
+                        "time end": "5:30PM",
+                        "type": "disc",
+                        "room": "2 DE"
+                    }
+                ]
+            },
+            {
+                "class code": "14957",
+                "subject": "Span 11",
+                "section": "WFW",
+                "units": "3.0",
+                "instructor": "CONCEALED",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "1:00PM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "CANDA, PATRICK BLANCO",
+        "student number": "2024-20445",
+        "college": "CFA",
+        "degree major": "AA (StudArts)",
+        "subjects": [
+            {
+                "class code": "19351",
+                "subject": "FA 11",
+                "section": "DSA-Y",
+                "units": "3.0",
+                "instructor": "CONCEPCION, R",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "11:30AM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "19353",
+                "subject": "FA 13",
+                "section": "DSA-Y",
+                "units": "3.0",
+                "instructor": "BELLA, GG",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "8:30AM",
+                        "time end": "11:30AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "19355",
+                "subject": "FA 15",
+                "section": "DSA-Y",
+                "units": "3.0",
+                "instructor": "ABUEVA, ID",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "8:30AM",
+                        "time end": "11:30AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "45829",
+                "subject": "KAS 1",
+                "section": "WFY1",
+                "units": "3.0",
+                "instructor": "ALFONSO, IC",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "4:00PM",
+                        "time end": "5:30PM",
+                        "type": "lec",
+                        "room": "PH 214"
+                    }
+                ]
+            },
+            {
+                "class code": "25094",
+                "subject": "PE 2 CH",
+                "section": "SIJ",
+                "units": "(2.0)",
+                "instructor": "CARLOS, L",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "1:00PM",
+                        "time end": "3:00PM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "19360",
+                "subject": "SFA 17",
+                "section": "Y",
+                "units": "3.0",
+                "instructor": "QUIRANTE, I",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "11:30AM",
+                        "time end": "2:30PM",
+                        "type": "lab",
+                        "room": "TBA"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "CONIENDO, ROLAND CLINT JANDOG",
+        "student number": "2024-01302",
+        "college": "Engg",
+        "degree major": "BS ECE",
+        "subjects": [
+            {
+                "class code": "52468",
+                "subject": "EEE 123",
+                "section": "THY",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "4:00PM",
+                        "time end": "5:30PM",
+                        "type": "lec",
+                        "room": "EEEI 421"
+                    }
+                ]
+            },
+            {
+                "class code": "52476",
+                "subject": "EEE 128",
+                "section": "FYZ",
+                "units": "1.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "F",
+                        "time start": "4:00PM",
+                        "time end": "7:00PM",
+                        "type": "lab",
+                        "room": "EEEI 301"
+                    }
+                ]
+            },
+            {
+                "class code": "52500",
+                "subject": "EEE 143",
+                "section": "WFW",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "1:00PM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "EEEI LC1"
+                    }
+                ]
+            },
+            {
+                "class code": "15661",
+                "subject": "Fil 40",
+                "section": "THX",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "2:30PM",
+                        "time end": "4:00PM",
+                        "type": "lec",
+                        "room": "CAL 410"
+                    }
+                ]
+            },
+            {
+                "class code": "39226",
+                "subject": "Math 22",
+                "section": "TWHFU-7",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "10:15AM",
+                        "time end": "11:15AM",
+                        "type": "lec",
+                        "room": "MB 307"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "10:15AM",
+                        "time end": "11:15AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "25070",
+                "subject": "PE 2 TPG",
+                "section": "HBC",
+                "units": "(2.0)",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "Th",
+                        "time start": "8:00AM",
+                        "time end": "10:00AM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "41578",
+                "subject": "Physics 72",
+                "section": "WFV-HV-3",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "11:30AM",
+                        "time end": "1:00PM",
+                        "type": "lec",
+                        "room": "NIP F208"
+                    },
+                    {
+                        "day": "Th",
+                        "time start": "11:45AM",
+                        "time end": "12:45PM",
+                        "type": "disc",
+                        "room": "NIP F208"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "JUAN, VERCIL ACUSAR",
+        "student number": "2022-12948",
+        "college": "CS",
+        "degree major": "BS Physics",
+        "subjects": [
+            {
+                "class code": "41469",
+                "subject": "App Physics 157",
+                "section": "THY-TX-1",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "T",
+                        "time start": "1:00PM",
+                        "time end": "4:00PM",
+                        "type": "lab",
+                        "room": "NIP R210"
+                    },
+                    {
+                        "day": "TTh",
+                        "time start": "4:00PM",
+                        "time end": "5:30PM",
+                        "type": "lec",
+                        "room": "NIP R211"
+                    }
+                ]
+            },
+            {
+                "class code": "45811",
+                "subject": "KAS 1",
+                "section": "WFR3",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "8:30AM",
+                        "time end": "10:00AM",
+                        "type": "lec",
+                        "room": "2, Bahaginan"
+                    }
+                ]
+            },
+            {
+                "class code": "41484",
+                "subject": "Physics 141",
+                "section": "WFU",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "10:00AM",
+                        "time end": "11:30AM",
+                        "type": "lec",
+                        "room": "NIP LP101"
+                    }
+                ]
+            },
+            {
+                "class code": "41451",
+                "subject": "Physics 151",
+                "section": "THU-1",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "10:00AM",
+                        "time end": "11:30AM",
+                        "type": "lec",
+                        "room": "NIP R109"
+                    }
+                ]
+            },
+            {
+                "class code": "41487",
+                "subject": "Physics 191",
+                "section": "THV-WFX-1",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "11:30AM",
+                        "time end": "12:30PM",
+                        "type": "lec",
+                        "room": "NIP LP101"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "1:00PM",
+                        "time end": "4:00PM",
+                        "type": "lab",
+                        "room": "NIP F105"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PANTOJA, JANWIN MYL ROMERO",
+        "student number": "2024-05366",
+        "college": "Engg",
+        "degree major": "BS EE",
+        "subjects": [
+            {
+                "class code": "52472",
+                "subject": "EEE 123",
+                "section": "WFW",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "1:00PM",
+                        "time end": "2:30PM",
+                        "type": "lec",
+                        "room": "EEEI 123"
+                    }
+                ]
+            },
+            {
+                "class code": "52487",
+                "subject": "EEE 128",
+                "section": "TXY",
+                "units": "1.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "T",
+                        "time start": "2:30PM",
+                        "time end": "5:30PM",
+                        "type": "lab",
+                        "room": "EEEI 428"
+                    }
+                ]
+            },
+            {
+                "class code": "52502",
+                "subject": "EEE 143",
+                "section": "WFY",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "4:00PM",
+                        "time end": "5:30PM",
+                        "type": "lec",
+                        "room": "EEEI LC1"
+                    }
+                ]
+            },
+            {
+                "class code": "39219",
+                "subject": "Math 22",
+                "section": "TWHFU",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "10:15AM",
+                        "time end": "11:15AM",
+                        "type": "lec",
+                        "room": "MB 301"
+                    },
+                    {
+                        "day": "WF",
+                        "time start": "10:15AM",
+                        "time end": "11:15AM",
+                        "type": "lec",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "25094",
+                "subject": "PE 2 CH",
+                "section": "SIJ",
+                "units": "(2.0)",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "S",
+                        "time start": "1:00PM",
+                        "time end": "3:00PM",
+                        "type": "PE",
+                        "room": "TBA"
+                    }
+                ]
+            },
+            {
+                "class code": "41396",
+                "subject": "Physics 72",
+                "section": "WFR-TR-2",
+                "units": "4.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "WF",
+                        "time start": "8:30AM",
+                        "time end": "10:00AM",
+                        "type": "lec",
+                        "room": "NIP F204"
+                    },
+                    {
+                        "day": "T",
+                        "time start": "8:45AM",
+                        "time end": "9:45AM",
+                        "type": "disc",
+                        "room": "NIP F210"
+                    }
+                ]
+            },
+            {
+                "class code": "16108",
+                "subject": "Speech 30",
+                "section": "THZ-2",
+                "units": "3.0",
+                "instructor": "",
+                "schedule": [
+                    {
+                        "day": "TTh",
+                        "time start": "5:30PM",
+                        "time end": "7:00PM",
+                        "type": "lec",
+                        "room": "PH 1231-1232"
+                    }
+                ]
+            }
+        ]
+    }
+]

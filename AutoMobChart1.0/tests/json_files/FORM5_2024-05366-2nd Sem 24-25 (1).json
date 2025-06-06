@@ -1,0 +1,118 @@
+{
+  "name": "PANTOJA, JANWIN MYL ROMERO",
+  "student number": "2024-05366",
+  "college": "Engg",
+  "degree major": "BS EE",
+  "subjects": [
+    {
+      "class code": "52472",
+      "subject": "EEE 123",
+      "section": "WFW",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "1-2:30PM",
+          "type": "lec",
+          "room": "EEEI 123"
+        }
+      ]
+    },
+    {
+      "class code": "52487",
+      "subject": "EEE 128",
+      "section": "TXY",
+      "units": "1.0",
+      "schedule": [
+        {
+          "day": "T",
+          "time": "2:30-5:30PM",
+          "type": "lab",
+          "room": "EEEI 428"
+        }
+      ]
+    },
+    {
+      "class code": "52502",
+      "subject": "EEE 143",
+      "section": "WFY",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "4-5:30PM",
+          "type": "lec",
+          "room": "EEEI LC1"
+        }
+      ]
+    },
+    {
+      "class code": "39219",
+      "subject": "Math 22",
+      "section": "TWHFU",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "10:15-11:15AM",
+          "type": "lec",
+          "room": "MB 301"
+        },
+        {
+          "day": "WF",
+          "time": "10:15-11:15AM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "25094",
+      "subject": "PE 2 CH",
+      "section": "SIJ",
+      "units": "(2.0)",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "1-3PM",
+          "type": "PE",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "41396",
+      "subject": "Physics 72",
+      "section": "WFR-TR-2",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "8:30-10AM",
+          "type": "lec",
+          "room": "NIP F204"
+        },
+        {
+          "day": "T",
+          "time": "8:45-9:45AM",
+          "type": "disc",
+          "room": "NIP F210"
+        }
+      ]
+    },
+    {
+      "class code": "16108",
+      "subject": "Speech 30",
+      "section": "THZ-2",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "5:30-7PM",
+          "type": "lec",
+          "room": "PH 1231-1232"
+        }
+      ]
+    }
+  ]
+}

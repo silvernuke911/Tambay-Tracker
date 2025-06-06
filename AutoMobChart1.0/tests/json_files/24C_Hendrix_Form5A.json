@@ -1,0 +1,106 @@
+{
+  "name": "RAMOS, JOHN HENDRIX ANGELO CABAMUNGAN",
+  "student number": "2024-00939",
+  "college": "CSSP",
+  "degree major": "BA (Philo)",
+  "subjects": [
+    {
+      "class code": "45794",
+      "subject": "KAS 1",
+      "section": "THX3",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "2:30-4PM",
+          "type": "lec",
+          "room": "PH 116-118"
+        }
+      ]
+    },
+    {
+      "class code": "45832",
+      "subject": "Kas 2",
+      "section": "THU1",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "10-11:30AM",
+          "type": "lec",
+          "room": "PH 212"
+        }
+      ]
+    },
+    {
+      "class code": "25106",
+      "subject": "PE 1",
+      "section": "WFD-1",
+      "units": "(2.0)",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "10-11AM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "42560",
+      "subject": "Philo 10",
+      "section": "SIJK",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "1-4PM",
+          "type": "lec",
+          "room": "2 DE"
+        }
+      ]
+    },
+    {
+      "class code": "42561",
+      "subject": "Philo 12",
+      "section": "WFX",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "2:30-4PM",
+          "type": "disc",
+          "room": "Room 1"
+        }
+      ]
+    },
+    {
+      "class code": "42579",
+      "subject": "Philo 197",
+      "section": "THY",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "4-5:30PM",
+          "type": "disc",
+          "room": "2 DE"
+        }
+      ]
+    },
+    {
+      "class code": "14957",
+      "subject": "Span 11",
+      "section": "WFW",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "1-2:30PM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "name": "GOCHUICO, AKHILLIS DELA CRUZ",
+  "student number": "2024-01872",
+  "college": "Engg",
+  "degree major": "BS IE",
+  "subjects": [
+    {
+      "class code": "52981",
+      "subject": "ES 26",
+      "section": "WYZ1/FYZ1",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "W",
+          "time": "4-6PM",
+          "type": "lec",
+          "room": "AECH TL3"
+        },
+        {
+          "day": "F",
+          "time": "4-7PM",
+          "type": "lab",
+          "room": "AECH TL3"
+        }
+      ]
+    },
+    {
+      "class code": "14609",
+      "subject": "Eng 13",
+      "section": "THZ",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "5:30-7PM",
+          "type": "lec",
+          "room": "CAL 211"
+        }
+      ]
+    },
+    {
+      "class code": "55721",
+      "subject": "IE 31",
+      "section": "WFU",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "10-11:30AM",
+          "type": "lec",
+          "room": "MH 413"
+        }
+      ]
+    },
+    {
+      "class code": "39213",
+      "subject": "Math 22",
+      "section": "TWHFR-2",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "MB 303"
+        },
+        {
+          "day": "WF",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "25098",
+      "subject": "PE 2 CPW",
+      "section": "SBC-1",
+      "units": "(2.0)",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "8-10AM",
+          "type": "PE",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "41401",
+      "subject": "Physics 72",
+      "section": "WFV-HV-1",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "11:30AM-1PM",
+          "type": "lec",
+          "room": "NIP F206"
+        },
+        {
+          "day": "Th",
+          "time": "11:45AM-12:45PM",
+          "type": "disc",
+          "room": "NIP F209"
+        }
+      ]
+    },
+    {
+      "class code": "41435",
+      "subject": "Physics 72.1",
+      "section": "WIJ-1",
+      "units": "1.0",
+      "schedule": [
+        {
+          "day": "W",
+          "time": "1-3PM",
+          "type": "lab",
+          "room": "NIP F102"
+        }
+      ]
+    }
+  ]
+}

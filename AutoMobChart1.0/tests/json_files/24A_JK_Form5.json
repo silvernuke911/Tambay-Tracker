@@ -1,0 +1,180 @@
+{
+  "name": "EMPERUA, JUSTIN KYLE LAGAYAN",
+  "student number": "2024-09117",
+  "college": "Engg",
+  "degree major": "BS GE",
+  "subjects": [
+    {
+      "class code": "55106",
+      "subject": "GE 12",
+      "section": "1D",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "1-2PM",
+          "type": "lec",
+          "room": "MH 310"
+        }
+      ]
+    },
+    {
+      "class code": "55115",
+      "subject": "GE 12",
+      "section": "1D-1",
+      "units": "0.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "10AM-1PM",
+          "type": "lab",
+          "room": "MH 310"
+        }
+      ]
+    },
+    {
+      "class code": "55124",
+      "subject": "GE 120",
+      "section": "1D",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "T",
+          "time": "2:30-3:30PM",
+          "type": "lec",
+          "room": "MH 214"
+        }
+      ]
+    },
+    {
+      "class code": "55137",
+      "subject": "GE 120",
+      "section": "1D-1",
+      "units": "0.0",
+      "schedule": [
+        {
+          "day": "Th",
+          "time": "2:30-6PM",
+          "type": "lab",
+          "room": "MH 214"
+        },
+        {
+          "day": "T",
+          "time": "3:30-6PM",
+          "type": "lab",
+          "room": "MH 214"
+        }
+      ]
+    },
+    {
+      "class code": "55149",
+      "subject": "GE 142",
+      "section": "1D",
+      "units": "1.0",
+      "schedule": [
+        {
+          "day": "M",
+          "time": "11AM-12PM",
+          "type": "lec",
+          "room": "MH 422-424"
+        }
+      ]
+    },
+    {
+      "class code": "55142",
+      "subject": "GE 30",
+      "section": "1D",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "W",
+          "time": "1:30-3:30PM",
+          "type": "lec",
+          "room": "MH 310"
+        }
+      ]
+    },
+    {
+      "class code": "55146",
+      "subject": "GE 30",
+      "section": "1D-1",
+      "units": "0.0",
+      "schedule": [
+        {
+          "day": "F",
+          "time": "1:30-4:30PM",
+          "type": "lab",
+          "room": "MH 310"
+        }
+      ]
+    },
+    {
+      "class code": "39214",
+      "subject": "Math 22",
+      "section": "TWHFR-3",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "MB 304"
+        },
+        {
+          "day": "WF",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "25171",
+      "subject": "PE 2 AR",
+      "section": "SBC",
+      "units": "(2.0)",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "8-10AM",
+          "type": "PE",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "41391",
+      "subject": "Physics 72",
+      "section": "WFQ-TQ-2",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "T",
+          "time": "7-8AM",
+          "type": "disc",
+          "room": "NIP F210"
+        },
+        {
+          "day": "WF",
+          "time": "7-8:30AM",
+          "type": "lec",
+          "room": "NIP F204"
+        }
+      ]
+    },
+    {
+      "class code": "41415",
+      "subject": "Physics 72.1",
+      "section": "FDE-1",
+      "units": "1.0",
+      "schedule": [
+        {
+          "day": "F",
+          "time": "10AM-12PM",
+          "type": "lab",
+          "room": "NIP F102"
+        }
+      ]
+    }
+  ]
+}

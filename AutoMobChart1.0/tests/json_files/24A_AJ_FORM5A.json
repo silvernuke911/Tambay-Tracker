@@ -1,0 +1,118 @@
+{
+  "name": "ANGELES, ANTHONY JOSE ARENAS",
+  "student number": "2024-07585",
+  "college": "Engg",
+  "degree major": "BS ECE",
+  "subjects": [
+    {
+      "class code": "13926",
+      "subject": "ARTS 1",
+      "section": "THZ-3",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "5:30-7PM",
+          "type": "lec",
+          "room": "PH 213-215"
+        }
+      ]
+    },
+    {
+      "class code": "52620",
+      "subject": "EEE 121",
+      "section": "WFUV",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "10-11AM",
+          "type": "lec",
+          "room": "EEEI 205"
+        },
+        {
+          "day": "WF",
+          "time": "11AM-12:30PM",
+          "type": "lab",
+          "room": "EEEI 205"
+        }
+      ]
+    },
+    {
+      "class code": "52466",
+      "subject": "EEE 123",
+      "section": "THX1",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "2:30-4PM",
+          "type": "lec",
+          "room": "EEEI 123"
+        }
+      ]
+    },
+    {
+      "class code": "52480",
+      "subject": "EEE 128",
+      "section": "SRU1",
+      "units": "1.0",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "8:30-11:30AM",
+          "type": "lab",
+          "room": "EEEI 228"
+        }
+      ]
+    },
+    {
+      "class code": "39414",
+      "subject": "Math 22",
+      "section": "TWHFW-8",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "TWThF",
+          "time": "1:15-2:15PM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "25070",
+      "subject": "PE 2 TPG",
+      "section": "HBC",
+      "units": "(2.0)",
+      "schedule": [
+        {
+          "day": "Th",
+          "time": "8-10AM",
+          "type": "PE",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "41396",
+      "subject": "Physics 72",
+      "section": "WFR-TR-2",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "8:30-10AM",
+          "type": "lec",
+          "room": "NIP F204"
+        },
+        {
+          "day": "T",
+          "time": "8:45-9:45AM",
+          "type": "disc",
+          "room": "NIP F210"
+        }
+      ]
+    }
+  ]
+}

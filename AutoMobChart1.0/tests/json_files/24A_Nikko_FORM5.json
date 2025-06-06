@@ -1,0 +1,124 @@
+{
+  "name": "MAGSINO, NIKKO CATAQUIS",
+  "student number": "2024-07760",
+  "college": "Engg",
+  "degree major": "BS EE",
+  "subjects": [
+    {
+      "class code": "52454",
+      "subject": "EEE 121",
+      "section": "THVW1",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "11:30AM-12:30PM",
+          "type": "lec",
+          "room": "EEEI 308"
+        },
+        {
+          "day": "TTh",
+          "time": "12:30-2PM",
+          "type": "lab",
+          "room": "EEEI 308"
+        }
+      ]
+    },
+    {
+      "class code": "52472",
+      "subject": "EEE 123",
+      "section": "WFW",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "1-2:30PM",
+          "type": "lec",
+          "room": "EEEI 123"
+        }
+      ]
+    },
+    {
+      "class code": "52628",
+      "subject": "EEE 128",
+      "section": "SVW4",
+      "units": "1.0",
+      "schedule": [
+        {
+          "day": "S",
+          "time": "11:30AM-2:30PM",
+          "type": "lab",
+          "room": "EEEI 301"
+        }
+      ]
+    },
+    {
+      "class code": "39218",
+      "subject": "Math 22",
+      "section": "TWHFR-7",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "MB 308"
+        },
+        {
+          "day": "WF",
+          "time": "8:45-9:45AM",
+          "type": "lec",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "25015",
+      "subject": "PE 2 JU",
+      "section": "WFK",
+      "units": "(2.0)",
+      "schedule": [
+        {
+          "day": "WF",
+          "time": "3-4PM",
+          "type": "PE",
+          "room": "TBA"
+        }
+      ]
+    },
+    {
+      "class code": "41361",
+      "subject": "Physics 72",
+      "section": "THQ-FQ-2",
+      "units": "4.0",
+      "schedule": [
+        {
+          "day": "F",
+          "time": "7-8AM",
+          "type": "disc",
+          "room": "NIP F207"
+        },
+        {
+          "day": "TTh",
+          "time": "7-8:30AM",
+          "type": "lec",
+          "room": "NIP F202"
+        }
+      ]
+    },
+    {
+      "class code": "16092",
+      "subject": "Speech 30",
+      "section": "THX",
+      "units": "3.0",
+      "schedule": [
+        {
+          "day": "TTh",
+          "time": "2:30-4PM",
+          "type": "lec",
+          "room": "PH 1227-1228"
+        }
+      ]
+    }
+  ]
+}
