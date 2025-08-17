@@ -188,3 +188,21 @@ def parse_command(command):
         i += 1
     noun = " ".join(noun_parts) if noun_parts else None
     return verb, noun, flags
+
+# daymap.py
+import itertools
+days = [
+    ("M", "Monday"),
+    ("T", "Tuesday"),
+    ("W", "Wednesday"),
+    ("Th", "Thursday"),
+    ("F", "Friday"),
+    ("S", "Saturday"),
+    ("Su", "Sunday"),
+]
+day_map = {}
+for r in range(1, len(days) + 1):
+    for combo in itertools.combinations(days, r):
+        key = "".join([c[0] for c in combo])
+        value = [c[1] for c in combo]
+        day_map[key] = value

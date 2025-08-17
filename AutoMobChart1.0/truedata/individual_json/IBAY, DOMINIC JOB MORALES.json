@@ -1,0 +1,119 @@
+{
+    "name": "IBAY, DOMINIC JOB MORALES",
+    "student number": "2020-02591",
+    "college": "CS",
+    "degree major": "BS AppPhysics",
+    "total units": "20.0",
+    "subjects": [
+        {
+            "class code": "41500",
+            "subject": "App Physics 167",
+            "section": "THV",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "11:30AM",
+                    "time end": "1:00PM",
+                    "type": "lec",
+                    "room": "NIP R109"
+                }
+            ]
+        },
+        {
+            "class code": "41502",
+            "subject": "App Physics 184",
+            "section": "THY-FX-1",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "F",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "NIP R208"
+                },
+                {
+                    "day": "TTh",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "NIP R201"
+                }
+            ]
+        },
+        {
+            "class code": "41482",
+            "subject": "Physics 131",
+            "section": "WFR-2",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "NIP F207"
+                }
+            ]
+        },
+        {
+            "class code": "41534",
+            "subject": "Physics 142",
+            "section": "THU",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "NIP R109"
+                }
+            ]
+        },
+        {
+            "class code": "41486",
+            "subject": "Physics 170",
+            "section": "THU-1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "NIP F202"
+                }
+            ]
+        },
+        {
+            "class code": "41488",
+            "subject": "Physics 192",
+            "section": "WFV-THX-1",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "11:30AM",
+                    "time end": "12:30PM",
+                    "type": "lec",
+                    "room": "NIP R109"
+                },
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "TBA"
+                }
+            ]
+        }
+    ]
+}

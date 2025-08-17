@@ -1,0 +1,126 @@
+{
+    "name": "GAVILAN, SEAN CEDRICK JACOBE",
+    "student number": "2024-08362",
+    "college": "Engg",
+    "degree major": "BS CoE",
+    "total units": "17.0",
+    "subjects": [
+        {
+            "class code": "62254",
+            "subject": "Archaeo 2",
+            "section": "THW-1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "Classroom B"
+                }
+            ]
+        },
+        {
+            "class code": "52484",
+            "subject": "EEE 111",
+            "section": "MDEWX",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "M",
+                    "time start": "10:00AM",
+                    "time end": "12:00PM",
+                    "type": "lec",
+                    "room": "EEEI 204"
+                },
+                {
+                    "day": "M",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "EEEI 204"
+                }
+            ]
+        },
+        {
+            "class code": "52471",
+            "subject": "EEE 113",
+            "section": "WFX",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "EEEI VLC"
+                }
+            ]
+        },
+        {
+            "class code": "39217",
+            "subject": "Math 21",
+            "section": "TWHFY-4",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "4:15PM",
+                    "time end": "5:15PM",
+                    "type": "lec",
+                    "room": "MB 307"
+                },
+                {
+                    "day": "WF",
+                    "time start": "4:15PM",
+                    "time end": "5:15PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "25227",
+            "subject": "PE 2 RF",
+            "section": "WFB-3",
+            "units": "(2.0)",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:00AM",
+                    "time end": "9:00AM",
+                    "type": "PE",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "41386",
+            "subject": "Physics 71",
+            "section": "WFU-TU-3",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "NIP LP102"
+                },
+                {
+                    "day": "T",
+                    "time start": "10:15AM",
+                    "time end": "11:15AM",
+                    "type": "disc",
+                    "room": "NIP F210"
+                }
+            ]
+        }
+    ]
+}

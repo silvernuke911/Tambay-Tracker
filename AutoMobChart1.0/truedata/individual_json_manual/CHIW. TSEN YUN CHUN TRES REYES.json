@@ -1,0 +1,73 @@
+{
+    "name": "CHIW, TSEN YUN CHUN TRES REYES",
+    "student number": "2019-08990",
+    "college": "VSB",
+    "degree major": "BS BA",
+    "total units": "6.0",
+    "subjects": [
+        {
+            "class code": "17746",
+            "subject": "BA 129",
+            "section": "WFX",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "BA 108"
+                }
+            ]
+        },
+        {
+            "class code": "17744",
+            "subject": "BA 145",
+            "section": "WFW",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "BA 309"
+                }
+            ]
+        },
+        {
+            "class code": "25254",
+            "subject": "PE 2",
+            "section": "MHW FDE",
+            "units": "(2.0)",
+            "instructor": "AGUSTIN, MJ",
+            "schedule": [
+                {
+                    "day": "F",
+                    "time start": "10:00AM",
+                    "time end": "12:00PM",
+                    "type": "PE",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "24982",
+            "subject": "PE 2",
+            "section": "WF MBC",
+            "units": "(2.0)",
+            "instructor": "BARTOLOME, RA",
+            "schedule": [
+                {
+                    "day": "M",
+                    "time start": "8:00AM",
+                    "time end": "10:00AM",
+                    "type": "PE",
+                    "room": "TBA"
+                }
+            ]
+        }
+    ]
+}

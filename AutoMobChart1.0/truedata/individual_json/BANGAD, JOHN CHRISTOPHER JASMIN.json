@@ -1,0 +1,126 @@
+{
+    "name": "BANGAD, JOHN CHRISTOPHER JASMIN",
+    "student number": "2024-10583",
+    "college": "Engg",
+    "degree major": "BS EE",
+    "total units": "19.0",
+    "subjects": [
+        {
+            "class code": "52484",
+            "subject": "EEE 111",
+            "section": "MDEWX",
+            "units": "3.0",
+            "instructor": "BENITEZ, HK",
+            "schedule": [
+                {
+                    "day": "M",
+                    "time start": "10:00AM",
+                    "time end": "12:00PM",
+                    "type": "lec",
+                    "room": "EEEI 204"
+                },
+                {
+                    "day": "M",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "EEEI 204"
+                }
+            ]
+        },
+        {
+            "class code": "52469",
+            "subject": "EEE 113",
+            "section": "WFU",
+            "units": "3.0",
+            "instructor": "CHUA, A et al.",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "EEEI VLC"
+                }
+            ]
+        },
+        {
+            "class code": "52490",
+            "subject": "EEE 131",
+            "section": "THY",
+            "units": "3.0",
+            "instructor": "QUIZON, LR",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "EEEI 229"
+                }
+            ]
+        },
+        {
+            "class code": "52498",
+            "subject": "EEE 133",
+            "section": "THW3",
+            "units": "3.0",
+            "instructor": "HIZON, JR",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "EEEI 422"
+                }
+            ]
+        },
+        {
+            "class code": "52533",
+            "subject": "EEE 137",
+            "section": "WFV1",
+            "units": "3.0",
+            "instructor": "TBA",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "11:30AM",
+                    "time end": "12:30PM",
+                    "type": "lec",
+                    "room": "EEEI LC1"
+                },
+                {
+                    "day": "WF",
+                    "time start": "12:30PM",
+                    "time end": "1:00PM",
+                    "type": "disc",
+                    "room": "EEEI LC1"
+                }
+            ]
+        },
+        {
+            "class code": "39387",
+            "subject": "Math 23",
+            "section": "WFX-HX-6",
+            "units": "4.0",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "MB 306"
+                },
+                {
+                    "day": "Th",
+                    "time start": "3:00PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        }
+    ]
+}

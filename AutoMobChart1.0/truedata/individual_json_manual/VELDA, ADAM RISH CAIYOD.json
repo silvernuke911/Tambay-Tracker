@@ -1,0 +1,119 @@
+{
+    "name": "VELDA, ADAM RISH CAIYOD",
+    "student number": "2022-35251",
+    "college": "CS",
+    "degree major": "BS Physics",
+    "total units": "17.0",
+    "subjects": [
+        {
+            "class code": "41498",
+            "subject": "App Physics 155",
+            "section": "THV-TX-2",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "11:30AM",
+                    "time end": "1:00PM",
+                    "type": "lec",
+                    "room": "NIP LP103"
+                },
+                {
+                    "day": "T",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "NIP R209"
+                }
+            ]
+        },
+        {
+            "class code": "37516",
+            "subject": "BIO 11",
+            "section": "WFR",
+            "units": "3.0",
+            "instructor": "PUZON, JJ.",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "IB 250"
+                }
+            ]
+        },
+        {
+            "class code": "37158",
+            "subject": "BIO 11.1",
+            "section": "WFXY",
+            "units": "2.0",
+            "instructor": "LIM, EJ",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "5:30PM",
+                    "type": "lab",
+                    "room": "IB 308"
+                }
+            ]
+        },
+        {
+            "class code": "25118",
+            "subject": "PE 2",
+            "section": "TK SGI",
+            "units": "(2.0)",
+            "instructor": "BUSTO, BJ",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "12:00PM",
+                    "time end": "2:00PM",
+                    "type": "PE",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "41506",
+            "subject": "Physics 108",
+            "section": "TWHFU",
+            "units": "5.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "10:00AM",
+                    "time end": "11;15AM",
+                    "type": "disc",
+                    "room": "NIP LP103"
+                },
+                {
+                    "day": "WThF",
+                    "time start": "10:00AM",
+                    "time end": "11:15AM",
+                    "type": "lec",
+                    "room": "NIP LP103"
+                }
+            ]
+        },
+        {
+            "class code": "42019",
+            "subject": "STS 1",
+            "section": "SHQ",
+            "units": "3.0",
+            "instructor": "CANOY, RJ",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "7:00AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "IB 250"
+                }
+            ]
+        }
+    ]
+}

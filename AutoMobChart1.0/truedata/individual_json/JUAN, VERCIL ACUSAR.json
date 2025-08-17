@@ -1,0 +1,112 @@
+{
+    "name": "JUAN, VERCIL ACUSAR",
+    "student number": "2022-12948",
+    "college": "CS",
+    "degree major": "BS Physics",
+    "total units": "16.0",
+    "subjects": [
+        {
+            "class code": "41479",
+            "subject": "Physics 118",
+            "section": "WFU",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "NIP R109"
+                }
+            ]
+        },
+        {
+            "class code": "41481",
+            "subject": "Physics 131",
+            "section": "WFR-1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "NIP R201"
+                }
+            ]
+        },
+        {
+            "class code": "41534",
+            "subject": "Physics 142",
+            "section": "THU",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "NIP R109"
+                }
+            ]
+        },
+        {
+            "class code": "41485",
+            "subject": "Physics 170",
+            "section": "THU",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "NIP R201"
+                }
+            ]
+        },
+        {
+            "class code": "41491",
+            "subject": "Physics 192",
+            "section": "WFV-WFX-2",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "11:30AM",
+                    "time end": "12:30PM",
+                    "type": "lec",
+                    "room": "NIP R109"
+                },
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "61702",
+            "subject": "ROTC Mil Sci 1",
+            "section": "SBCDE-2",
+            "units": "(3.0)",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "8:00AM",
+                    "time end": "12:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        }
+    ]
+}

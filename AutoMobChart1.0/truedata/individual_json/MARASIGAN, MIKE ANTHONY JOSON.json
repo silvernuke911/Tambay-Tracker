@@ -1,0 +1,105 @@
+{
+    "name": "MARASIGAN, MIKE ANTHONY JOSON",
+    "student number": "2018-21131",
+    "college": "Law",
+    "degree major": "JD",
+    "total units": "15.0",
+    "subjects": [
+        {
+            "class code": "58566",
+            "subject": "Law 103",
+            "section": "II-Eve1",
+            "units": "2.0",
+            "instructor": "JARDELEZA, C",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "6:00PM",
+                    "time end": "8:00PM",
+                    "type": "lec",
+                    "room": "LAW 221"
+                }
+            ]
+        },
+        {
+            "class code": "58554",
+            "subject": "Law 104",
+            "section": "II-Eve1",
+            "units": "3.0",
+            "instructor": "ENCARNACION, A",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "6:00PM",
+                    "time end": "9:00PM",
+                    "type": "lec",
+                    "room": "LAW 308"
+                }
+            ]
+        },
+        {
+            "class code": "58506",
+            "subject": "Law 107",
+            "section": "II-Eve1",
+            "units": "3.0",
+            "instructor": "JOVEN, MD",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "9:00AM",
+                    "time end": "12:00PM",
+                    "type": "lec",
+                    "room": "LAW 321"
+                }
+            ]
+        },
+        {
+            "class code": "58557",
+            "subject": "Law 124",
+            "section": "II-Eve1",
+            "units": "3.0",
+            "instructor": "TE, T",
+            "schedule": [
+                {
+                    "day": "M",
+                    "time start": "6:00PM",
+                    "time end": "9:00PM",
+                    "type": "lec",
+                    "room": "LAW 203-205"
+                }
+            ]
+        },
+        {
+            "class code": "58568",
+            "subject": "Law 134",
+            "section": "II-Eve1",
+            "units": "2.0",
+            "instructor": "SANTIAGO, J",
+            "schedule": [
+                {
+                    "day": "F",
+                    "time start": "6:00PM",
+                    "time end": "8:00PM",
+                    "type": "lec",
+                    "room": "LAW 221"
+                }
+            ]
+        },
+        {
+            "class code": "58563",
+            "subject": "Law 139",
+            "section": "II-Eve1",
+            "units": "2.0",
+            "instructor": "VILLAREAL-FERNANDO, ECJ",
+            "schedule": [
+                {
+                    "day": "W",
+                    "time start": "6:00PM",
+                    "time end": "8:00PM",
+                    "type": "lec",
+                    "room": "LAW 212"
+                }
+            ]
+        }
+    ]
+}

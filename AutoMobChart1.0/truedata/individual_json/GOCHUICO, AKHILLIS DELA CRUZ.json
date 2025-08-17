@@ -1,0 +1,113 @@
+{
+    "name": "GOCHUICO, AKHILLIS DELA CRUZ",
+    "student number": "2024-01872",
+    "college": "Engg",
+    "degree major": "BS IE",
+    "total units": "18.0",
+    "subjects": [
+        {
+            "class code": "17749",
+            "subject": "Acctg 1",
+            "section": "THU",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "BA 208"
+                }
+            ]
+        },
+        {
+            "class code": "48003",
+            "subject": "Anthro 10",
+            "section": "WFX",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "PH 402"
+                }
+            ]
+        },
+        {
+            "class code": "55660",
+            "subject": "CWTS 1",
+            "section": "Engg",
+            "units": "MCDE-4",
+            "instructor": "",
+            "schedule": []
+        },
+        {
+            "class code": "55662",
+            "subject": "IE 21",
+            "section": "THW",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "MH 417-419"
+                }
+            ]
+        },
+        {
+            "class code": "55669",
+            "subject": "IE 27",
+            "section": "THV",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "11:30AM",
+                    "time end": "1:00PM",
+                    "type": "lec",
+                    "room": "IE-ME 111"
+                }
+            ]
+        },
+        {
+            "class code": "55673",
+            "subject": "IE 40",
+            "section": "THX",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "42010",
+            "subject": "STS 1",
+            "section": "WFR",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "CS AUDI"
+                }
+            ]
+        }
+    ]
+}

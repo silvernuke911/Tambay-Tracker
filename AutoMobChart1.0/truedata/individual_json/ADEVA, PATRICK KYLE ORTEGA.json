@@ -1,0 +1,89 @@
+{
+    "name": "ADEVA, PATRICK KYLE ORTEGA",
+    "student number": "2021-35042",
+    "college": "NCPAG",
+    "degree major": "B PA",
+    "total units": "15.0",
+    "subjects": [
+        {
+            "class code": "51268",
+            "subject": "EDH 100",
+            "section": "THU",
+            "units": "3.0",
+            "instructor": "DUKA-PANTE, FG",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "ED 108"
+                }
+            ]
+        },
+        {
+            "class code": "60137",
+            "subject": "PA 124",
+            "section": "WFW",
+            "units": "3.0",
+            "instructor": "CASTILLO, M",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "60125",
+            "subject": "PA 152",
+            "section": "THY",
+            "units": "3.0",
+            "instructor": "DELA CRUZ, CE",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "60070",
+            "subject": "PA 199.1",
+            "section": "WFX",
+            "units": "3.0",
+            "instructor": "ASUNCION, XV",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "15623",
+            "subject": "PI 100",
+            "section": "THW-1",
+            "units": "3.0",
+            "instructor": "FLORES, MC",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "PH 1201"
+                }
+            ]
+        }
+    ]
+}

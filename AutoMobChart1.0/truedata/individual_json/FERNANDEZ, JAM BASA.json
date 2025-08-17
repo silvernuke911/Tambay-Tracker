@@ -1,0 +1,119 @@
+{
+    "name": "FERNANDEZ, JAM BASA",
+    "student number": "2024-05308",
+    "college": "CS",
+    "degree major": "BS AppPhysics",
+    "total units": "18.0",
+    "subjects": [
+        {
+            "class code": "39317",
+            "subject": "Math 122",
+            "section": "THY",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "MB 120"
+                }
+            ]
+        },
+        {
+            "class code": "39266",
+            "subject": "Math 23",
+            "section": "WFW-HW-4",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "1:00PM",
+                    "time end": "2:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                },
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "MB 304"
+                }
+            ]
+        },
+        {
+            "class code": "25069",
+            "subject": "PE 2 FFB",
+            "section": "SDE",
+            "units": "(2.0)",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "10:00AM",
+                    "time end": "12:00PM",
+                    "type": "PE",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "41470",
+            "subject": "Physics 107",
+            "section": "TWHFR-2",
+            "units": "5.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "8:30AM",
+                    "time end": "9:45AM",
+                    "type": "disc",
+                    "room": "NIP F202"
+                },
+                {
+                    "day": "WThF",
+                    "time start": "8:30AM",
+                    "time end": "9:45AM",
+                    "type": "lec",
+                    "room": "NIP F202"
+                }
+            ]
+        },
+        {
+            "class code": "41471",
+            "subject": "Physics 107.1",
+            "section": "MBCD-1",
+            "units": "1.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "M",
+                    "time start": "8:00AM",
+                    "time end": "11:00AM",
+                    "type": "lab",
+                    "room": "NIP F102"
+                }
+            ]
+        },
+        {
+            "class code": "41476",
+            "subject": "Physics 116",
+            "section": "TWHFU-1",
+            "units": "5.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TWThF",
+                    "time start": "10:00AM",
+                    "time end": "11:15AM",
+                    "type": "lec",
+                    "room": "NIP LP101"
+                }
+            ]
+        }
+    ]
+}

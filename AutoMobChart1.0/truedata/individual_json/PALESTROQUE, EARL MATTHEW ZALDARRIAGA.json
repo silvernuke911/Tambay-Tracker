@@ -1,0 +1,87 @@
+{
+    "name": "PALESTROQUE, EARL MATTHEW ZALDARRIAGA",
+    "student number": "2018-02521",
+    "college": "Law",
+    "degree major": "JD",
+    "total units": "13.0",
+    "subjects": [
+        {
+            "class code": "58506",
+            "subject": "Law 105",
+            "section": "III-Eve1",
+            "units": "3.0",
+            "instructor": "JOVEN, MD",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "9:00AM",
+                    "time end": "11:00AM",
+                    "type": "disc",
+                    "room": "LAW 307-309"
+                },
+                {
+                    "day": "Th",
+                    "time start": "8:30PM",
+                    "time end": "9:30PM",
+                    "type": "disc",
+                    "room": "LAW 307-309"
+                }
+            ]
+        },
+        {
+            "class code": "58580",
+            "subject": "Law 106",
+            "section": "III-Eve1",
+            "units": "5.0",
+            "instructor": "POLICARPIO, R",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "1:00PM",
+                    "time end": "3:30PM",
+                    "type": "lec",
+                    "room": "LAW AMB"
+                },
+                {
+                    "day": "W",
+                    "time start": "7:00PM",
+                    "time end": "9:30PM",
+                    "type": "lec",
+                    "room": "LAW AMB"
+                }
+            ]
+        },
+        {
+            "class code": "58576",
+            "subject": "Law 113",
+            "section": "III-Eve1",
+            "units": "3.0",
+            "instructor": "LIM, JJ",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "6:00PM",
+                    "time end": "7:30PM",
+                    "type": "disc",
+                    "room": "LAW 307-309"
+                }
+            ]
+        },
+        {
+            "class code": "58571",
+            "subject": "Law 138",
+            "section": "III-Eve1",
+            "units": "2.0",
+            "instructor": "BAÑAGA, MJ",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "7:30PM",
+                    "time end": "9:30PM",
+                    "type": "disc",
+                    "room": "LAW 307-309"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "name": "ANGELES, ANTHONY JOSE ARENAS",
+    "student number": "2024-07585",
+    "college": "Engg",
+    "degree major": "BS ECE",
+    "total units": "17.0",
+    "subjects": [
+        {
+            "class code": "52488",
+            "subject": "EEE 131",
+            "section": "THX1",
+            "units": "3.0",
+            "instructor": "MANTARING, RN",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "EEEI 123"
+                }
+            ]
+        },
+        {
+            "class code": "52507",
+            "subject": "EEE 133",
+            "section": "THY",
+            "units": "3.0",
+            "instructor": "HIZON, JR",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "EEEI 420"
+                }
+            ]
+        },
+        {
+            "class code": "52533",
+            "subject": "EEE 137",
+            "section": "WFV1",
+            "units": "3.0",
+            "instructor": "TBA",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "11:30AM",
+                    "time end": "12:30PM",
+                    "type": "lec",
+                    "room": "EEEI LC1"
+                },
+                {
+                    "day": "WF",
+                    "time start": "12:30PM",
+                    "time end": "1:00PM",
+                    "type": "disc",
+                    "room": "EEEI LC1"
+                }
+            ]
+        },
+        {
+            "class code": "52659",
+            "subject": "EEE 138",
+            "section": "MWX",
+            "units": "1.0",
+            "instructor": "LEYNES, A",
+            "schedule": [
+                {
+                    "day": "M",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "EEEI 301"
+                }
+            ]
+        },
+        {
+            "class code": "40277",
+            "subject": "MS 1",
+            "section": "THW",
+            "units": "3.0",
+            "instructor": "ABESAMIS, R",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "MSI Sem. Rm."
+                }
+            ]
+        },
+        {
+            "class code": "39257",
+            "subject": "Math 23",
+            "section": "WFU-HU-5",
+            "units": "4.0",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "10:00AM",
+                    "time end": "11:00AM",
+                    "type": "lec",
+                    "room": "TBA"
+                },
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "MB 121"
+                }
+            ]
+        },
+        {
+            "class code": "61703",
+            "subject": "ROTC Mil Sci 1",
+            "section": "SBCDE-3",
+            "units": "(3.0)",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "8:00AM",
+                    "time end": "12:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        }
+    ]
+}

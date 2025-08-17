@@ -1,0 +1,176 @@
+{
+    "name": "EMPERUA, JUSTIN KYLE LAGAYAN",
+    "student number": "2024-09117",
+    "college": "Engg",
+    "degree major": "BS GE",
+    "total units": "19.0",
+    "subjects": [
+        {
+            "class code": "54027",
+            "subject": "CE 29",
+            "section": "SCDE",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "9:00AM",
+                    "time end": "12:00PM",
+                    "type": "lec",
+                    "room": "ICE 408"
+                }
+            ]
+        },
+        {
+            "class code": "55140",
+            "subject": "GE 117",
+            "section": "2D",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "W",
+                    "time start": "2:30PM",
+                    "time end": "4:30PM",
+                    "type": "lec",
+                    "room": "MH 416-418"
+                }
+            ]
+        },
+        {
+            "class code": "55141",
+            "subject": "GE 117",
+            "section": "2D-1",
+            "units": "0.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "F",
+                    "time start": "2:30PM",
+                    "time end": "5:30PM",
+                    "type": "lab",
+                    "room": "MH 416-418"
+                }
+            ]
+        },
+        {
+            "class code": "55160",
+            "subject": "GE 122",
+            "section": "2D",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "3:00PM",
+                    "time end": "5:00PM",
+                    "type": "lec",
+                    "room": "MH 416-418"
+                }
+            ]
+        },
+        {
+            "class code": "55161",
+            "subject": "GE 122",
+            "section": "2D-1",
+            "units": "0.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "3:00PM",
+                    "time end": "6:00PM",
+                    "type": "lab",
+                    "room": "MH 416-418"
+                }
+            ]
+        },
+        {
+            "class code": "55157",
+            "subject": "GE 161",
+            "section": "2D",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "*:00AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "MH 318-320"
+                }
+            ]
+        },
+        {
+            "class code": "55176",
+            "subject": "GE 161",
+            "section": "2D-1",
+            "units": "0.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "8:00AM",
+                    "time end": "11:00AM",
+                    "type": "lab",
+                    "room": "MH 318-320"
+                }
+            ]
+        },
+        {
+            "class code": "55186",
+            "subject": "GE 162",
+            "section": "2D",
+            "units": "0.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "W",
+                    "time start": "8:00AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "MH 106"
+                }
+            ]
+        },
+        {
+            "class code": "55187",
+            "subject": "GE 162",
+            "section": "2D-1",
+            "units": "0.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "F",
+                    "time start": "8:00AM",
+                    "time end": "11:00AM",
+                    "type": "lab",
+                    "room": "MH 106"
+                }
+            ]
+        },
+        {
+            "class code": "39264",
+            "subject": "Math 23",
+            "section": "WFW-HW-2",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "1:00PM",
+                    "time end": "2:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                },
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "MB 302"
+                }
+            ]
+        }
+    ]
+}

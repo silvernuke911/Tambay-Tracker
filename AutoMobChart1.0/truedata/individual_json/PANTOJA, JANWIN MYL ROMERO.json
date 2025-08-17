@@ -1,0 +1,135 @@
+{
+    "name": "PANTOJA, JANWIN MYL ROMERO",
+    "student number": "2024-05366",
+    "college": "Engg",
+    "degree major": "BS EE",
+    "total units": "20.0",
+    "subjects": [
+        {
+            "class code": "52494",
+            "subject": "EEE 131",
+            "section": "WFY",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "EEEI 229"
+                }
+            ]
+        },
+        {
+            "class code": "52504",
+            "subject": "EEE 133",
+            "section": "THW2",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "EEEI 421"
+                }
+            ]
+        },
+        {
+            "class code": "52532",
+            "subject": "EEE 137",
+            "section": "WFU",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "11:00AM",
+                    "type": "lec",
+                    "room": "EEEI LC2"
+                },
+                {
+                    "day": "WF",
+                    "time start": "11:00AM",
+                    "time end": "11:30AM",
+                    "type": "disc",
+                    "room": "EEEI LC2"
+                }
+            ]
+        },
+        {
+            "class code": "52524",
+            "subject": "EEE 138",
+            "section": "TXY",
+            "units": "1.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "2:30PM",
+                    "time end": "5:30PM",
+                    "type": "lab",
+                    "room": "EEEI 228"
+                }
+            ]
+        },
+        {
+            "class code": "45803",
+            "subject": "KAS 1",
+            "section": "THU1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "PH 116-118"
+                }
+            ]
+        },
+        {
+            "class code": "39251",
+            "subject": "Math 23",
+            "section": "WFR-HR-4",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "MB 304"
+                },
+                {
+                    "day": "Th",
+                    "time start": "9:00AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "39321",
+            "subject": "Math 40",
+            "section": "WFX",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "MBAN 301"
+                }
+            ]
+        }
+    ]
+}

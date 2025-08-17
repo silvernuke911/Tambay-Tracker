@@ -3,6 +3,12 @@ import re
 import os
 from pathlib import Path
 import json
+import shutil
+import logging
+logging.getLogger("pdfminer").setLevel(logging.ERROR)
+# ===============================
+# PDF reading helpers
+# ===============================
 
 def read_pdf(path):
     text = ""
@@ -41,6 +47,10 @@ def textblock_up_form(text, form_type):
     else:
         raise ValueError("Unknown form type")
 
+# ===============================
+# Sched parsing helpers
+# ===============================
+
 def has_am_pm(t):
     return t.endswith("AM") or t.endswith("PM")
 
@@ -55,18 +65,24 @@ def process_schedlines(schedlines):
     sched_dicts = []
     for sched in schedlines:     
         sched_field = sched.split(" ")
+        if len(sched_field) < 2:
+            continue
         day = sched_field[0]
         time = sched_field[1]
         times = time.split("-")
+        if len(times) != 2:
+            continue
         time_start = times[0].upper()
         time_end = times[1].upper()
         if not has_am_pm(time_start) and has_am_pm(time_end):
             time_start += time_end[-2:]
         time_start = add_colon_zero(time_start)
         time_end = add_colon_zero(time_end)
-        class_type = sched_field[2]
+        class_type = sched_field[2] if len(sched_field) > 2 else ""
         if sched_field[-1] == "TBA":
             room_no = sched_field[-1]
+        elif sched_field[-1]=="Rm.":
+            room_no = " ".join(sched_field[-3:])
         else:
             room_no = " ".join(sched_field[-2:])
         sched_dicts.append({
@@ -78,13 +94,24 @@ def process_schedlines(schedlines):
         })
     return sched_dicts
 
-def parse_text_block(textblock, form_type):
-    if form_type == "FORM5":
-        return parse_form5_block(textblock)
-    elif form_type == "FORM5A":
-        return parse_form5a_block(textblock)
-    else:
-        return "UNKNOWN FORM TYPE"
+# ===============================
+# Parsing logic
+# ===============================
+
+def safe_unit_parse(units):
+    """
+    Convert unit string to float if possible.
+    Skip if wrapped in parentheses.
+    """
+    if not units:
+        return 0.0
+    u = units.strip()
+    if u.startswith("(") and u.endswith(")"):  # skip units in parentheses
+        return 0.0
+    try:
+        return float(u)
+    except ValueError:
+        return 0.0
     
 def parse_form5_block(textblock):
     lines = textblock.split('\n')
@@ -100,7 +127,7 @@ def parse_form5_block(textblock):
         name_list = nameline_words[name_index+1:]
     if "BS" in nameline_words:
         BS_index = nameline_words.index("BS")
-        name_list = nameline_words[name_index:BS_index]
+        name_list = nameline_words[name_index+1:BS_index]
         degree_major = " ".join(nameline_words[BS_index:])
     name = " ".join(name_list)
     subject_words = lines[4:-1]
@@ -112,7 +139,7 @@ def parse_form5_block(textblock):
                 "Dental","Guidance", 
                 "Handbook", "School", 
                 "Development", "EDF", 
-                "200.00"]
+                "200.00", "400.00"]
     subject_entries = []
     for line in subject_words:
         subject_line = line.split(" ")
@@ -140,17 +167,22 @@ def parse_form5_block(textblock):
                 units = subject_line[5]
                 offset = 6
         elif second_word == "App":
-                subject = " ".join(subject_line[1:4])  # PE 2 XYZ
-                section = subject_line[4]
-                units = subject_line[5]
-                offset = 6
+            subject = " ".join(subject_line[1:4])  
+            section = subject_line[4]
+            units = subject_line[5]
+            offset = 6
         elif second_word == "FA":
-            subject = " ".join(subject_line[1:3])  # FA XYZ
+            subject = " ".join(subject_line[1:3])  
             section = "".join(subject_line[3:6])
             units = subject_line[6]
             offset = 7
+        elif second_word == "ROTC":
+            subject = " ".join(subject_line[1:5])  
+            section = "".join(subject_line[5:6])
+            units = subject_line[6]
+            offset = 7
         else:
-            subject = " ".join(subject_line[1:3])  # e.g., MATH 100
+            subject = " ".join(subject_line[1:3])  
             section = subject_line[3]
             units = subject_line[4]
             offset = 5
@@ -166,11 +198,13 @@ def parse_form5_block(textblock):
             "instructor": instructor,
             "schedule": sched_dicts
         })
+    total_units = sum(safe_unit_parse(s["units"]) for s in subject_entries)
     student_dict = {
         "name": name,
         "student number": student_number,
         "college": college,
         "degree major": degree_major,
+        "total units": f"{total_units:.1f}",
         "subjects": subject_entries
     }
     return student_dict
@@ -180,9 +214,15 @@ def parse_form5a_block(textblock):
     nameline = lines[1]
     nameline_words = nameline.split(" ")
     student_number = nameline_words[0]
-    degree_major = " ".join(nameline_words[-2:])
-    college = nameline_words[-3]
-    name = " ".join(nameline_words[1:-3])
+
+    if nameline_words[-2] == "Law":
+        college = nameline_words[-2]
+        degree_major = nameline_words[-1]
+        name = " ".join(nameline_words[1:-2])
+    else:
+        degree_major = " ".join(nameline_words[-2:])
+        college = nameline_words[-3]
+        name = " ".join(nameline_words[1:-3])
     subject_words = lines[4:-1]
     subject_entries = []
     for line in subject_words:
@@ -196,29 +236,38 @@ def parse_form5a_block(textblock):
         section = ""
         if second_word == "PE":
             if subject_line[2] == "1":
-                subject = " ".join(subject_line[1:3])  # PE 1
+                subject = " ".join(subject_line[1:3])  
                 section = subject_line[3]
                 units = subject
                 offset = 4
             else:
-                subject = " ".join(subject_line[1:4])  # PE 2 XYZ
+                subject = " ".join(subject_line[1:4])  
                 section = subject_line[4]
                 offset = 5
         elif second_word == "FA":
-            subject = " ".join(subject_line[1:3])  # FA XYZ
+            subject = " ".join(subject_line[1:3])  
             section = "".join(subject_line[3:6])
             offset = 6
+        elif second_word == "ROTC":
+            subject = " ".join(subject_line[1:5])  
+            section = "".join(subject_line[5:6])
+            offset = 6
         else:
-            subject = " ".join(subject_line[1:3])  # e.g., MATH 100
+            subject = " ".join(subject_line[1:3])  
             section = subject_line[3]
             offset = 4
         units = subject_line[-1]
-        if subject_line[-2] in ["TBA", "CONCEALED"]:
-            instructor = subject_line[-2]
-        else:
-            instructor = " ".join(subject_line[-3:-1])
-        schedule_words = subject_line[offset:-3] if subject_line[-2] not in ["TBA", "CONCEALED"] else subject_line[offset:-2]
-        schedule = " ".join(schedule_words)
+        schedule_line = subject_line[offset:-1]
+        instructor_index = -2
+        if schedule_line[-1] in ["TBA",'CONCEALED']:
+            instructor_index = -1
+        if schedule_line[-3] in ["DELA"]:
+            instructor_index = -3 
+        if schedule_line[-4] in ["CHUA,"]:
+            instructor_index = -4
+        instructor = " ".join(schedule_line[instructor_index:])
+        schedule_line = schedule_line[:instructor_index]
+        schedule = " ".join(schedule_line)
         schedlines = [s.strip() for s in schedule.split(";")]
         sched_dicts = process_schedlines(schedlines)
         subject_entries.append({
@@ -229,11 +278,13 @@ def parse_form5a_block(textblock):
             "instructor": instructor,
             "schedule": sched_dicts
         })
+    total_units = sum(safe_unit_parse(s["units"]) for s in subject_entries)
     student_dict = {
         "name": name,
         "student number": student_number,
         "college": college,
         "degree major": degree_major,
+        "total units": f"{total_units:.1f}",
         "subjects": subject_entries
     }
     return student_dict
@@ -244,105 +295,94 @@ def parse_text_block(textblock, form_type):
     elif form_type == "FORM5A":
         return parse_form5a_block(textblock)
     else:
-        return "UNKNOWN FORM TYPE"
-    
-def pdfread(form5_dir, pdftext_dir):
-    pdf_files = list(form5_dir.glob("*.pdf"))
-    for pdf_path in pdf_files:
-        print(pdf_path)
-        text = read_pdf(pdf_path)
-        filename = os.path.splitext(os.path.basename(pdf_path))[0] + ".txt"
-        save_path = os.path.join(
-            pdftext_dir,
-            filename
-        )
-        if os.path.exists(save_path):
-            overwrite = "y"  # Change to input(...) if you want to prompt
-            if overwrite != 'y':
-                print(f"Skipped: {filename}")
-                continue
-        with open(save_path, "w", encoding="utf-8") as f:
-            f.write(text)
-            print(f"Saved to: {save_path}")
+        return None
 
+# ===============================
+# Main JSON save/load
+# ===============================
 
-def pdf_load(pdftext_dir):
-    # --- Step 2: Read and parse textblocks from directory ---
-    for fname in os.listdir(pdftext_dir):
-        if not fname.endswith(".txt"):
+def process_all_pdfs(base_dir):
+    form5_dir = base_dir / "truedata" / "form5files"
+    individual_dir = base_dir / "truedata" / "individual_json"
+    all_dir = base_dir / "truedata" / "alldata_json"
+    print("="*100)
+    print("Processing PDF Files")
+    print("="*100)
+    # recreate/overwrite output dirs
+    for d in [individual_dir, all_dir]:
+        if d.exists():
+            shutil.rmtree(d)
+        d.mkdir(parents=True, exist_ok=True)
+    error_list = []
+    for file in form5_dir.iterdir():
+        if not file.suffix.lower() == ".pdf":
+            error_list.append(f"{file.name} is not pdf/ introduces errors, need's manual json input")
             continue
-        with open(os.path.join(pdftext_dir, fname), "r", encoding="utf-8") as f:
-            text = f.read()
+        
+        text = read_pdf(file)
+        if text == "":
+            error_list.append(f"{file.name} is not pdf/introduces errors, need's manual json input")
+            continue
+
         form_type = determine_form_type(text)
         textblock = textblock_up_form(text, form_type)
         parsed = parse_text_block(textblock, form_type)
-        print("*"*130)
-        print("="*130)
-        print(f"NAME            : {parsed["name"]}")
-        print(f"STUDENT NO     : {parsed["student number"]}")
-        print(f"COLLEGE/MAJOR  : {" ".join([parsed["college"], parsed["degree major"]])}")
-        for subject in parsed["subjects"]:
-            print("-"*100)
-            print(f"  CLASS CODE : {subject["class code"]}")
-            print(f"  SUBJECT    : {subject["subject"]}")
-            print(f"  SECTION    : {subject["section"]}")
-            print(f"  UNITS      : {subject["units"]}")
-            print("- "*50 + '-')
-            for schedline in subject["schedule"]:
-                print(f"    DAY        : {schedline["day"]}")
-                print(f"    TIME START : {schedline["time start"]}")
-                print(f"    TIME END   : {schedline["time end"]}")
-                print(f"    TYPE       : {schedline["type"]}")
-                print(f"    ROOM       : {schedline["room"]}")
-        print("=" * 130)
-
-def save_json(filename, pdftext_dir, base_dir):
-    all_data = []
-    for fname in os.listdir(pdftext_dir):
-        if not fname.endswith(".txt"):
+        if not parsed:
             continue
-        with open(os.path.join(pdftext_dir, fname), "r", encoding="utf-8") as f:
-            full_text = f.read()
-        form_type = determine_form_type(full_text)
-        textblock = textblock_up_form(full_text, form_type)
-        parsed = parse_text_block(textblock, form_type)
-        all_data.append(parsed)
-    save_path = base_dir / filename
-    with open(save_path, "w", encoding="utf-8") as f:
+
+        # save individual json
+        indiv_path = individual_dir / f"{parsed['name']}.json"
+        with open(indiv_path, "w", encoding="utf-8") as f:
+            json.dump(parsed, f, ensure_ascii=False, indent=4)
+            print(f"Saved {indiv_path.name}")
+    print("-"*100)
+    print("Error logs")
+    print("-"*100)
+    for error in error_list:
+        print(error)
+    print("-"*100)
+
+def save_alldata(base_dir):
+    all_dir = base_dir / "truedata" / "alldata_json"
+    individual_dir = base_dir / "truedata" / "individual_json"
+    individual_dir_manual = base_dir / "truedata" / "individual_json_manual"
+    all_path = all_dir / "alldata.json"
+
+    # make sure output dir exists
+    all_dir.mkdir(parents=True, exist_ok=True)
+
+    all_data = []
+
+    # collect all json files in individual_json
+    for file in individual_dir.glob("*.json"):
+        with open(file, "r", encoding="utf-8") as f:
+            try:
+                data = json.load(f)
+                all_data.append(data)
+            except json.JSONDecodeError:
+                print(f"⚠️ Skipping invalid JSON file: {file.name}")
+    
+    # collect all json files in individual_json
+    for file in individual_dir_manual.glob("*.json"):
+        with open(file, "r", encoding="utf-8") as f:
+            try:
+                data = json.load(f)
+                all_data.append(data)
+            except json.JSONDecodeError:
+                print(f"⚠️ Skipping invalid JSON file: {file.name}")
+
+    # save combined file
+    with open(all_path, "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=4)
-    print(f"Saved all data to {filename}")
+    print("="*100)
+    print(f"Saved {len(all_data)} student records to {all_path.name}")
+    print("="*100)
 
-def load_json(filename, base_dir):
-    source_path = base_dir / filename
-    with open(source_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    for student in data:
-        print("*"*130)
-        print("="*130)
-        print(f"NAME            : {student["name"]}")
-        print(f"STUDENT NO     : {student["student number"]}")
-        print(f"COLLEGE/MAJOR  : {" ".join([student["college"], student["degree major"]])}")
-        for subject in student["subjects"]:
-            print("-"*100)
-            print(f"  CLASS CODE : {subject["class code"]}")
-            print(f"  SUBJECT    : {subject["subject"]}")
-            print(f"  SECTION    : {subject["section"]}")
-            print(f"  UNITS      : {subject["units"]}")
-            print("- "*50 + '-')
-            for schedline in subject["schedule"]:
-                print(f"    DAY        : {schedline["day"]}")
-                print(f"    TIME START : {schedline["time start"]}")
-                print(f"    TIME END   : {schedline["time end"]}")
-                print(f"    TYPE       : {schedline["type"]}")
-                print(f"    ROOM       : {schedline["room"]}")
-        print("=" * 130)
+# ===============================
+# RUN PROGRAM
+# ===============================
 
-base_dir = Path(r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests")
-form5_dir = base_dir / "sample_form5"
-pdf_files = list(form5_dir.glob("*.pdf"))
-pdftext_dir = base_dir / "pdftext"
-os.makedirs(pdftext_dir, exist_ok=True)
-json_filename = "brod_data.json"
-## pdfread()
-save_json(json_filename, pdftext_dir, base_dir)
-load_json(json_filename, base_dir)
+if __name__ == "__main__":
+    base_dir = Path(r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0")
+    process_all_pdfs(base_dir)
+    save_alldata(base_dir)

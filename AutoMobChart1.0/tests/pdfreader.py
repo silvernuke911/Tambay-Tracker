@@ -301,13 +301,13 @@ def parse_text_block(textblock, form_type, ifprint = False):
     else:
         return "UNKNOWN FORM TYPE"
 
-form5_dir = Path(r"C:\Users\verci\Documents\Python Code\Tambay-Tracker\AutoMobChart1.0\tests\sample_form5")
+form5_dir = Path(r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\sample_form5")
 pdf_files = list(form5_dir.glob("*.pdf"))  # Only .pdf files
 
 import os
 
 # Ensure target directory exists
-os.makedirs(r"C:\Users\verci\Documents\Python Code\Tambay-Tracker\AutoMobChart1.0\tests\pdftextblocks", exist_ok=True)
+os.makedirs(r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\pdftextblocks", exist_ok=True)
 
 def pdfread():
     # --- Step 1: Extract and save raw text from PDFs ---
@@ -317,7 +317,7 @@ def pdfread():
 
         filename = os.path.splitext(os.path.basename(pdf_path))[0] + ".txt"
         save_path = os.path.join(
-            r"C:\Users\verci\Documents\Python Code\Tambay-Tracker\AutoMobChart1.0\tests\pdftextblocks",
+            r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\pdftextblocks",
             filename
         )
 
@@ -331,7 +331,7 @@ def pdfread():
             f.write(text)
             print(f"Saved to: {save_path}")
 
-textblock_dir = r"C:\Users\verci\Documents\Python Code\Tambay-Tracker\AutoMobChart1.0\tests\pdftextblocks"
+textblock_dir = r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\pdftextblocks"
 def pdf_load():
     # --- Step 2: Read and parse textblocks from directory ---
     for fname in os.listdir(textblock_dir):
@@ -370,7 +370,7 @@ def save_json():
     import json
     import os
 
-    output_dir = r"C:\Users\verci\Documents\Python Code\Tambay-Tracker\AutoMobChart1.0\tests\json_files"
+    output_dir = r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\json_files"
     os.makedirs(output_dir, exist_ok=True)
 
     for fname in os.listdir(textblock_dir):
@@ -398,7 +398,7 @@ def save_json2():
     import os
     import json
 
-    textblock_dir = r"C:\Users\verci\Documents\Python Code\Tambay-Tracker\AutoMobChart1.0\tests\pdftextblocks"
+    textblock_dir = r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\pdftextblocks"
     all_data = []
 
     for fname in os.listdir(textblock_dir):
@@ -415,7 +415,7 @@ def save_json2():
         all_data.append(parsed)
 
     # Save the entire list to one JSON file
-    with open(r"AutoMobChart1.0\tests\all_students.json", "w", encoding="utf-8") as f:
+    with open( r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\all_students.json", "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
 
     print("Saved all data to all_students.json")
@@ -423,7 +423,7 @@ save_json2()
 def load_json():
     import json
 
-    with open(r"AutoMobChart1.0\tests\all_students.json", "r", encoding="utf-8") as f:
+    with open( r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\all_students.json", "r", encoding="utf-8") as f:
         students = json.load(f)
     print(students)
     # Example

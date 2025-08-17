@@ -280,7 +280,7 @@ class Form5Parser:
 
 def main():
     parser = Form5Parser()
-    form5_dir = Path(r"C:\Users\verci\Documents\Python Code\Tambay-Tracker\AutoMobChart1.0\tests\sample_form5")
+    form5_dir = Path(r"C:\Users\verci\Documents\code\Tambay-Tracker\AutoMobChart1.0\tests\sample_form5")
     
     for pdf_path in form5_dir.glob("*.pdf"):
         print(pdf_path)

@@ -1,0 +1,135 @@
+{
+    "name": "CONIENDO, ROLAND CLINT JANDOG",
+    "student number": "2024-01302",
+    "college": "Engg",
+    "degree major": "BS ECE",
+    "total units": "20.0",
+    "subjects": [
+        {
+            "class code": "52496",
+            "subject": "EEE 131",
+            "section": "WFR2",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "EEEI 123"
+                }
+            ]
+        },
+        {
+            "class code": "52499",
+            "subject": "EEE 133",
+            "section": "THR",
+            "units": "3.0",
+            "instructor": "TARNATE, WR",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "EEEI 421"
+                }
+            ]
+        },
+        {
+            "class code": "52532",
+            "subject": "EEE 137",
+            "section": "WFU",
+            "units": "3.0",
+            "instructor": "TBA",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "11:00AM",
+                    "type": "lec",
+                    "room": "EEEI LC2"
+                },
+                {
+                    "day": "WF",
+                    "time start": "11:00AM",
+                    "time end": "11:30AM",
+                    "type": "disc",
+                    "room": "EEEI LC2"
+                }
+            ]
+        },
+        {
+            "class code": "52529",
+            "subject": "EEE 138",
+            "section": "WXY2",
+            "units": "1.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "W",
+                    "time start": "2:30PM",
+                    "time end": "5:30PM",
+                    "type": "lab",
+                    "room": "EEI 305"
+                }
+            ]
+        },
+        {
+            "class code": "40806",
+            "subject": "Geol 1",
+            "section": "THU-2",
+            "units": "3.0",
+            "instructor": "PAYOT, B",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "NIGS 127"
+                }
+            ]
+        },
+        {
+            "class code": "39386",
+            "subject": "Math 23",
+            "section": "WFW-HW-6",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "1:00PM",
+                    "time end": "2:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                },
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "MB 306"
+                }
+            ]
+        },
+        {
+            "class code": "39411",
+            "subject": "Math 40",
+            "section": "THX",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "MBAN 301"
+                }
+            ]
+        }
+    ]
+}
