@@ -61,3 +61,6 @@ help_color_file     = text_reader(help_color_filepath)
 help_note_file      = text_reader(help_note_filepath)
 help_sys_file       = text_reader(help_sys_filepath)
 temp_output_file    = text_reader(temp_output_filepath)
+
+## Start date
+start_date = '09/28/25'

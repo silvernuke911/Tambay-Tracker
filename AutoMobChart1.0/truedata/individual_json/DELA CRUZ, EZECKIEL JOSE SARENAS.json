@@ -1,0 +1,126 @@
+{
+    "name": "DELA CRUZ, EZECKIEL JOSE SARENAS",
+    "student number": "2025-03531",
+    "college": "Engg",
+    "degree major": "BS ECE",
+    "total units": "18.0",
+    "subjects": [
+        {
+            "class code": "52480",
+            "subject": "EEE 111",
+            "section": "WFVW",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "11:30AM",
+                    "time end": "12:30PM",
+                    "type": "lec",
+                    "room": "EEEI 204"
+                },
+                {
+                    "day": "WF",
+                    "time start": "12:30PM",
+                    "time end": "2:00PM",
+                    "type": "lab",
+                    "room": "EEEI 204"
+                }
+            ]
+        },
+        {
+            "class code": "52471",
+            "subject": "EEE 113",
+            "section": "WFX",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "EEEI VLC"
+                }
+            ]
+        },
+        {
+            "class code": "52468",
+            "subject": "EEE 118",
+            "section": "SXY2",
+            "units": "1.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "2:30PM",
+                    "time end": "5:30PM",
+                    "type": "lab",
+                    "room": "EEEI 301"
+                }
+            ]
+        },
+        {
+            "class code": "39168",
+            "subject": "Math 21",
+            "section": "TWHFQ-3",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "7:15AM",
+                    "time end": "8:15AM",
+                    "type": "lec",
+                    "room": "MB 304"
+                },
+                {
+                    "day": "WF",
+                    "time start": "7:15AM",
+                    "time end": "8:15AM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "42564",
+            "subject": "Philo 1",
+            "section": "THU-8",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "PH 222"
+                }
+            ]
+        },
+        {
+            "class code": "41381",
+            "subject": "Physics 71",
+            "section": "WFR-HR-2",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "NIP F206"
+                },
+                {
+                    "day": "Th",
+                    "time start": "8:45AM",
+                    "time end": "9:45AM",
+                    "type": "disc",
+                    "room": "NIP F209"
+                }
+            ]
+        }
+    ]
+}

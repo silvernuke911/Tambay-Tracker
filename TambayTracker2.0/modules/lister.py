@@ -53,7 +53,7 @@ def list_date_frequency(flags):
         start_date = pd.to_datetime(
             flags.get(
                 'startdate',
-                '01/20/25'
+                filepaths.start_date
             ), format='%m/%d/%y'
         )
         end_date = pd.to_datetime(

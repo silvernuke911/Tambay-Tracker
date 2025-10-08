@@ -1,0 +1,142 @@
+{
+    "name": "PASADILLA, JONAS AVRIL",
+    "student number": "2025-01405",
+    "college": "Engg",
+    "degree major": "BS ChE",
+    "total units": "20.0",
+    "subjects": [
+        {
+            "class code": "38668",
+            "subject": "Chem 16",
+            "section": "WFW",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "IC 307-308"
+                }
+            ]
+        },
+        {
+            "class code": "38669",
+            "subject": "Chem 16.1",
+            "section": "WFW/WFUV1",
+            "units": "2.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "1:00PM",
+                    "type": "lab",
+                    "room": "IC 128-129"
+                }
+            ]
+        },
+        {
+            "class code": "53452",
+            "subject": "ChemE 101",
+            "section": "TGI/HVW",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "11:30AM",
+                    "time end": "2:30PM",
+                    "type": "lab",
+                    "room": "MH 321"
+                },
+                {
+                    "day": "T",
+                    "time start": "12:00PM",
+                    "time end": "2:00PM",
+                    "type": "lec",
+                    "room": "MH 321"
+                }
+            ]
+        },
+        {
+            "class code": "53457",
+            "subject": "ChemE 103",
+            "section": "TN",
+            "units": "1.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "5:00PM",
+                    "time end": "6:00PM",
+                    "type": "lec",
+                    "room": "lec P&G"
+                }
+            ]
+        },
+        {
+            "class code": "14440",
+            "subject": "Eng 13",
+            "section": "THR-3",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "CAL 310"
+                }
+            ]
+        },
+        {
+            "class code": "39170",
+            "subject": "Math 21",
+            "section": "TWHFQ-5",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "7:15AM",
+                    "time end": "8:15AM",
+                    "type": "lec",
+                    "room": "MB 306"
+                },
+                {
+                    "day": "WF",
+                    "time start": "7:15AM",
+                    "time end": "8:15AM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "41371",
+            "subject": "Physics 71",
+            "section": "THX-FX-1",
+            "units": "4.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "NIP F203"
+                },
+                {
+                    "day": "F",
+                    "time start": "2:45PM",
+                    "time end": "3:45PM",
+                    "type": "disc",
+                    "room": "NIP F208"
+                }
+            ]
+        }
+    ]
+}

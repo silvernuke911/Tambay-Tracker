@@ -108,7 +108,11 @@ def update_scores(silent = False):
 
     # Merge the old Special Points back in
     score_data = pd.merge(score_data, score_file[['Name', 'Special Points']], on='Name', how='left')
-    score_data['Special Points'] = score_data['Special Points'].astype(int)
+    score_data['Special Points'] = (
+        pd.to_numeric(score_data['Special Points'], errors='coerce')
+        .fillna(0)
+        .astype(int)
+    )
     # Fill missing special points with 0 (for new members)
     score_data = score_data.assign(**{'Special Points': score_data['Special Points'].fillna(0)})
 
