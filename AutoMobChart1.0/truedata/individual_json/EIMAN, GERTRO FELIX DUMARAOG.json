@@ -3,93 +3,108 @@
     "student number": "2025-08240",
     "college": "Stat",
     "degree major": "BS (Stat)",
-    "total units": "12.0",
+    "total units": "16.0",
     "subjects": [
         {
-            "class code": "13858",
-            "subject": "ARTS 1",
-            "section": "THU-3",
+            "class code": "15510",
+            "subject": "Fil 40",
+            "section": "WFV-1",
             "units": "3.0",
-            "instructor": "",
+            "instructor": "ORTIZ, A",
             "schedule": [
                 {
+                    "day": "WF",
+                    "time start": "11:30AM",
+                    "time end": "1:00PM",
+                    "type": "lec",
+                    "room": "CAL 402"
+                }
+            ]
+        },
+        {
+            "class code": "39184",
+            "subject": "Math 21",
+            "section": "TWHFX-3",
+            "units": "4.0",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:45PM",
+                    "time end": "3:45PM",
+                    "type": "lec",
+                    "room": "MB 304"
+                },
+                {
                     "day": "TTh",
-                    "time start": "10:00AM",
-                    "time end": "11:30AM",
+                    "time start": "2:45PM",
+                    "time end": "3:45PM",
                     "type": "lec",
                     "room": "TBA"
                 }
             ]
         },
         {
-            "class code": "13880",
-            "subject": "Art Stud",
-            "section": "2",
-            "units": "THX-1",
-            "instructor": "",
-            "schedule": []
-        },
-        {
-            "class code": "45777",
-            "subject": "KAS 1",
-            "section": "WFU2",
-            "units": "3.0",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "WF",
-                    "time start": "10:00AM",
-                    "time end": "11:30AM",
-                    "type": "lec",
-                    "room": "PH 214"
-                }
-            ]
-        },
-        {
-            "class code": "24962",
-            "subject": "PE 2 CPW",
-            "section": "SBC",
+            "class code": "25096",
+            "subject": "PE 2 CH",
+            "section": "SKL",
             "units": "(2.0)",
-            "instructor": "",
+            "instructor": "CARLOS, L",
             "schedule": [
                 {
                     "day": "S",
-                    "time start": "8:00AM",
-                    "time end": "10:00AM",
+                    "time start": "3:00PM",
+                    "time end": "5:00PM",
                     "type": "PE",
                     "room": "TBA"
                 }
             ]
         },
         {
-            "class code": "41435",
-            "subject": "Physics 10",
-            "section": "WFX-1",
+            "class code": "42633",
+            "subject": "Philo 1",
+            "section": "WFW-1",
             "units": "3.0",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "WF",
-                    "time start": "2:30PM",
-                    "time end": "4:00PM",
-                    "type": "lec",
-                    "room": "NIP F201"
-                }
-            ]
-        },
-        {
-            "class code": "69954",
-            "subject": "Stat 114",
-            "section": "WFW",
-            "units": "3.0",
-            "instructor": "",
+            "instructor": "DURAN, AL",
             "schedule": [
                 {
                     "day": "WF",
                     "time start": "1:00PM",
                     "time end": "2:30PM",
                     "type": "lec",
-                    "room": "SS 302"
+                    "room": "PH 418"
+                }
+            ]
+        },
+        {
+            "class code": "69992",
+            "subject": "Stat 115",
+            "section": "THW",
+            "units": "3.0",
+            "instructor": "MANAPAT, GR",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "SS 432"
+                }
+            ]
+        },
+        {
+            "class code": "69999",
+            "subject": "Stat 117",
+            "section": "THV",
+            "units": "3.0",
+            "instructor": "ALAS, RA",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "11:30AM",
+                    "time end": "1:00PM",
+                    "type": "lec",
+                    "room": "SS 301"
                 }
             ]
         }

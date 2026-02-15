@@ -1,0 +1,143 @@
+{
+    "name": "CAYABYAB, CARL JOSE GARCIA",
+    "student number": "2023-01168",
+    "college": "Engg",
+    "degree major": "BS IE",
+    "total units": "14.0",
+    "subjects": [
+        {
+            "class code": "52909",
+            "subject": "ES 102",
+            "section": "WFY1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "ICE 408"
+                }
+            ]
+        },
+        {
+            "class code": "66690",
+            "subject": "Econ 11",
+            "section": "WFD",
+            "units": "0.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "11:00AM",
+                    "type": "lec",
+                    "room": "SE AUDI"
+                }
+            ]
+        },
+        {
+            "class code": "66702",
+            "subject": "Econ 11",
+            "section": "WK",
+            "units": "2",
+            "instructor": "",
+            "schedule": []
+        },
+        {
+            "class code": "55661",
+            "subject": "IE 28",
+            "section": "WFV",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "11:30AM",
+                    "time end": "1:00PM",
+                    "type": "lec",
+                    "room": "(VLC 1)"
+                }
+            ]
+        },
+        {
+            "class code": "55668",
+            "subject": "IE 32",
+            "section": "THXY",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "2:30PM",
+                    "time end": "4:30PM",
+                    "type": "lec",
+                    "room": "Ergo Lab"
+                },
+                {
+                    "day": "Th",
+                    "time start": "2:30PM",
+                    "time end": "5:00PM",
+                    "type": "lab",
+                    "room": ".E0r0go Lab"
+                },
+                {
+                    "day": "T",
+                    "time start": "4:30",
+                    "time end": "L5APBMO:00",
+                    "type": "rlaatbo",
+                    "room": "Lab 2,000.00"
+                }
+            ]
+        },
+        {
+            "class code": "55720",
+            "subject": "IE 33",
+            "section": "THI-1",
+            "units": "2.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:00PM",
+                    "type": "lec",
+                    "room": "IE-ME 109"
+                }
+            ]
+        },
+        {
+            "class code": "25109",
+            "subject": "PE 2 OBS",
+            "section": "WBC",
+            "units": "(2.0)",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "W",
+                    "time start": "8:00AM",
+                    "time end": "10:00AM",
+                    "type": "PE",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "56274",
+            "subject": "Shop 7",
+            "section": "FWX",
+            "units": "1.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "F",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "Shop 1500.00"
+                }
+            ]
+        }
+    ]
+}

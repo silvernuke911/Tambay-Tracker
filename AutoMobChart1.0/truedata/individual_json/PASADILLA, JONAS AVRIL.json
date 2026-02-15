@@ -3,138 +3,129 @@
     "student number": "2025-01405",
     "college": "Engg",
     "degree major": "BS ChE",
-    "total units": "20.0",
+    "total units": "19.0",
     "subjects": [
         {
-            "class code": "38668",
-            "subject": "Chem 16",
+            "class code": "38708",
+            "subject": "Chem 17",
             "section": "WFW",
             "units": "3.0",
-            "instructor": "",
+            "instructor": "CONCEALED",
             "schedule": [
                 {
                     "day": "WF",
                     "time start": "1:00PM",
                     "time end": "2:30PM",
                     "type": "lec",
-                    "room": "IC 307-308"
+                    "room": "IC 309-310"
                 }
             ]
         },
         {
-            "class code": "38669",
-            "subject": "Chem 16.1",
+            "class code": "38721",
+            "subject": "Chem 17.1",
             "section": "WFW/WFUV1",
             "units": "2.0",
-            "instructor": "",
+            "instructor": "CONCEALED",
             "schedule": [
                 {
                     "day": "WF",
                     "time start": "10:00AM",
                     "time end": "1:00PM",
                     "type": "lab",
-                    "room": "IC 128-129"
+                    "room": "IC 126-127"
                 }
             ]
         },
         {
-            "class code": "53452",
-            "subject": "ChemE 101",
-            "section": "TGI/HVW",
+            "class code": "53453",
+            "subject": "ChemE 102",
+            "section": "TDE/HUV1",
             "units": "3.0",
-            "instructor": "",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "T",
+                    "time start": "10:00AM",
+                    "time end": "12:00PM",
+                    "type": "lec",
+                    "room": "lec A402"
+                },
+                {
+                    "day": "Th",
+                    "time start": "10:00AM",
+                    "time end": "1:00PM",
+                    "type": "lab",
+                    "room": "lab A402"
+                }
+            ]
+        },
+        {
+            "class code": "53462",
+            "subject": "ChemE 105",
+            "section": "TWX/HIJ1",
+            "units": "3.0",
+            "instructor": "CONCEALED",
             "schedule": [
                 {
                     "day": "Th",
-                    "time start": "11:30AM",
-                    "time end": "2:30PM",
-                    "type": "lab",
-                    "room": "MH 321"
+                    "time start": "1:00PM",
+                    "time end": "3:00PM",
+                    "type": "lec",
+                    "room": "lec A302"
                 },
                 {
                     "day": "T",
-                    "time start": "12:00PM",
-                    "time end": "2:00PM",
-                    "type": "lec",
-                    "room": "MH 321"
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lab",
+                    "room": "lab A302"
                 }
             ]
         },
         {
-            "class code": "53457",
-            "subject": "ChemE 103",
-            "section": "TN",
-            "units": "1.0",
-            "instructor": "",
+            "class code": "39193",
+            "subject": "Math 22",
+            "section": "THQ-WQ-7",
+            "units": "4.0",
+            "instructor": "CONCEALED",
             "schedule": [
                 {
-                    "day": "T",
-                    "time start": "5:00PM",
-                    "time end": "6:00PM",
+                    "day": "W",
+                    "time start": "7:00AM",
+                    "time end": "8:00AM",
                     "type": "lec",
-                    "room": "lec P&G"
-                }
-            ]
-        },
-        {
-            "class code": "14440",
-            "subject": "Eng 13",
-            "section": "THR-3",
-            "units": "3.0",
-            "instructor": "",
-            "schedule": [
+                    "room": "TBA"
+                },
                 {
                     "day": "TTh",
+                    "time start": "7:00AM",
+                    "time end": "8:30AM",
+                    "type": "lec",
+                    "room": "MB 307"
+                }
+            ]
+        },
+        {
+            "class code": "41397",
+            "subject": "Physics 72",
+            "section": "WFR-HR-1",
+            "units": "4.0",
+            "instructor": "et al.",
+            "schedule": [
+                {
+                    "day": "WF",
                     "time start": "8:30AM",
                     "time end": "10:00AM",
                     "type": "lec",
-                    "room": "CAL 310"
-                }
-            ]
-        },
-        {
-            "class code": "39170",
-            "subject": "Math 21",
-            "section": "TWHFQ-5",
-            "units": "4.0",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "TTh",
-                    "time start": "7:15AM",
-                    "time end": "8:15AM",
-                    "type": "lec",
-                    "room": "MB 306"
+                    "room": "NIP F207"
                 },
                 {
-                    "day": "WF",
-                    "time start": "7:15AM",
-                    "time end": "8:15AM",
-                    "type": "lec",
-                    "room": "TBA"
-                }
-            ]
-        },
-        {
-            "class code": "41371",
-            "subject": "Physics 71",
-            "section": "THX-FX-1",
-            "units": "4.0",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "TTh",
-                    "time start": "2:30PM",
-                    "time end": "4:00PM",
-                    "type": "lec",
-                    "room": "NIP F203"
-                },
-                {
-                    "day": "F",
-                    "time start": "2:45PM",
-                    "time end": "3:45PM",
+                    "day": "Th",
+                    "time start": "8:45AM",
+                    "time end": "9:45AM",
                     "type": "disc",
-                    "room": "NIP F208"
+                    "room": "ORDONIO, AE"
                 }
             ]
         }

@@ -3,122 +3,131 @@
     "student number": "2024-10583",
     "college": "Engg",
     "degree major": "BS EE",
-    "total units": "19.0",
+    "total units": "16.0",
     "subjects": [
         {
-            "class code": "52484",
-            "subject": "EEE 111",
-            "section": "MDEWX",
+            "class code": "52510",
+            "subject": "EEE 143",
+            "section": "THR1",
             "units": "3.0",
-            "instructor": "BENITEZ, HK",
+            "instructor": "",
             "schedule": [
                 {
-                    "day": "M",
-                    "time start": "10:00AM",
-                    "time end": "12:00PM",
+                    "day": "TTh",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
                     "type": "lec",
-                    "room": "EEEI 204"
-                },
-                {
-                    "day": "M",
-                    "time start": "1:00PM",
-                    "time end": "4:00PM",
-                    "type": "lab",
-                    "room": "EEEI 204"
+                    "room": "EEEI 123"
                 }
             ]
         },
         {
-            "class code": "52469",
-            "subject": "EEE 113",
+            "class code": "52524",
+            "subject": "EEE 145",
             "section": "WFU",
             "units": "3.0",
-            "instructor": "CHUA, A et al.",
+            "instructor": "",
             "schedule": [
                 {
                     "day": "WF",
                     "time start": "10:00AM",
-                    "time end": "11:30AM",
+                    "time end": "11:00AM",
                     "type": "lec",
+                    "room": "EEEI 422"
+                },
+                {
+                    "day": "WF",
+                    "time start": "11:00AM",
+                    "time end": "11:30AM",
+                    "type": "disc",
+                    "room": "EEEI 422"
+                }
+            ]
+        },
+        {
+            "class code": "52530",
+            "subject": "EEE 147",
+            "section": "THX1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "2:30PM",
+                    "time end": "3:30PM",
+                    "type": "lec",
+                    "room": "EEEI VLC"
+                },
+                {
+                    "day": "TTh",
+                    "time start": "3:30PM",
+                    "time end": "4:00PM",
+                    "type": "disc",
                     "room": "EEEI VLC"
                 }
             ]
         },
         {
-            "class code": "52490",
-            "subject": "EEE 131",
-            "section": "THY",
-            "units": "3.0",
-            "instructor": "QUIZON, LR",
+            "class code": "52920",
+            "subject": "ES 101",
+            "section": "THYL",
+            "units": "0.0",
+            "instructor": "",
             "schedule": [
                 {
                     "day": "TTh",
                     "time start": "4:00PM",
                     "time end": "5:30PM",
                     "type": "lec",
-                    "room": "EEEI 229"
+                    "room": "ICE 405"
                 }
             ]
         },
         {
-            "class code": "52498",
-            "subject": "EEE 133",
-            "section": "THW3",
-            "units": "3.0",
-            "instructor": "HIZON, JR",
-            "schedule": [
-                {
-                    "day": "TTh",
-                    "time start": "1:00PM",
-                    "time end": "2:30PM",
-                    "type": "lec",
-                    "room": "EEEI 422"
-                }
-            ]
-        },
-        {
-            "class code": "52533",
-            "subject": "EEE 137",
-            "section": "WFV1",
-            "units": "3.0",
-            "instructor": "TBA",
-            "schedule": [
-                {
-                    "day": "WF",
-                    "time start": "11:30AM",
-                    "time end": "12:30PM",
-                    "type": "lec",
-                    "room": "EEEI LC1"
-                },
-                {
-                    "day": "WF",
-                    "time start": "12:30PM",
-                    "time end": "1:00PM",
-                    "type": "disc",
-                    "room": "EEEI LC1"
-                }
-            ]
-        },
-        {
-            "class code": "39387",
-            "subject": "Math 23",
-            "section": "WFX-HX-6",
+            "class code": "52955",
+            "subject": "ES 101",
+            "section": "WFX4",
             "units": "4.0",
-            "instructor": "CONCEALED",
+            "instructor": "",
             "schedule": [
                 {
                     "day": "WF",
                     "time start": "2:30PM",
                     "time end": "4:00PM",
-                    "type": "lec",
-                    "room": "MB 306"
-                },
-                {
-                    "day": "Th",
-                    "time start": "3:00PM",
-                    "time end": "4:00PM",
-                    "type": "lec",
+                    "type": "lab",
                     "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "25194",
+            "subject": "PE 2 TT",
+            "section": "WFI",
+            "units": "(2.0)",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "2:00PM",
+                    "type": "PE",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "42016",
+            "subject": "STS 1",
+            "section": "WFY-1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "EEEI 120"
                 }
             ]
         }

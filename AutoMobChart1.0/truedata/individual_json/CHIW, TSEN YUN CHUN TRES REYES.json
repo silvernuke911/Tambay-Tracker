@@ -1,0 +1,57 @@
+{
+    "name": "CHIW, TSEN YUN CHUN TRES REYES",
+    "student number": "2019-08990",
+    "college": "VSB",
+    "degree major": "BS BA",
+    "total units": "9.0",
+    "subjects": [
+        {
+            "class code": "16737",
+            "subject": "BA 190",
+            "section": "THX",
+            "units": "3.0",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "BA 309"
+                }
+            ]
+        },
+        {
+            "class code": "16718",
+            "subject": "BA 193",
+            "section": "THU",
+            "units": "3.0",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "BA 110"
+                }
+            ]
+        },
+        {
+            "class code": "16719",
+            "subject": "BA 194",
+            "section": "THW",
+            "units": "3.0",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "BA 307"
+                }
+            ]
+        }
+    ]
+}

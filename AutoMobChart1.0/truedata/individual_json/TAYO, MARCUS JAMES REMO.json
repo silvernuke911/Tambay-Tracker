@@ -3,114 +3,99 @@
     "student number": "2025-16851",
     "college": "Engg",
     "degree major": "BS EE",
-    "total units": "14.0",
+    "total units": "18.0",
     "subjects": [
         {
-            "class code": "52477",
-            "subject": "EEE 111",
-            "section": "THVW",
+            "class code": "13872",
+            "subject": "ARTS 1",
+            "section": "THW-2",
             "units": "3.0",
             "instructor": "",
             "schedule": [
                 {
                     "day": "TTh",
-                    "time start": "11:30AM",
-                    "time end": "12:30PM",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
                     "type": "lec",
-                    "room": "EEEI 204"
-                },
-                {
-                    "day": "TTh",
-                    "time start": "12:30PM",
-                    "time end": "2:00PM",
-                    "type": "lab",
-                    "room": "EEEI 204"
+                    "room": "PH 217"
                 }
             ]
         },
         {
-            "class code": "52471",
-            "subject": "EEE 113",
-            "section": "WFX",
+            "class code": "52472",
+            "subject": "EEE 123",
+            "section": "THX2",
             "units": "3.0",
             "instructor": "",
             "schedule": [
                 {
-                    "day": "WF",
+                    "day": "TTh",
                     "time start": "2:30PM",
                     "time end": "4:00PM",
                     "type": "lec",
-                    "room": "EEEI VLC"
+                    "room": "EEEI 420"
                 }
             ]
         },
         {
-            "class code": "52465",
-            "subject": "EEE 118",
-            "section": "WYZ",
+            "class code": "52482",
+            "subject": "EEE 128",
+            "section": "FYZ2",
             "units": "1.0",
             "instructor": "",
             "schedule": [
                 {
-                    "day": "W",
+                    "day": "F",
                     "time start": "4:00PM",
                     "time end": "7:00PM",
                     "type": "lab",
-                    "room": "EEEI 301"
+                    "room": "EEEI 305"
                 }
             ]
         },
         {
-            "class code": "39184",
-            "subject": "Math 21",
-            "section": "TWHFU-3",
+            "class code": "45780",
+            "subject": "KAS 1",
+            "section": "THU1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "PH 116-118"
+                }
+            ]
+        },
+        {
+            "class code": "39198",
+            "subject": "Math 22",
+            "section": "THR-WR-4",
             "units": "4.0",
             "instructor": "",
             "schedule": [
                 {
                     "day": "TTh",
-                    "time start": "10:15AM",
-                    "time end": "11:15AM",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
                     "type": "lec",
                     "room": "MB 304"
                 },
                 {
-                    "day": "WF",
-                    "time start": "10:15AM",
-                    "time end": "11:15AM",
+                    "day": "W",
+                    "time start": "9:00AM",
+                    "time end": "10:00AM",
                     "type": "lec",
                     "room": "TBA"
                 }
             ]
         },
         {
-            "class code": "24967",
-            "subject": "PE 2 RF",
-            "section": "THC",
-            "units": "(2.0)",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "TTh",
-                    "time start": "9:00AM",
-                    "time end": "10:00AM",
-                    "type": "PE",
-                    "room": "TBA"
-                }
-            ]
-        },
-        {
-            "class code": "42582",
-            "subject": "Philo 1",
-            "section": "THZ",
-            "units": "-1",
-            "instructor": "",
-            "schedule": []
-        },
-        {
-            "class code": "41374",
-            "subject": "Physics 71",
-            "section": "WFQ-HQ-1",
+            "class code": "41393",
+            "subject": "Physics 72",
+            "section": "WFQ-HQ-2",
             "units": "4.0",
             "instructor": "",
             "schedule": [
@@ -119,14 +104,14 @@
                     "time start": "7:00AM",
                     "time end": "8:00AM",
                     "type": "disc",
-                    "room": "NIP F209"
+                    "room": "NIP F210"
                 },
                 {
                     "day": "WF",
                     "time start": "7:00AM",
                     "time end": "8:30AM",
                     "type": "lec",
-                    "room": "NIP F203"
+                    "room": "NIP F202"
                 }
             ]
         }

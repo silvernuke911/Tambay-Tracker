@@ -1,36 +1,75 @@
 {
-    "name": "ANGELES, ANTHONY JOSE ARENAS",
-    "student number": "2024-07585",
+    "name": "CONIENDO, ROLAND CLINT JANDOG",
+    "student number": "2024-01302",
     "college": "Engg",
     "degree major": "BS ECE",
     "total units": "20.0",
     "subjects": [
         {
-            "class code": "52621",
-            "subject": "CoE 197",
-            "section": "UA-TBCWXY",
+            "class code": "52662",
+            "subject": "EEE 121",
+            "section": "SRUVW",
             "units": "3.0",
             "instructor": "",
             "schedule": [
                 {
-                    "day": "T",
+                    "day": "S",
                     "time start": "8:00AM",
                     "time end": "10:00AM",
                     "type": "lec",
-                    "room": "EEEI 120"
+                    "room": "EEEI 204"
                 },
                 {
-                    "day": "W",
-                    "time start": "2:30PM",
-                    "time end": "5:30PM",
+                    "day": "S",
+                    "time start": "11:00AM",
+                    "time end": "2:00PM",
                     "type": "lab",
-                    "room": "EEEI 403"
+                    "room": "EEEI 204"
                 }
             ]
         },
         {
-            "class code": "52503",
+            "class code": "52501",
             "subject": "EEE 141",
+            "section": "THW1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "EEEI 229"
+                }
+            ]
+        },
+        {
+            "class code": "52519",
+            "subject": "EEE 145",
+            "section": "THV",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "11:30AM",
+                    "time end": "12:30PM",
+                    "type": "lec",
+                    "room": "EEEI 422"
+                },
+                {
+                    "day": "TTh",
+                    "time start": "12:30PM",
+                    "time end": "1:00PM",
+                    "type": "disc",
+                    "room": "EEEI 422"
+                }
+            ]
+        },
+        {
+            "class code": "52530",
+            "subject": "EEE 147",
             "section": "THX1",
             "units": "3.0",
             "instructor": "",
@@ -38,119 +77,80 @@
                 {
                     "day": "TTh",
                     "time start": "2:30PM",
+                    "time end": "3:30PM",
+                    "type": "lec",
+                    "room": "EEEI VLC"
+                },
+                {
+                    "day": "TTh",
+                    "time start": "3:30PM",
                     "time end": "4:00PM",
-                    "type": "lec",
-                    "room": "EEEI 229"
-                }
-            ]
-        },
-        {
-            "class code": "52667",
-            "subject": "EEE 143",
-            "section": "WFV",
-            "units": "3.0",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "WF",
-                    "time start": "11:30AM",
-                    "time end": "1:00PM",
-                    "type": "lec",
-                    "room": "EEEI 123"
-                }
-            ]
-        },
-        {
-            "class code": "52524",
-            "subject": "EEE 145",
-            "section": "WFU",
-            "units": "3.0",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "WF",
-                    "time start": "10:00AM",
-                    "time end": "11:00AM",
-                    "type": "lec",
-                    "room": "EEEI 422"
-                },
-                {
-                    "day": "WF",
-                    "time start": "11:00AM",
-                    "time end": "11:30AM",
-                    "type": "disc",
-                    "room": "EEEI 422"
-                }
-            ]
-        },
-        {
-            "class code": "52532",
-            "subject": "EEE 147",
-            "section": "THY",
-            "units": "3.0",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "TTh",
-                    "time start": "4:00PM",
-                    "time end": "5:00PM",
-                    "type": "lec",
-                    "room": "EEEI VLC"
-                },
-                {
-                    "day": "TTh",
-                    "time start": "5:00PM",
-                    "time end": "5:30PM",
                     "type": "disc",
                     "room": "EEEI VLC"
                 }
             ]
         },
         {
-            "class code": "52539",
+            "class code": "52538",
             "subject": "EEE 148",
-            "section": "HRU",
+            "section": "FVW",
             "units": "1.0",
             "instructor": "",
             "schedule": [
                 {
-                    "day": "Th",
-                    "time start": "8:30AM",
-                    "time end": "11:30AM",
+                    "day": "F",
+                    "time start": "11:30AM",
+                    "time end": "2:30PM",
                     "type": "lab",
                     "room": "EEEI 127"
                 }
             ]
         },
         {
-            "class code": "52919",
+            "class code": "52918",
             "subject": "ES 101",
-            "section": "THVL",
+            "section": "THUL",
             "units": "0.0",
             "instructor": "",
             "schedule": [
                 {
                     "day": "TTh",
-                    "time start": "11:30AM",
-                    "time end": "1:00PM",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
                     "type": "lec",
                     "room": "ICE 405"
                 }
             ]
         },
         {
-            "class code": "52937",
+            "class code": "52927",
             "subject": "ES 101",
-            "section": "WFW3",
+            "section": "WFU2",
             "units": "4.0",
             "instructor": "",
             "schedule": [
                 {
                     "day": "WF",
-                    "time start": "1:00PM",
-                    "time end": "2:30PM",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
                     "type": "lab",
                     "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "42015",
+            "subject": "STS 1",
+            "section": "WFX-1",
+            "units": "3.0",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "EEEI 120"
                 }
             ]
         }

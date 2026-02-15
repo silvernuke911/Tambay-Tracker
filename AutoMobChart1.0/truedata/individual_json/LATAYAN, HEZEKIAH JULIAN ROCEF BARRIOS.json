@@ -1,0 +1,126 @@
+{
+    "name": "LATAYAN, HEZEKIAH JULIAN ROCEF BARRIOS",
+    "student number": "2025-00835",
+    "college": "Engg",
+    "degree major": "BS ECE",
+    "total units": "15.0",
+    "subjects": [
+        {
+            "class code": "52452",
+            "subject": "EEE 121",
+            "section": "THUV1",
+            "units": "3.0",
+            "instructor": "CONCEALED",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:00AM",
+                    "type": "lec",
+                    "room": "EEEI 308"
+                },
+                {
+                    "day": "TTh",
+                    "time start": "11:00AM",
+                    "time end": "12:30PM",
+                    "type": "lab",
+                    "room": "EEEI 308"
+                }
+            ]
+        },
+        {
+            "class code": "52471",
+            "subject": "EEE 123",
+            "section": "THX1",
+            "units": "3.0",
+            "instructor": "MANTARING, RN",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "EEEI 123"
+                }
+            ]
+        },
+        {
+            "class code": "52494",
+            "subject": "EEE 128",
+            "section": "SXY1",
+            "units": "1.0",
+            "instructor": "CRUZ, RR",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "2:30PM",
+                    "time end": "5:30PM",
+                    "type": "lab",
+                    "room": "EEEI 428"
+                }
+            ]
+        },
+        {
+            "class code": "39151",
+            "subject": "Math 21",
+            "section": "TWHFQ",
+            "units": "4.0",
+            "instructor": "et al.",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "7:15AM",
+                    "time end": "8:15AM",
+                    "type": "lec",
+                    "room": "MB 301"
+                },
+                {
+                    "day": "TTh",
+                    "time start": "7:15AM",
+                    "time end": "8:15AM",
+                    "type": "lec",
+                    "room": "MARFIL, RI"
+                }
+            ]
+        },
+        {
+            "class code": "25094",
+            "subject": "PE 2 CH",
+            "section": "SDE",
+            "units": "(2.0)",
+            "instructor": "CARLOS, L",
+            "schedule": [
+                {
+                    "day": "S",
+                    "time start": "10:00AM",
+                    "time end": "12:00PM",
+                    "type": "PE",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "41398",
+            "subject": "Physics 72",
+            "section": "WFR-HR-2",
+            "units": "4.0",
+            "instructor": "CABANILLA, J",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "8:30AM",
+                    "time end": "10:00AM",
+                    "type": "lec",
+                    "room": "NIP F208"
+                },
+                {
+                    "day": "Th",
+                    "time start": "8:45AM",
+                    "time end": "9:45AM",
+                    "type": "disc",
+                    "room": "NIP F210"
+                }
+            ]
+        }
+    ]
+}

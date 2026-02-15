@@ -1,0 +1,121 @@
+{
+    "name": "GAVILAN, SEAN CEDRICK",
+    "student number": "2024-08362",
+    "college": "JACOBE",
+    "degree major": "Engg NON-MAJ",
+    "total units": "21.0",
+    "subjects": [
+        {
+            "class code": "14528",
+            "subject": "CW 10",
+            "section": "WFU",
+            "units": "3.0",
+            "instructor": "PINEDA, DL",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "PH 138"
+                }
+            ]
+        },
+        {
+            "class code": "14601",
+            "subject": "Eng 12",
+            "section": "WFW",
+            "units": "3.0",
+            "instructor": "BAUTISTA, VF",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "PH 138"
+                }
+            ]
+        },
+        {
+            "class code": "40879",
+            "subject": "Geol 1",
+            "section": "THU-1",
+            "units": "3.0",
+            "instructor": "DIANALA, JD",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "10:00AM",
+                    "time end": "11:30AM",
+                    "type": "lec",
+                    "room": "NIGS 127"
+                }
+            ]
+        },
+        {
+            "class code": "45830",
+            "subject": "KAS 1",
+            "section": "WFY3",
+            "units": "3.0",
+            "instructor": "PEREZ, MJ",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "PH 414"
+                }
+            ]
+        },
+        {
+            "class code": "39353",
+            "subject": "Math 10",
+            "section": "THY",
+            "units": "3.0",
+            "instructor": "SADDI, DA",
+            "schedule": [
+                {
+                    "day": "TTh",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
+                    "type": "lec",
+                    "room": "MB 118"
+                }
+            ]
+        },
+        {
+            "class code": "60109",
+            "subject": "PA 101",
+            "section": "HWX",
+            "units": "3.0",
+            "instructor": "CABO, W",
+            "schedule": [
+                {
+                    "day": "Th",
+                    "time start": "1:00PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "TBA"
+                }
+            ]
+        },
+        {
+            "class code": "42011",
+            "subject": "STS 1",
+            "section": "WFX",
+            "units": "3.0",
+            "instructor": "et al.",
+            "schedule": [
+                {
+                    "day": "WF",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
+                    "type": "lec",
+                    "room": "MINIMO, L"
+                }
+            ]
+        }
+    ]
+}

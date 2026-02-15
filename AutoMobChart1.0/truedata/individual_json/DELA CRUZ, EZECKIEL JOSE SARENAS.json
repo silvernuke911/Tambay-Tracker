@@ -6,119 +6,119 @@
     "total units": "18.0",
     "subjects": [
         {
-            "class code": "52480",
-            "subject": "EEE 111",
-            "section": "WFVW",
+            "class code": "52462",
+            "subject": "EEE 121",
+            "section": "WFWX1",
             "units": "3.0",
-            "instructor": "",
+            "instructor": "TBA",
             "schedule": [
                 {
                     "day": "WF",
-                    "time start": "11:30AM",
-                    "time end": "12:30PM",
+                    "time start": "1:00PM",
+                    "time end": "2:00PM",
                     "type": "lec",
-                    "room": "EEEI 204"
+                    "room": "EEEI 308"
                 },
                 {
                     "day": "WF",
-                    "time start": "12:30PM",
-                    "time end": "2:00PM",
+                    "time start": "2:00PM",
+                    "time end": "3:30PM",
                     "type": "lab",
-                    "room": "EEEI 204"
+                    "room": "EEEI 308"
                 }
             ]
         },
         {
             "class code": "52471",
-            "subject": "EEE 113",
-            "section": "WFX",
+            "subject": "EEE 123",
+            "section": "THX1",
             "units": "3.0",
-            "instructor": "",
+            "instructor": "MANTARING, RN",
             "schedule": [
                 {
-                    "day": "WF",
+                    "day": "TTh",
                     "time start": "2:30PM",
                     "time end": "4:00PM",
                     "type": "lec",
-                    "room": "EEEI VLC"
+                    "room": "EEEI 123"
                 }
             ]
         },
         {
-            "class code": "52468",
-            "subject": "EEE 118",
-            "section": "SXY2",
+            "class code": "52500",
+            "subject": "EEE 128",
+            "section": "WYZ",
             "units": "1.0",
-            "instructor": "",
+            "instructor": "DIONIDO, R",
             "schedule": [
                 {
-                    "day": "S",
-                    "time start": "2:30PM",
-                    "time end": "5:30PM",
+                    "day": "W",
+                    "time start": "4:00PM",
+                    "time end": "7:00PM",
                     "type": "lab",
                     "room": "EEEI 301"
                 }
             ]
         },
         {
-            "class code": "39168",
-            "subject": "Math 21",
-            "section": "TWHFQ-3",
+            "class code": "39214",
+            "subject": "Math 22",
+            "section": "THV-WV-4",
             "units": "4.0",
-            "instructor": "",
+            "instructor": "CONCEALED",
             "schedule": [
                 {
                     "day": "TTh",
-                    "time start": "7:15AM",
-                    "time end": "8:15AM",
+                    "time start": "11:30AM",
+                    "time end": "1:00PM",
                     "type": "lec",
                     "room": "MB 304"
                 },
                 {
-                    "day": "WF",
-                    "time start": "7:15AM",
-                    "time end": "8:15AM",
+                    "day": "W",
+                    "time start": "12:00PM",
+                    "time end": "1:00PM",
                     "type": "lec",
                     "room": "TBA"
                 }
             ]
         },
         {
-            "class code": "42564",
-            "subject": "Philo 1",
-            "section": "THU-8",
-            "units": "3.0",
-            "instructor": "",
+            "class code": "41403",
+            "subject": "Physics 72",
+            "section": "WFU-HU-1",
+            "units": "4.0",
+            "instructor": "TBA",
             "schedule": [
                 {
-                    "day": "TTh",
+                    "day": "WF",
                     "time start": "10:00AM",
                     "time end": "11:30AM",
                     "type": "lec",
-                    "room": "PH 222"
+                    "room": "NIP F207"
+                },
+                {
+                    "day": "Th",
+                    "time start": "10:15AM",
+                    "time end": "11:15AM",
+                    "type": "disc",
+                    "room": "NIP F209"
                 }
             ]
         },
         {
-            "class code": "41381",
-            "subject": "Physics 71",
-            "section": "WFR-HR-2",
-            "units": "4.0",
-            "instructor": "",
+            "class code": "16135",
+            "subject": "Speech 30",
+            "section": "THY-1",
+            "units": "3.0",
+            "instructor": "ANGARA, CM",
             "schedule": [
                 {
-                    "day": "WF",
-                    "time start": "8:30AM",
-                    "time end": "10:00AM",
+                    "day": "TTh",
+                    "time start": "4:00PM",
+                    "time end": "5:30PM",
                     "type": "lec",
-                    "room": "NIP F206"
-                },
-                {
-                    "day": "Th",
-                    "time start": "8:45AM",
-                    "time end": "9:45AM",
-                    "type": "disc",
-                    "room": "NIP F209"
+                    "room": "TBA"
                 }
             ]
         }

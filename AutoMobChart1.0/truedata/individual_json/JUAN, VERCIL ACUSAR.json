@@ -3,44 +3,68 @@
     "student number": "2022-12948",
     "college": "CS",
     "degree major": "BS Physics",
-    "total units": "16.0",
+    "total units": "12.0",
     "subjects": [
         {
-            "class code": "41479",
-            "subject": "Physics 118",
-            "section": "WFU",
+            "class code": "41541",
+            "subject": "App Physics 195",
+            "section": "THW",
             "units": "3.0",
             "instructor": "",
             "schedule": [
                 {
-                    "day": "WF",
+                    "day": "TTh",
+                    "time start": "1:00PM",
+                    "time end": "2:30PM",
+                    "type": "lec",
+                    "room": "NIP F201"
+                }
+            ]
+        },
+        {
+            "class code": "24859",
+            "subject": "CWTS 1",
+            "section": "CHK",
+            "units": "MBD",
+            "instructor": "",
+            "schedule": []
+        },
+        {
+            "class code": "25146",
+            "subject": "PE 2 CH",
+            "section": "THD",
+            "units": "(2.0)",
+            "instructor": "",
+            "schedule": [
+                {
+                    "day": "TTh",
                     "time start": "10:00AM",
-                    "time end": "11:30AM",
-                    "type": "lec",
-                    "room": "NIP R109"
+                    "time end": "11:00AM",
+                    "type": "PE",
+                    "room": "TBA"
                 }
             ]
         },
         {
-            "class code": "41481",
-            "subject": "Physics 131",
-            "section": "WFR-1",
+            "class code": "42636",
+            "subject": "Philo 1",
+            "section": "WFX",
             "units": "3.0",
             "instructor": "",
             "schedule": [
                 {
                     "day": "WF",
-                    "time start": "8:30AM",
-                    "time end": "10:00AM",
+                    "time start": "2:30PM",
+                    "time end": "4:00PM",
                     "type": "lec",
-                    "room": "NIP R201"
+                    "room": "PH 317"
                 }
             ]
         },
         {
-            "class code": "41534",
-            "subject": "Physics 142",
-            "section": "THU",
+            "class code": "41489",
+            "subject": "Physics 165",
+            "section": "THR-1",
             "units": "3.0",
             "instructor": "",
             "schedule": [
@@ -54,57 +78,18 @@
             ]
         },
         {
-            "class code": "41485",
-            "subject": "Physics 170",
-            "section": "THU",
+            "class code": "41540",
+            "subject": "Physics 195",
+            "section": "WFV",
             "units": "3.0",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "TTh",
-                    "time start": "10:00AM",
-                    "time end": "11:30AM",
-                    "type": "lec",
-                    "room": "NIP R201"
-                }
-            ]
-        },
-        {
-            "class code": "41491",
-            "subject": "Physics 192",
-            "section": "WFV-WFX-2",
-            "units": "4.0",
             "instructor": "",
             "schedule": [
                 {
                     "day": "WF",
                     "time start": "11:30AM",
-                    "time end": "12:30PM",
+                    "time end": "1:00PM",
                     "type": "lec",
-                    "room": "NIP R109"
-                },
-                {
-                    "day": "WF",
-                    "time start": "1:00PM",
-                    "time end": "4:00PM",
-                    "type": "lab",
-                    "room": "TBA"
-                }
-            ]
-        },
-        {
-            "class code": "61702",
-            "subject": "ROTC Mil Sci 1",
-            "section": "SBCDE-2",
-            "units": "(3.0)",
-            "instructor": "",
-            "schedule": [
-                {
-                    "day": "S",
-                    "time start": "8:00AM",
-                    "time end": "12:00PM",
-                    "type": "lec",
-                    "room": "TBA"
+                    "room": "NIP F201"
                 }
             ]
         }
