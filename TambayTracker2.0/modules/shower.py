@@ -1,6 +1,7 @@
 from modules import filepaths
 from modules import utils
 from modules import sciplots
+from modules import filepaths
 
 from datetime import datetime
 
@@ -82,7 +83,7 @@ def show_attendance_frequency(flags):
         start_date = pd.to_datetime(
             flags.get(
                 'startdate', 
-                '01/20/25'
+                filepaths.start_date
             ), 
             format='%m/%d/%y'
         )
