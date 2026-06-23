@@ -1854,3 +1854,50 @@ Date,Time,Input
 03/30/2026,04:21:17 PM,note read --all
 03/30/2026,04:21:46 PM,sys
 03/30/2026,04:21:49 PM,...
+03/30/2026,04:22:33 PM,color 0a
+03/30/2026,04:22:37 PM,cmdlog
+03/30/2026,04:22:45 PM,cmdlog --all
+03/30/2026,04:25:18 PM,note add
+03/30/2026,04:25:34 PM,"First time I touched this shit this year, genuinely insane."
+03/30/2026,04:25:35 PM, 
+03/30/2026,04:25:47 PM,note read --all
+03/30/2026,04:26:22 PM,cmdlog --all
+06/23/2026,01:30:56 PM,-h
+06/23/2026,01:30:58 PM,h
+06/23/2026,01:31:08 PM,help cls
+06/23/2026,01:31:14 PM,help remove
+06/23/2026,01:31:24 PM,help add
+06/23/2026,01:31:32 PM,show
+06/23/2026,01:31:44 PM,show af
+06/23/2026,01:32:01 PM,list af
+06/23/2026,01:32:11 PM,list p
+06/23/2026,01:32:24 PM,note read all
+06/23/2026,01:32:29 PM,note r -all
+06/23/2026,01:32:31 PM,note
+06/23/2026,01:32:36 PM,note read --all
+06/23/2026,01:33:00 PM,note add
+06/23/2026,01:34:47 PM,"Hey there, been a while. Me and Nadia had our anniversary. Pretty cool, I might say. I haven't finished a lot of the things I wanted to finish, and honestly, I'm a bum. So, yeah, kinda fucked that here I am. I have no money again, I have no parents. I have no one, and no one to call on to. I am alone, wallowing in self pity, again and again and again. I am shit. Here I am, here I remain. I am tired."
+06/23/2026,01:34:49 PM, 
+06/23/2026,01:34:56 PM,n r
+06/23/2026,01:35:01 PM,n r -all
+06/23/2026,01:35:07 PM,n r --all
+06/23/2026,01:40:43 PM,n a
+06/23/2026,01:44:20 PM,"I have two, technically three, overbearing tasks over me. The two is from pathways, from my missed submissions. I genuinely do not want to do anything at this time. I am very tired, but yeah I need to do them. The second one is from Faisal pestering me over for rent, which is annoying, but something I have to do. So I guess that is what it is. The frat house is falling apart, people are starting to leave, it's starting to be unsustainable. Honestly I don't really give that much of a shit, I can live wherever life takes me. But it does dawn on me that I might lose my home which I have been living in for the last three years, which is somewhat depressing. A chud like me couldn't fucking survive without anyone else yet I am very bad at getting along with people. Such is the life. I should have just died long ago, honestly. I am such a mess."
+06/23/2026,01:44:21 PM, 
+06/23/2026,01:44:42 PM,dir
+06/23/2026,01:44:44 PM,sys
+06/23/2026,01:44:47 PM,299792458
+06/23/2026,01:45:19 PM,help
+06/23/2026,01:45:27 PM,add
+06/23/2026,01:45:31 PM,remove
+06/23/2026,01:45:33 PM,list
+06/23/2026,01:45:44 PM,l p --order
+06/23/2026,01:45:58 PM,list cmdlog
+06/23/2026,01:46:08 PM,list cmdlog -all
+06/23/2026,01:46:15 PM,list cmdlog --all
+06/23/2026,01:48:01 PM,sys
+06/23/2026,01:48:04 PM,er
+06/23/2026,01:48:06 PM,git
+06/23/2026,01:48:11 PM,git add .
+06/23/2026,01:48:16 PM,git add all
+06/23/2026,01:48:20 PM,git add

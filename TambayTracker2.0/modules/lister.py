@@ -221,7 +221,6 @@ def list_point_order(flags):
         )
     print(utils.sepline(80))
     return
-    utils.temporary_output()
     
 def list_individual_attendance(flags):
     utils.temporary_output()
